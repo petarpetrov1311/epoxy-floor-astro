@@ -1,0 +1,58 @@
+---
+import Footer from '../components/landing/Footer.jsx';
+import Navbar from '../components/landing/Navbar.jsx';
+import Layout from './Layout.astro';
+
+// Markdown layouts receive frontmatter as one `frontmatter` prop.
+const metadata = Astro.props.frontmatter ?? Astro.props;
+const {
+  title = 'Блогове | Epoxy Floors',
+  image,
+  excerpt,
+  category,
+  readTime,
+} = metadata;
+const hasArticleHero = Boolean(image && excerpt);
+---
+
+<Layout {title}>
+  <div class="min-h-screen bg-background text-foreground font-inter">
+    <Navbar client:load />
+    <main>
+      {hasArticleHero ? (
+        <>
+          <section class="relative overflow-hidden bg-navy">
+            <img src={image} alt="" class="absolute inset-0 h-full w-full object-cover opacity-35" />
+            <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/45"></div>
+            <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 md:py-24">
+              <div class="max-w-3xl">
+                <a href="/blogove" class="mb-8 inline-flex text-sm font-semibold text-white/70 transition-colors hover:text-primary">← Всички блогове</a>
+                <div class="mb-5 flex flex-wrap items-center gap-3">
+                  {category && <span class="rounded-full bg-primary px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">{category}</span>}
+                  {readTime && <span class="text-sm font-medium text-white/70">{readTime} четене</span>}
+                </div>
+                <h1 class="text-3xl font-bold leading-tight text-white md:text-5xl">{title}</h1>
+                <p class="mt-5 text-lg leading-relaxed text-white/75">{excerpt}</p>
+              </div>
+            </div>
+          </section>
+          <article class="mx-auto max-w-3xl px-6 py-12 md:py-20 lg:px-8">
+            <div class="markdown-content rounded-lg border border-border bg-white p-6 shadow-sm md:p-10"><slot /></div>
+          </article>
+        </>
+      ) : <slot />}
+    </main>
+    <Footer client:load />
+  </div>
+</Layout>
+
+<style>
+  .markdown-content :global(h1), .markdown-content :global(h2), .markdown-content :global(h3) { color: hsl(var(--foreground)); font-weight: 700; }
+  .markdown-content :global(h1) { font-size: 2rem; margin-bottom: 1rem; }
+  .markdown-content :global(h2) { font-size: 1.5rem; margin: 2rem 0 1rem; }
+  .markdown-content :global(p), .markdown-content :global(li) { color: hsl(var(--muted-foreground)); font-size: 1.0625rem; line-height: 1.9; }
+  .markdown-content :global(p) { margin: 0 0 1.5rem; }
+  .markdown-content :global(ul) { list-style: disc; margin: 0 0 1.5rem 1.5rem; }
+  .markdown-content :global(blockquote) { border-left: 4px solid hsl(var(--primary)); color: hsl(var(--foreground)); margin: 1.5rem 0; padding-left: 1rem; }
+  .markdown-content :global(a) { color: hsl(var(--primary)); font-weight: 600; }
+</style>
