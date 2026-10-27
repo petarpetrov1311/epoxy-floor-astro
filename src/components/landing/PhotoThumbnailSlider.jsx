@@ -1,45 +1,239 @@
-import React, { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { AnimatePresence, animate, motion, useMotionValue } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
-export default function PhotoThumbnailSlider({ images = [], className = 'mt-4 md:mt-6', thumbnailClassName = 'h-20 w-full object-cover md:h-28', altPrefix = 'Project image' }) {
-  const [active, setActive] = useState(0);
+const VISIBLE = 3;
+const GAP = 12;
+const BUFFER = 1;
+const RENDERED = VISIBLE + BUFFER * 2;
+
+export default function PhotoThumbnailSlider({
+  images = [],
+  className = 'mt-4 md:mt-6',
+  thumbnailClassName = 'w-full h-20 md:h-28 object-cover',
+  altPrefix = 'Project image',
+}) {
+  const containerRef = useRef(null);
+  const [itemWidth, setItemWidth] = useState(0);
+  const [startIdx, setStartIdx] = useState(0);
+  const [locked, setLocked] = useState(false);
   const [lightbox, setLightbox] = useState(null);
-  const count = images.length;
-  const go = (direction) => setActive((index) => (index + direction + count) % count);
+  const xMV = useMotionValue(0);
+  const imageCount = images.length;
+
+  const restX = useCallback((iw) => -(iw + GAP) * BUFFER, []);
+
+  useEffect(() => {
+    if (!containerRef.current) return undefined;
+
+    const measure = () => {
+      const width = containerRef.current.offsetWidth;
+      const nextItemWidth = (width - GAP * (VISIBLE - 1)) / VISIBLE;
+      setItemWidth(nextItemWidth);
+      xMV.set(restX(nextItemWidth));
+    };
+
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, [xMV, restX]);
+
+  const goDir = useCallback(
+    async (dir) => {
+      if (locked || itemWidth <= 0 || imageCount <= 1) return;
+      setLocked(true);
+
+      const step = itemWidth + GAP;
+      const from = restX(itemWidth);
+      const to = from - dir * step;
+
+      await animate(xMV, to, {
+        duration: 0.42,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      });
+
+      xMV.set(from);
+      setStartIdx((s) => (s + dir + imageCount) % imageCount);
+      setLocked(false);
+    },
+    [imageCount, itemWidth, locked, restX, xMV],
+  );
 
   useEffect(() => {
     if (lightbox === null) return undefined;
+
     const onKey = (event) => {
       if (event.key === 'Escape') setLightbox(null);
-      if (event.key === 'ArrowLeft') setLightbox((index) => (index - 1 + count) % count);
-      if (event.key === 'ArrowRight') setLightbox((index) => (index + 1) % count);
+      if (event.key === 'ArrowRight') setLightbox((i) => (i + 1) % imageCount);
+      if (event.key === 'ArrowLeft') setLightbox((i) => (i - 1 + imageCount) % imageCount);
     };
+
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [count, lightbox]);
+  }, [imageCount, lightbox]);
 
-  if (!count) return null;
+  if (!images.length) return null;
 
-  return <>
-    <div className={className}>
-      <div className="flex items-center gap-3">
-        <button type="button" onClick={() => go(-1)} aria-label="Previous image" className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border bg-white shadow-sm transition hover:border-primary hover:bg-primary hover:text-white"><ChevronLeft className="h-5 w-5" /></button>
-        <div className="grid flex-1 grid-cols-3 gap-3">
-          {[-1, 0, 1].map((offset) => {
-            const index = (active + offset + count) % count;
-            return <button type="button" key={`${index}-${offset}`} onClick={() => setLightbox(index)} className="overflow-hidden rounded-md border border-border transition hover:border-primary/60"><img src={images[index]} alt={`${altPrefix} ${index + 1}`} className={thumbnailClassName} loading="lazy" /></button>;
-          })}
+  const renderedIndices = Array.from(
+    { length: RENDERED },
+    (_, i) => (startIdx + i - BUFFER + imageCount * 100) % imageCount,
+  );
+  const trackWidth = itemWidth > 0 ? RENDERED * itemWidth + (RENDERED - 1) * GAP : 0;
+
+  return (
+    <>
+      <div className={className}>
+        <div className="md:hidden overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-3 px-1">
+            {images.map((src, imgIdx) => (
+              <button
+                key={src}
+                onClick={() => setLightbox(imgIdx)}
+                aria-label={`Open image ${imgIdx + 1}`}
+                className="w-28 flex-shrink-0 overflow-hidden rounded-md border border-border bg-white shadow-sm transition-all duration-200 hover:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <img
+                  src={src}
+                  alt={`${altPrefix} ${imgIdx + 1}`}
+                  className="h-20 w-full object-cover"
+                  loading="lazy"
+                  draggable={false}
+                />
+              </button>
+            ))}
+          </div>
         </div>
-        <button type="button" onClick={() => go(1)} aria-label="Next image" className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border bg-white shadow-sm transition hover:border-primary hover:bg-primary hover:text-white"><ChevronRight className="h-5 w-5" /></button>
+
+        <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={() => goDir(-1)}
+            disabled={locked || imageCount <= 1}
+            aria-label="Previous image"
+            className="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-white border border-border shadow-sm hover:bg-primary hover:text-white hover:border-primary disabled:opacity-40 transition-all duration-200"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <div
+            ref={containerRef}
+            className="flex-1 overflow-hidden rounded-lg"
+          >
+            <motion.div
+              style={{
+                display: 'flex',
+                gap: GAP,
+                x: itemWidth > 0 ? xMV : undefined,
+                transform: itemWidth > 0 ? undefined : 'translateX(calc(-100% / 3 - 4px))',
+                width: trackWidth > 0 ? trackWidth : 'auto',
+              }}
+            >
+              {renderedIndices.map((imgIdx, pos) => (
+                <button
+                  key={pos}
+                  onClick={() => setLightbox(imgIdx)}
+                  aria-label={`Open image ${imgIdx + 1}`}
+                  style={{ width: itemWidth > 0 ? itemWidth : 'calc((100% - 24px) / 3)', flexShrink: 0 }}
+                  className="rounded-md overflow-hidden border border-border hover:border-primary/60 hover:brightness-110 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <img
+                    src={images[imgIdx]}
+                    alt={`${altPrefix} ${imgIdx + 1}`}
+                    className={thumbnailClassName}
+                    loading="lazy"
+                    draggable={false}
+                  />
+                </button>
+              ))}
+            </motion.div>
+          </div>
+
+          <button
+            onClick={() => goDir(1)}
+            disabled={locked || imageCount <= 1}
+            aria-label="Next image"
+            className="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-full bg-white border border-border shadow-sm hover:bg-primary hover:text-white hover:border-primary disabled:opacity-40 transition-all duration-200"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="hidden md:flex justify-center gap-2 mt-3">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                if (locked || i === startIdx) return;
+                xMV.set(restX(itemWidth));
+                setStartIdx(i);
+              }}
+              aria-label={`Show image ${i + 1}`}
+              className={`h-2 rounded-full transition-all duration-200 ${
+                i === startIdx ? 'bg-primary w-4' : 'bg-border w-2'
+              }`}
+            />
+          ))}
+        </div>
       </div>
-      <div className="mt-3 flex justify-center gap-2">{images.map((_, index) => <button type="button" key={index} onClick={() => setActive(index)} aria-label={`Show image ${index + 1}`} className={`h-2 rounded-full transition-all ${index === active ? 'w-4 bg-primary' : 'w-2 bg-border'}`} />)}</div>
-    </div>
-    <AnimatePresence>{lightbox !== null && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center bg-black/90" onClick={() => setLightbox(null)}>
-      <button type="button" onClick={() => setLightbox(null)} aria-label="Close" className="absolute right-4 top-4 text-white"><X className="h-8 w-8" /></button>
-      <button type="button" onClick={(event) => { event.stopPropagation(); setLightbox((index) => (index - 1 + count) % count); }} aria-label="Previous image" className="absolute left-4 text-white"><ChevronLeft className="h-10 w-10" /></button>
-      <img src={images[lightbox]} alt={`${altPrefix} ${lightbox + 1}`} className="max-h-[90vh] max-w-[90vw] rounded-lg object-contain" onClick={(event) => event.stopPropagation()} />
-      <button type="button" onClick={(event) => { event.stopPropagation(); setLightbox((index) => (index + 1) % count); }} aria-label="Next image" className="absolute right-4 text-white"><ChevronRight className="h-10 w-10" /></button>
-    </motion.div>}</AnimatePresence>
-  </>;
+
+      <AnimatePresence>
+        {lightbox !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+            onClick={() => setLightbox(null)}
+          >
+            <button
+              onClick={() => setLightbox(null)}
+              aria-label="Close"
+              className="absolute top-4 right-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={(event) => {
+                event.stopPropagation();
+                setLightbox((i) => (i - 1 + imageCount) % imageCount);
+              }}
+              aria-label="Previous image"
+              className="absolute left-4 z-10 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <motion.img
+              key={lightbox}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              src={images[lightbox]}
+              alt={`${altPrefix} ${lightbox + 1}`}
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            />
+
+            <button
+              onClick={(event) => {
+                event.stopPropagation();
+                setLightbox((i) => (i + 1) % imageCount);
+              }}
+              aria-label="Next image"
+              className="absolute right-4 z-10 flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
+              {lightbox + 1} / {imageCount}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 }

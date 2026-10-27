@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React from 'react';
 
 const specs = [
   { label: 'Якост на натиск', value: '55 N/mm²' },
@@ -10,20 +9,14 @@ const specs = [
 ];
 
 export default function EpoxyInfo() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3">
               Какво представляват<br />епоксидните настилки?
             </h2>
@@ -40,14 +33,10 @@ export default function EpoxyInfo() {
               приложени <strong className="text-foreground">повече от една система</strong>, съобразно използването 
               на различните помещения.
             </p>
-          </motion.div>
+          </div>
 
           {/* Specs Table */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
-          >
+          <div>
             <div className="bg-muted/30 rounded-lg overflow-hidden border border-border">
               <div className="bg-navy px-6 py-4">
                 <h3 className="text-white font-bold">Технически показатели</h3>
@@ -75,7 +64,7 @@ export default function EpoxyInfo() {
                 зависимост от избраните продукти.
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

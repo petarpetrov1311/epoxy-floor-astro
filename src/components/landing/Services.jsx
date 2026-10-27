@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const services = [
@@ -60,15 +59,9 @@ const services = [
 ];
 
 function ServiceCard({ service, index }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
+    <div
       className="group"
     >
       <a href={service.href} className="md:hidden flex items-center gap-3 bg-white rounded-lg overflow-hidden shadow-sm border border-border p-3 hover:border-primary/50 transition-all duration-200">
@@ -85,15 +78,15 @@ function ServiceCard({ service, index }) {
         <ArrowRight className="w-4 h-4 text-primary flex-shrink-0" />
       </a>
 
-      <div className="hidden md:block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-400 border border-border h-full">
+      <div className="hidden md:block bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-200 border border-border h-full">
         <div className="relative h-52 overflow-hidden">
           <img
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover transition-transform duration-200"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-navy/20 group-hover:bg-navy/10 transition-colors duration-300" />
+          <div className="absolute inset-0 bg-navy/20 group-hover:bg-navy/10 transition-colors duration-200" />
         </div>
         <div className="p-6">
           <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-200">
@@ -104,29 +97,23 @@ function ServiceCard({ service, index }) {
           </p>
           <a
             href={service.href}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all duration-200"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-all duration-200"
           >
             Повече информация
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Services() {
-  const headingRef = useRef(null);
-  const headingInView = useInView(headingRef, { once: true, margin: '-50px' });
 
   return (
-    <section id="services" className="py-10 md:py-20 bg-muted/30">
+    <section id="applications" className="py-10 md:py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <motion.div
-          ref={headingRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={headingInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center max-w-3xl mx-auto mb-8 md:mb-14"
         >
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
@@ -138,7 +125,7 @@ export default function Services() {
             обществени сгради и домове. Продуктите се отличават с високо качество,
             устойчивост и разнообразие от цветове и материали.
           </p>
-        </motion.div>
+        </div>
 
         <div className="md:hidden grid gap-3">
           {services.map((service, i) => (
@@ -155,3 +142,4 @@ export default function Services() {
     </section>
   );
 }
+

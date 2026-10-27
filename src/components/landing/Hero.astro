@@ -1,0 +1,14 @@
+---
+import { frontmatter as home } from '../../../handoff/content/pages/home.md';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
+---
+<section id="hero" class="home-hero">
+  <img class="hero-photo" src="/images/projects/oborudvane1.jpg" alt="Индустриален под в производствено помещение" width="1600" height="1000" fetchpriority="high" />
+  <div class="hero-shade"></div>
+  <div class="home-container hero-content">
+    <span class="hero-category">Индустриални и декоративни настилки</span>
+    <h1>{home.hero.headline}</h1><p>{home.hero.lead}</p>
+    <div class="hero-actions"><a href="#contact" class="home-button">Заявете безплатен оглед <ArrowRight size={18} aria-hidden="true" /></a><a href="#services" class="home-button secondary">Разгледайте настилките</a></div>
+    <div class="hero-guarantee"><ShieldCheck size={20} aria-hidden="true" />Гаранция 5 години по договор</div>
+  </div>
+</section>

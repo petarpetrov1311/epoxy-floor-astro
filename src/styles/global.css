@@ -7,13 +7,14 @@
 @layer base {
   :root {
     --font-inter: 'Inter', sans-serif;
-    --background: 0 0% 100%; --foreground: 210 20% 15%;
-    --primary: 38 91% 55%; --primary-foreground: 0 0% 100%;
-    --muted: 210 16% 96%; --muted-foreground: 210 10% 52%;
-    --border: 210 16% 88%; --ring: 38 91% 55%; --radius: 0.375rem;
+    --background: 0 0% 100%; --foreground: 212 19.4805% 15.098%;
+    --primary: 37.6077 91.2664% 55.098%; --primary-foreground: 0 0% 100%;
+    --muted: 200 14.2857% 95.8824%; --muted-foreground: 208.8 10.3734% 51.9608%;
+    --border: 213.3333 14.7541% 88.0392%; --ring: 38 91% 55%; --radius: 0.375rem;
   }
 
   * { @apply border-border outline-ring/50; }
   body { @apply bg-background text-foreground font-inter; }
   html { scroll-behavior: smooth; }
 }
+

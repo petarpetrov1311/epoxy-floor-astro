@@ -1,0 +1,40 @@
+---
+const textures = [
+  ['Епоксидна настилка', '/images/textures/epoxy-texture-1.avif'],
+  ['Полиуретан-цимент', '/images/textures/epoxy-texture-2.avif'],
+  ['Настилка от кварцов пясък', '/images/textures/epoxy-texture-3.avif'],
+  ['Каменен килим', '/images/textures/epoxy-texture-4.avif'],
+  ['Хидроизолации', '/images/textures/epoxy-texture-5.avif'],
+  ['Texture 6', '/images/textures/epoxy-texture-6.avif'],
+];
+---
+<section id="textures" class="py-10 md:py-18 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+      <h2 class="text-2xl md:text-4xl font-bold text-foreground mb-3">Текстури на епоксидни подове</h2>
+      <div class="w-16 h-1 bg-primary mx-auto mb-4 md:mb-5"></div>
+      <p class="text-muted-foreground text-sm md:text-lg leading-relaxed">Разгледайте примерни повърхности и цветови комбинации за декоративни и индустриални настилки.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-8 md:gap-x-10 md:gap-y-10 max-w-4xl mx-auto">
+      {textures.map(([name, image], index) => (
+        <label class="group relative flex flex-col items-center gap-3 cursor-pointer">
+          <input class="peer sr-only" type="radio" name="epoxy-texture" value={name} checked={index === 0} aria-label={name} />
+          <span class="texture-swatch relative block aspect-square w-full max-w-[180px] rounded-full p-1 transition-all duration-300 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-primary peer-focus-visible:outline-offset-4">
+            <span class="absolute inset-1 rounded-full opacity-0 ring-4 ring-primary/15 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true"></span>
+            <span class="relative block h-full w-full overflow-hidden rounded-full border border-white/80 transition-transform duration-300 group-hover:scale-[1.04]">
+              <img src={image} alt={name} class="h-full w-full object-cover" loading="lazy" />
+              <span class="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_34%_22%,rgba(255,255,255,0.42),transparent_24%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_42%,rgba(0,0,0,0.18))]"></span>
+              <span class="absolute inset-[16%] rounded-full border border-white/20"></span>
+            </span>
+          </span>
+          <span class="text-sm font-semibold text-foreground transition-colors duration-200 peer-checked:text-primary group-hover:text-primary">{name}</span>
+        </label>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .texture-swatch { background: white; box-shadow: 0 14px 34px rgb(15 23 42 / .16); }
+  label:hover .texture-swatch { box-shadow: 0 18px 42px rgb(15 23 42 / .22); }
+  input:checked + .texture-swatch { background: hsl(var(--primary)); box-shadow: 0 18px 38px rgb(245 166 35 / .28); }
+</style>

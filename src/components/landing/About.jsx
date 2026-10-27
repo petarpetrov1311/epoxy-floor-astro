@@ -1,7 +1,6 @@
-﻿import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React from 'react';
 import { CheckCircle } from 'lucide-react';
-import PhotoThumbnailSlider from './PhotoThumbnailSlider';
+import { existsSync } from 'node:fs';
 
 const benefits = [
   'Кратки срокове на изпълнение',
@@ -11,29 +10,15 @@ const benefits = [
   'Поддръжка и бърз сервиз',
 ];
 
-const sliderImages = [
-  '/images/projects/about-us1.jpg',
-  '/images/projects/about-us2.jpg',
-  '/images/projects/oborudvane1.jpg',
-  '/images/projects/oborudvane2.jpg',
-  '/images/projects/parking.jpg',
-  '/images/projects/img-3147-1-scaled.jpeg',
-];
-
-export default function About() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
+export default function About({ children }) {
 
   return (
     <section id="about" className="py-10 md:py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div ref={ref} className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Images */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7 }}
+          <div
             className="hidden md:block"
           >
             <div className="relative">
@@ -43,23 +28,20 @@ export default function About() {
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
               />
               <div className="absolute -bottom-6 -right-4 w-48 shadow-xl rounded-lg overflow-hidden border-4 border-white bg-white p-4">
-                <img
+                {existsSync('public/images/site/logo-navbar.png') ? <img
                   src="/images/site/logo-navbar.png"
                   alt="Epoxy Floors Logo"
                   className="w-full h-28 object-contain"
-                />
+                /> : <span className="font-bold text-foreground">EPOXY FLOORS</span>}
               </div>
             </div>
             <div className="pt-10">
-              <PhotoThumbnailSlider images={sliderImages} altPrefix="Наш проект" />
+              {children}
             </div>
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <div
             className="md:pt-6"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Кои сме ние?</h2>
@@ -88,7 +70,7 @@ export default function About() {
             >
               Свържете се с нас
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "test:static": "node scripts/check-static-output.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

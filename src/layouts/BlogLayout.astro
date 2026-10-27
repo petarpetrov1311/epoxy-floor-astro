@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/landing/Footer.jsx';
-import Navbar from '../components/landing/Navbar.jsx';
+import Navbar from '../components/landing/Navbar.astro';
 import Layout from './Layout.astro';
 
 // Markdown layouts receive frontmatter as one `frontmatter` prop.
@@ -17,7 +17,7 @@ const hasArticleHero = Boolean(image && excerpt);
 
 <Layout {title}>
   <div class="min-h-screen bg-background text-foreground font-inter">
-    <Navbar client:load />
+    <Navbar />
     <main>
       {hasArticleHero ? (
         <>
@@ -42,7 +42,7 @@ const hasArticleHero = Boolean(image && excerpt);
         </>
       ) : <slot />}
     </main>
-    <Footer client:load />
+    <Footer />
   </div>
 </Layout>
 

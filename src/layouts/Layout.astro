@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-const { title = 'Epoxy Floors | Подови настилки' } = Astro.props;
+const { title = 'Epoxy Floors | Подови настилки', description = 'Индустриални и декоративни епоксидни подови настилки.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +12,7 @@ const { title = 'Epoxy Floors | Подови настилки' } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Индустриални и декоративни епоксидни подови настилки." />
+		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
 	<body>

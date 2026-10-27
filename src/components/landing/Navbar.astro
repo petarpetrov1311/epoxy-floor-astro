@@ -1,0 +1,109 @@
+---
+import { Phone, Mail, Menu, ChevronDown } from 'lucide-react';
+import { serviceLinks } from '../../data/navigation';
+import { existsSync } from 'node:fs';
+const hasLogo = existsSync('public/images/site/logo-navbar.png');
+const links = [
+  { href: '/#hero', label: 'Начало' },
+  { href: '/#projects', label: 'Проекти' },
+  { href: '/galeria', label: 'Галерия' },
+  { href: '/blogove', label: 'Блогове' },
+  { href: '/#about', label: 'За нас' },
+  { href: '/#contact', label: 'Контакти' },
+];
+---
+
+<div class="bg-navy text-white text-xs py-2 px-6 hidden md:flex justify-between items-center">
+  <div class="flex items-center gap-6">
+    <a href="tel:+359898512776" class="flex items-center gap-2 hover:text-primary transition-colors"><Phone className="w-3 h-3" />+359 898 512 776</a>
+    <a href="mailto:epoxy_fl@abv.bg" class="flex items-center gap-2 hover:text-primary transition-colors"><Mail className="w-3 h-3" />epoxy_fl@abv.bg</a>
+  </div>
+  <span class="text-white/60">Индустриални и декоративни подови настилки</span>
+</div>
+<nav data-navigation aria-label="Основна навигация" class="sticky top-0 z-50 transition-all duration-300 bg-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-18 py-3">
+      <a href="/#hero" class="flex items-center gap-3">
+        {hasLogo ? <img src="/images/site/logo-navbar.png" alt="Epoxy Floors Logo" class="h-14 w-auto object-contain" /> : (
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center"><span class="text-primary font-bold text-xs">EF</span></div>
+            <div><div class="font-bold text-foreground leading-tight text-sm">EPOXY FLOORS</div><div class="text-[10px] text-muted-foreground">Индустриални и декоративни настилки</div></div>
+          </div>
+        )}
+      </a>
+      <div class="hidden xl:flex items-center gap-6">
+        <a href={links[0].href} class="nav-link text-sm font-medium transition-colors duration-200">{links[0].label}</a>
+        <details class="relative desktop-services">
+          <summary class="nav-link flex items-center gap-1 text-sm font-medium cursor-pointer">Настилки <ChevronDown className="w-4 h-4" /></summary>
+          <div class="absolute top-full left-0 mt-2 w-72 bg-white border border-border rounded-lg shadow-xl z-50 py-2">
+            {serviceLinks.map(link => <a href={link.href} class="block px-4 py-2.5 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors">{link.label}</a>)}
+          </div>
+        </details>
+        {links.slice(1).map(link => <a href={link.href} class="nav-link text-sm font-medium transition-colors duration-200">{link.label}</a>)}
+      </div>
+      <div class="hidden xl:block"><a href="/#contact" class="bg-primary text-foreground px-6 py-2.5 text-sm font-semibold rounded hover:bg-primary/90 transition-all duration-200 shadow-sm">Заяви Оферта</a></div>
+      <details class="mobile-menu xl:hidden">
+        <summary class="nav-link p-2 cursor-pointer" aria-label="Меню"><Menu className="w-6 h-6" /></summary>
+        <div class="absolute left-0 right-0 top-full bg-white border-t border-border shadow-xl max-h-[calc(100dvh-80px)] overflow-y-auto">
+          <div class="px-6 py-4 space-y-3">
+            <a href={links[0].href} class="block py-2 text-foreground hover:text-primary font-medium">{links[0].label}</a>
+            <details>
+              <summary class="flex items-center justify-between w-full py-2 text-foreground hover:text-primary font-medium cursor-pointer">Настилки <ChevronDown className="w-4 h-4" /></summary>
+              <div class="pl-4 mt-1 space-y-1 border-l-2 border-primary/30">
+                {serviceLinks.map(link => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-primary">{link.label}</a>)}
+              </div>
+            </details>
+            {links.slice(1).map(link => <a href={link.href} class="block py-2 text-foreground hover:text-primary font-medium">{link.label}</a>)}
+            <a href="/#contact" class="block w-full text-center bg-primary text-foreground px-6 py-3 text-sm font-semibold rounded mt-2">Заяви Оферта</a>
+            <div class="pt-3 border-t border-border space-y-2">
+              <a href="tel:+359898512776" class="flex items-center gap-2 text-sm text-muted-foreground"><Phone className="w-4 h-4 text-primary" />+359 898 512 776</a>
+              <a href="mailto:epoxy_fl@abv.bg" class="flex items-center gap-2 text-sm text-muted-foreground"><Mail className="w-4 h-4 text-primary" />epoxy_fl@abv.bg</a>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</nav>
+
+<style>
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  .nav-link { color: hsl(var(--foreground)); }
+  .nav-link:hover { color: hsl(var(--primary)); }
+  nav[data-scrolled="true"] { box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1); backdrop-filter: blur(4px); }
+  nav[data-dark="true"] { background: #1A1A2E; }
+  nav[data-dark="true"] .nav-link { color: white; }
+  nav:has(details[open]) { background: white; box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1); }
+  nav:has(details[open]) .nav-link { color: hsl(var(--foreground)); }
+</style>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('[data-navigation]')!;
+  const menus = [...nav.querySelectorAll<HTMLDetailsElement>('details')];
+  function closeMenus() { menus.forEach(menu => { menu.open = false; }); }
+  function updateSurface() {
+    const scrolled = window.scrollY > 60;
+    nav.dataset.scrolled = String(scrolled);
+    nav.dataset.dark = String(scrolled && ['hero', 'stats', 'why-choose-us'].some(id => {
+      const rect = document.getElementById(id)?.getBoundingClientRect();
+      return rect && rect.top < 80 && rect.bottom > 80;
+    }));
+  }
+  window.addEventListener('scroll', () => { closeMenus(); updateSurface(); }, { passive: true });
+  window.addEventListener('resize', () => { closeMenus(); updateSurface(); });
+  document.addEventListener('click', event => {
+    if (event.target instanceof Node && !nav.contains(event.target)) closeMenus();
+  });
+  nav.addEventListener('click', event => {
+    if (event.target instanceof Element && event.target.closest('a')) closeMenus();
+  });
+  nav.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    const menu = event.target instanceof Element ? event.target.closest('details[open]') : null;
+    closeMenus();
+    menu?.querySelector('summary')?.focus();
+  });
+  updateSurface();
+</script>
+

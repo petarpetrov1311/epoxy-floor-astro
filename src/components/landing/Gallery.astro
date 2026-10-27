@@ -1,0 +1,59 @@
+---
+import { ArrowLeft, ArrowRight, Images, X, ZoomIn } from 'lucide-react';
+import { galleryCategories, galleryProjects } from '../../data/gallery';
+const { category } = Astro.props;
+const photos = category ? galleryProjects.filter(photo => photo.category === category.title) : [];
+---
+<section class="bg-navy pt-16 pb-14 md:pt-24 md:pb-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8"><div class="max-w-3xl">
+    <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-primary"><Images className="h-4 w-4" />Галерия</div>
+    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">{category ? category.title : 'Галерия по категории'}</h1>
+    <p class="mt-5 max-w-2xl text-white/70 leading-relaxed">{category ? 'Разгледайте снимките от избраната категория изпълнени настилки.' : 'Изберете категория и вижте примерни снимки от нашите изпълнени проекти.'}</p>
+  </div></div>
+</section>
+<section class="py-12 md:py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    {category ? <>
+      <a href="/galeria" class="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"><ArrowLeft className="h-4 w-4" />Всички категории</a>
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {photos.map(photo => <a href={photo.image} data-gallery-photo data-title={photo.title} data-category={photo.category} class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-muted text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-primary">
+          <img src={photo.image} alt={photo.title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/10 to-transparent opacity-90"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5"><p class="text-xs font-semibold uppercase tracking-wide text-primary">{photo.category}</p><h2 class="mt-1 text-lg font-bold text-white">{photo.title}</h2></div>
+          <div class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100"><ZoomIn className="h-5 w-5" /></div>
+        </a>)}
+      </div>
+    </> : <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+      {galleryCategories.map(item => <article class="group overflow-hidden rounded-lg border border-border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <a href={`/galeria/${item.slug}`} class="block">
+          <div class="aspect-[4/3] overflow-hidden bg-muted"><img src={item.image} alt={item.title} class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" /></div>
+          <div class="p-5"><h2 class="text-lg font-bold text-foreground">{item.title}</h2><span class="mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-primary">Виж галерията <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" /></span></div>
+        </a>
+      </article>)}
+    </div>}
+  </div>
+</section>
+{category && <dialog data-gallery-dialog aria-labelledby="gallery-photo-title" class="fixed inset-0 m-auto w-full max-w-5xl max-h-[95vh] overflow-auto bg-transparent p-6 text-white backdrop:bg-black/90">
+  <button type="button" data-close aria-label="Затвори" class="fixed right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white"><X className="h-6 w-6" /></button>
+  <img data-full-image alt="" class="max-h-[78vh] w-full rounded-lg object-contain" />
+  <div class="mt-4"><p data-photo-category class="text-xs font-semibold uppercase tracking-wide text-primary"></p><h2 id="gallery-photo-title" class="mt-1 text-xl font-bold text-white"></h2></div>
+</dialog>}
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-gallery-dialog]');
+  if (dialog) {
+    const fullImage = dialog.querySelector<HTMLImageElement>('[data-full-image]')!;
+    document.querySelectorAll<HTMLAnchorElement>('[data-gallery-photo]').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        fullImage.src = link.href;
+        fullImage.alt = link.dataset.title!;
+        dialog.querySelector('#gallery-photo-title')!.textContent = link.dataset.title!;
+        dialog.querySelector('[data-photo-category]')!.textContent = link.dataset.category!;
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('[data-close]')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  }
+</script>

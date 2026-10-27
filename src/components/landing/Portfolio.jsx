@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { AnimatePresence, motion, useInView } from 'framer-motion';
+import React, { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 import { galleryCategories, galleryProjects } from '../../data/gallery';
 
@@ -8,8 +8,6 @@ const categories = ['Всички', ...galleryCategories.map((category) => categ
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState('Всички');
   const [lightboxImage, setLightboxImage] = useState(null);
-  const headingRef = useRef(null);
-  const headingInView = useInView(headingRef, { once: true, margin: '-50px' });
 
   const filtered = activeCategory === 'Всички'
     ? galleryProjects
@@ -19,9 +17,8 @@ export default function Portfolio() {
     <section id="projects" className="py-10 md:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
-          ref={headingRef}
-          initial={{ opacity: 0, y: 20 }}
-          animate={headingInView ? { opacity: 1, y: 0 } : {}}
+          initial={false}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-6 md:mb-12"
         >
@@ -49,7 +46,7 @@ export default function Portfolio() {
         </div>
 
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence initial={false} mode="popLayout">
             {filtered.map((project) => (
               <motion.div
                 key={project.title + project.category}

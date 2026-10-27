@@ -1,5 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { existsSync } from 'node:fs';
 
 const serviceLinks = [
   'Тераси и плоски покриви',
@@ -14,11 +15,11 @@ const serviceLinks = [
 ];
 
 const navLinks = [
-  { label: 'Начало', href: '#hero' },
-  { label: 'Настилки', href: '#services' },
-  { label: 'Проекти', href: '#projects' },
-  { label: 'За нас', href: '#about' },
-  { label: 'Контакти', href: '#contact' },
+  { label: 'Начало', href: '/#hero' },
+  { label: 'Настилки', href: '/#services' },
+  { label: 'Проекти', href: '/#projects' },
+  { label: 'За нас', href: '/#about' },
+  { label: 'Контакти', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -28,19 +29,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
-            <img
+            {existsSync('public/images/site/logo-hero-footer.png') ? <img
               src="/images/site/logo-hero-footer.png"
               alt="Epoxy Floors"
               className="h-14 w-auto object-contain mb-5"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
-              }}
-            />
-            <div className="hidden text-xl font-bold mb-5">EPOXY FLOORS</div>
+            /> : <div className="text-xl font-bold mb-5">EPOXY FLOORS</div>}
             <p className="text-white/60 text-sm leading-relaxed mb-5">
               Иноваторите на пазара на индустриални и декоративни подови настилки. 
-              Висококачествени материали от Германия и Холандия. Гаранция 5–10 години.
+              Висококачествени материали от Германия и Холандия. Гаранция 5 години по договор.
             </p>
             <div className="space-y-2">
               <a href="tel:+359898512776" className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors">
@@ -60,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link}>
-                  <a href="#services" className="text-sm text-white/60 hover:text-primary transition-colors">
+                  <a href="/#services" className="text-sm text-white/60 hover:text-primary transition-colors">
                     {link}
                   </a>
                 </li>
@@ -97,3 +93,4 @@ export default function Footer() {
     </footer>
   );
 }
+
