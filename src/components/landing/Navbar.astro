@@ -1,17 +1,14 @@
 ---
 import { Phone, Mail, Menu, ChevronDown } from 'lucide-react';
-import { serviceLinks } from '../../data/navigation';
+import { usefulLinks } from '../../data/navigation';
+import FloorMenu from './FloorMenu.astro';
 import { existsSync } from 'node:fs';
 const hasLogo = existsSync('public/images/site/logo-navbar.png');
 const links = [
-  { href: '/#hero', label: 'Начало' },
   { href: '/tsena-nastilki', label: 'Цени' },
-  { href: '/sravneniya', label: 'Сравнения' },
-  { href: '/tehnologia-i-materiali', label: 'Технология и материали' },
   { href: '/galeria', label: 'Галерия' },
-  { href: '/blogove', label: 'Блогове' },
   { href: '/za-nas', label: 'За нас' },
-  { href: '/#contact', label: 'Контакти' },
+  { href: '/kontakti', label: 'Контакти' },
 ];
 ---
 
@@ -34,29 +31,25 @@ const links = [
         )}
       </a>
       <div class="hidden xl:flex items-center gap-4 whitespace-nowrap">
-        <a href={links[0].href} class="nav-link text-sm font-medium transition-colors duration-200">{links[0].label}</a>
         <details class="relative desktop-services">
           <summary class="nav-link flex items-center gap-1 text-sm font-medium cursor-pointer">Настилки <ChevronDown className="w-4 h-4" /></summary>
-          <div class="absolute top-full left-0 mt-2 w-72 bg-white border border-border rounded-lg shadow-xl z-50 py-2">
-            {serviceLinks.map(link => <a href={link.href} class="block px-4 py-2.5 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors">{link.label}</a>)}
-          </div>
+<div class="floor-dropdown absolute top-full left-0 mt-2 bg-white border border-border rounded shadow-xl z-50"><FloorMenu /></div>
         </details>
-        {links.slice(1).map(link => <a href={link.href} class="nav-link text-sm font-medium transition-colors duration-200">{link.label}</a>)}
+        <details class="relative"><summary class="nav-link flex items-center gap-1 text-sm font-medium cursor-pointer">Блог и съвети <ChevronDown className="w-4 h-4" /></summary><div class="absolute top-full left-0 mt-2 w-64 bg-white border border-border rounded shadow-xl py-2">{usefulLinks.map(link => <a href={link.href} class="block px-4 py-3 text-sm text-foreground hover:bg-muted transition-colors duration-200">{link.label}</a>)}</div></details>
+        {links.map(link => <a href={link.href} class="nav-link text-sm font-medium transition-colors duration-200">{link.label}</a>)}
       </div>
-      <div class="hidden xl:block"><a href="/#contact" class="bg-primary text-foreground px-6 py-2.5 text-sm font-semibold rounded hover:bg-primary/90 transition-all duration-200 shadow-sm">Заяви Оферта</a></div>
+      <div class="hidden xl:block"><a href="tel:+359898512776" class="bg-primary text-foreground px-6 py-2.5 text-sm font-semibold rounded hover:bg-primary/90 transition-all duration-200 shadow-sm">Безплатен оглед</a></div>
       <details class="mobile-menu xl:hidden">
         <summary class="nav-link p-2 cursor-pointer" aria-label="Меню"><Menu className="w-6 h-6" /></summary>
         <div class="absolute left-0 right-0 top-full bg-white border-t border-border shadow-xl max-h-[calc(100dvh-80px)] overflow-y-auto">
           <div class="px-6 py-4 space-y-3">
-            <a href={links[0].href} class="block py-2 text-foreground hover:text-primary font-medium">{links[0].label}</a>
             <details>
               <summary class="flex items-center justify-between w-full py-2 text-foreground hover:text-primary font-medium cursor-pointer">Настилки <ChevronDown className="w-4 h-4" /></summary>
-              <div class="pl-4 mt-1 space-y-1 border-l-2 border-primary/30">
-                {serviceLinks.map(link => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-primary">{link.label}</a>)}
-              </div>
+              <FloorMenu />
             </details>
-            {links.slice(1).map(link => <a href={link.href} class="block py-3 text-foreground hover:text-primary font-medium">{link.label}</a>)}
-            <a href="/#contact" class="block w-full text-center bg-primary text-foreground px-6 py-3 text-sm font-semibold rounded mt-2">Заяви Оферта</a>
+            <details><summary class="flex items-center justify-between py-3 text-foreground font-medium cursor-pointer">Блог и съвети <ChevronDown className="w-4 h-4" /></summary>{usefulLinks.map(link => <a href={link.href} class="block px-4 py-3 text-sm text-foreground hover:bg-muted">{link.label}</a>)}</details>
+            {links.map(link => <a href={link.href} class="block py-3 text-foreground hover:text-primary font-medium">{link.label}</a>)}
+            <a href="tel:+359898512776" class="block w-full text-center bg-primary text-foreground px-6 py-3 text-sm font-semibold rounded mt-2">Безплатен оглед</a>
             <div class="pt-3 border-t border-border space-y-2">
               <a href="tel:+359898512776" class="flex items-center gap-2 text-sm text-muted-foreground"><Phone className="w-4 h-4 text-primary" />+359 898 512 776</a>
               <a href="mailto:epoxy_fl@abv.bg" class="flex items-center gap-2 text-sm text-muted-foreground"><Mail className="w-4 h-4 text-primary" />epoxy_fl@abv.bg</a>
@@ -69,6 +62,7 @@ const links = [
 </nav>
 
 <style>
+  .floor-dropdown { width: 660px; max-height: calc(100dvh - 120px); overflow-y: auto; }
   summary { list-style: none; }
   summary::-webkit-details-marker { display: none; }
   .nav-link { color: hsl(var(--foreground)); }

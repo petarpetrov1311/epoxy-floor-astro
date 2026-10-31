@@ -1,0 +1,12 @@
+---
+import ServicePageShell from '../service/ServicePageShell.astro';
+import { floorIdentity } from '../../lib/floor-content.mjs';
+import { Check } from 'lucide-react';
+const { document } = Astro.props;
+const page = document.frontmatter;
+const entry = floorIdentity(page);
+---
+<ServicePageShell document={document} entry={entry}>
+  {page.features?.length > 0 && <div slot="summary" class="floor-features"><ul class="home-container">{page.features.map(feature => <li><Check size={20} aria-hidden="true" /><span>{feature}</span></li>)}</ul></div>}
+  {page.applications?.length > 0 && <section slot="applications" class="floor-applications"><div class="home-container"><h2>Приложения</h2><div class="heading-rule"></div><ul>{page.applications.map(application => <li><Check size={20} aria-hidden="true" />{application}</li>)}</ul></div></section>}
+</ServicePageShell>

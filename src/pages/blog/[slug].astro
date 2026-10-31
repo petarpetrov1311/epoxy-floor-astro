@@ -1,0 +1,16 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import { blogEntries } from '../../lib/blog-content.mjs';
+export function getStaticPaths() {
+  const documents = import.meta.glob('../../../handoff/content/blog/[!_]*.md', { eager: true });
+  return Object.entries(documents).filter(([, document]) => !document.frontmatter.draft).map(([path, document]) => {
+    const slug = document.frontmatter.slug || path.split('/').pop().replace('.md', '');
+    return { params: { slug }, props: { document } };
+  });
+}
+const { document } = Astro.props;
+const entry = blogEntries.find(entry => entry.data.slug === Astro.params.slug);
+if (!entry) throw new Error(`Unknown blog article: ${Astro.params.slug}`);
+const { Content, getHeadings } = document;
+---
+<BlogLayout entry={entry} headings={getHeadings()}><Content /></BlogLayout>

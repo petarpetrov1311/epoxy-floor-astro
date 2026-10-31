@@ -1,4 +1,5 @@
 ---
+import { floorRegistry } from '../../lib/floor-content.mjs';
 import { frontmatter as home } from '../../../handoff/content/pages/home.md';
 import { ArrowRight, Check, Factory, House, ShieldCheck, ChevronDown } from 'lucide-react';
 const images = ['/images/projects/oborudvane1.jpg', '/images/projects/about-us1.jpg'];
@@ -21,7 +22,7 @@ const icons = [Factory, House];
 </section>
 <section id="problems" class="home-section problem-section">
   <div class="home-container"><h2>Какъв проблем трябва да реши вашият под?</h2><div class="heading-rule"></div>
-    <div class="problem-grid">{home.problemEntry.items.map(item => <a href={`/${item.page}${item.anchor ? `#${item.anchor}` : ''}`}><span>{item.label}</span><ArrowRight size={20} aria-hidden="true" /></a>)}</div>
+    <div class="problem-grid">{home.problemEntry.items.map(item => <a href={`${floorRegistry.find(entry => entry.id === item.page)?.url || `/${item.page}`}${item.anchor ? `#${item.anchor}` : ''}`}><span>{item.label}</span><ArrowRight size={20} aria-hidden="true" /></a>)}</div>
   </div>
 </section>
 <section id="why-choose-us" class="home-section why-section">

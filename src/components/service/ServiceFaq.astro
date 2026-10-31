@@ -1,0 +1,5 @@
+---
+import { ChevronDown } from 'lucide-react';
+const { faqs = [] } = Astro.props;
+---
+{faqs.length > 0 && <section id="faq" class="home-section problem-section"><div class="home-container faq-container"><h2>Често задавани въпроси</h2><div class="heading-rule"></div>{faqs.map(faq => <details class="home-faq"><summary>{faq.q}<ChevronDown size={20} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div></section>}

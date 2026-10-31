@@ -1,0 +1,5 @@
+---
+import { ArrowRight, Phone } from 'lucide-react';
+const { phone, quote } = Astro.props;
+---
+<div class="hero-actions"><a class="home-button" href={phone} data-event="phone_click">Безплатен оглед <Phone size={18} aria-hidden="true" /></a><a class="home-button secondary" href={quote} data-event="form_open">Заяви оферта <ArrowRight size={18} aria-hidden="true" /></a></div>

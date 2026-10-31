@@ -1,0 +1,8 @@
+---
+import { ArrowRight, Phone } from 'lucide-react';
+const { headings = [], gallery = false, faqs = false, related = false, phone, quote } = Astro.props;
+---
+<aside>
+<nav aria-label="На тази страница" class="floor-contents"><h2>На тази страница</h2>{headings.map(heading => <a class:list={{ 'subheading-link': heading.depth === 3 }} href={`#${heading.slug}`}>{heading.text}<ArrowRight size={16} aria-hidden="true" /></a>)}{gallery && <a href="#galeria">Галерия <ArrowRight size={16} aria-hidden="true" /></a>}{faqs && <a href="#faq">Често задавани въпроси <ArrowRight size={16} aria-hidden="true" /></a>}{related && <a href="#related">Свързани страници <ArrowRight size={16} aria-hidden="true" /></a>}</nav>
+<div class="floor-call"><h2>Заявете безплатен оглед</h2><a href={phone} data-event="phone_click"><Phone size={18} aria-hidden="true" />+359 898 512 776</a><a class="home-button" href={quote} data-event="form_open">Заявка за оферта <ArrowRight size={18} aria-hidden="true" /></a></div>
+</aside>

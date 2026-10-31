@@ -2,57 +2,100 @@
 import Footer from '../components/landing/Footer.jsx';
 import Navbar from '../components/landing/Navbar.astro';
 import Layout from './Layout.astro';
+import { ArrowLeft } from 'lucide-react';
+import ServiceFaq from '../components/service/ServiceFaq.astro';
+import ServiceRelated from '../components/service/ServiceRelated.astro';
+import ServiceActions from '../components/service/ServiceActions.astro';
+import { buildSeo, SITE_CFG } from '../lib/floor-seo.mjs';
+import { floorRelated } from '../lib/floor-content.mjs';
+import { dateISO, dateLabel } from '../lib/blog-content.mjs';
+import '../styles/home.css';
+import '../styles/service-page.css';
 
-// Markdown layouts receive frontmatter as one `frontmatter` prop.
-const metadata = Astro.props.frontmatter ?? Astro.props;
-const {
-  title = 'Блогове | Epoxy Floors',
-  image,
-  excerpt,
-  category,
-  readTime,
-} = metadata;
-const hasArticleHero = Boolean(image && excerpt);
+// Both original Markdown pages and the handoff collection use the established article layout.
+const { entry, headings = [] } = Astro.props;
+const metadata = entry?.data ?? Astro.props.frontmatter ?? Astro.props;
+const { title = 'Блог | EPOXY FLOORS' } = metadata;
+const image = entry?.image?.src || metadata.image;
+const excerpt = entry ? metadata.description : metadata.excerpt;
+const category = entry?.category || metadata.category;
+const readTime = entry?.readTime || metadata.readTime;
+const hasArticleHero = Boolean(image && excerpt) || Boolean(entry);
+const seo = entry ? buildSeo('blog', metadata, entry.url, { pageId: entry.id, hero: entry.image }) : undefined;
+const related = floorRelated(metadata.related || []);
+const sections = headings.filter(heading => heading.depth === 2);
+const phone = 'tel:' + SITE_CFG.organization.telephone;
 ---
-
-<Layout {title}>
+<Layout title={seo?.title || title} description={metadata.description || excerpt} seo={seo}>
   <div class="min-h-screen bg-background text-foreground font-inter">
     <Navbar />
     <main>
-      {hasArticleHero ? (
-        <>
-          <section class="relative overflow-hidden bg-navy">
-            <img src={image} alt="" class="absolute inset-0 h-full w-full object-cover opacity-35" />
-            <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/45"></div>
-            <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 md:py-24">
-              <div class="max-w-3xl">
-                <a href="/blogove" class="mb-8 inline-flex text-sm font-semibold text-white/70 transition-colors hover:text-primary">← Всички блогове</a>
-                <div class="mb-5 flex flex-wrap items-center gap-3">
-                  {category && <span class="rounded-full bg-primary px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white">{category}</span>}
-                  {readTime && <span class="text-sm font-medium text-white/70">{readTime} четене</span>}
-                </div>
-                <h1 class="text-3xl font-bold leading-tight text-white md:text-5xl">{title}</h1>
-                <p class="mt-5 text-lg leading-relaxed text-white/75">{excerpt}</p>
+      {hasArticleHero ? <>
+        <header class="article-hero">
+          {image && <img src={image} alt={entry?.image?.alt || ''} width={entry?.image?.w} height={entry?.image?.h} fetchpriority="high" />}
+          <div class="article-shade"></div>
+          <div class="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 md:py-24">
+            <div class="max-w-4xl">
+              <a href="/blog" class="article-back"><ArrowLeft size={16} aria-hidden="true" /> Всички блог статии</a>
+              <h1>{title}</h1>
+              <div class="article-meta">
+                {category && <span>{category}</span>}
+                {entry && <time datetime={dateISO(metadata.pubDate)}>{dateLabel(metadata.pubDate)}</time>}
+                {readTime && <span>{readTime} четене</span>}
+                {entry && metadata.updatedDate && dateISO(metadata.updatedDate) !== dateISO(metadata.pubDate) && <span>Обновена: <time datetime={dateISO(metadata.updatedDate)}>{dateLabel(metadata.updatedDate)}</time></span>}
               </div>
+              <p class="article-excerpt">{excerpt}</p>
             </div>
-          </section>
-          <article class="mx-auto max-w-3xl px-6 py-12 md:py-20 lg:px-8">
-            <div class="markdown-content rounded-lg border border-border bg-white p-6 shadow-sm md:p-10"><slot /></div>
-          </article>
-        </>
-      ) : <slot />}
+          </div>
+        </header>
+        <article class="blog-article">
+          {sections.length >= 3 && <details class="article-contents"><summary>Съдържание на статията</summary><nav aria-label="Съдържание на статията">{sections.map(section => <a href={`#${section.slug}`}>{section.text}</a>)}</nav></details>}
+          <div class="markdown-content rounded-lg border border-border bg-white p-6 shadow-sm md:p-10"><slot /></div>
+          {entry && metadata.tags?.length > 0 && <ul class="article-tags" aria-label="Теми">{metadata.tags.map(tag => <li>{tag}</li>)}</ul>}
+        </article>
+        {entry && <>
+          <ServiceFaq faqs={metadata.faqs || []} />
+          <ServiceRelated entries={related} />
+          <section class="floor-bottom"><div class="home-container"><h2>Безплатен оглед на обекта</h2><ServiceActions phone={phone} quote="/kontakti#forma" /></div></section>
+        </>}
+      </> : <slot />}
     </main>
     <Footer />
   </div>
 </Layout>
-
 <style>
-  .markdown-content :global(h1), .markdown-content :global(h2), .markdown-content :global(h3) { color: hsl(var(--foreground)); font-weight: 700; }
-  .markdown-content :global(h1) { font-size: 2rem; margin-bottom: 1rem; }
-  .markdown-content :global(h2) { font-size: 1.5rem; margin: 2rem 0 1rem; }
-  .markdown-content :global(p), .markdown-content :global(li) { color: hsl(var(--muted-foreground)); font-size: 1.0625rem; line-height: 1.9; }
-  .markdown-content :global(p) { margin: 0 0 1.5rem; }
-  .markdown-content :global(ul) { list-style: disc; margin: 0 0 1.5rem 1.5rem; }
-  .markdown-content :global(blockquote) { border-left: 4px solid hsl(var(--primary)); color: hsl(var(--foreground)); margin: 1.5rem 0; padding-left: 1rem; }
-  .markdown-content :global(a) { color: hsl(var(--primary)); font-weight: 600; }
+ .article-hero { position: relative; isolation: isolate; overflow: hidden; background: #1A1A2E; color: white; }
+ .article-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+ .article-shade { position: absolute; inset: 0; background: rgb(26 26 46 / .82); z-index: -1; }
+ .article-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 20px; color: white; font-size: 14px; font-weight: 600; text-underline-offset: 4px; }
+ .article-back:hover { text-decoration: underline; }
+ h1 { font-size: clamp(32px,4vw,56px); font-weight: 700; line-height: 1.15; text-wrap: balance; letter-spacing: -.025em; }
+ .article-meta { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 24px; font-size: 14px; line-height: 1.5; }
+ .article-meta > span:first-child { color: #F5A824; font-weight: 600; }
+ .article-excerpt { margin-top: 24px; max-width: 70ch; font-size: 16px; line-height: 1.75; }
+ .blog-article { width: min(100%,880px); margin-inline: auto; padding: 56px 24px; }
+ .article-contents { border: 1px solid #DCE0E5; border-radius: 4px; padding: 20px 24px; margin-bottom: 28px; }
+ .article-contents summary { cursor: pointer; font-weight: 600; min-height: 28px; }
+ .article-contents nav { display: grid; margin-top: 16px; }
+ .article-contents a { padding-block: 12px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+ .article-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; font-size: 13px; }
+ .article-tags li { padding: 6px 10px; background: #F3F5F6; border-radius: 4px; }
+ .markdown-content :global(h1),.markdown-content :global(h2),.markdown-content :global(h3) { color: #1F262E; font-weight: 700; line-height: 1.3; }
+ .markdown-content :global(h2) { font-size: clamp(24px,2.5vw,30px); margin: 40px 0 20px; }
+ .markdown-content :global(h2::after) { content: ''; display: block; width: 48px; height: 3px; background: #F5A824; margin-top: 16px; }
+ .markdown-content :global(h3) { font-size: 22px; margin: 28px 0 16px; }
+ .markdown-content :global(p),.markdown-content :global(li) { color: #1F262E; font-size: 16px; line-height: 1.85; }
+ .markdown-content :global(p) { margin: 0 0 24px; }
+ .markdown-content :global(ul),.markdown-content :global(ol) { margin: 0 0 24px; padding-left: 24px; }
+ .markdown-content :global(ul) { list-style: disc; }
+ .markdown-content :global(ol) { list-style: decimal; }
+ .markdown-content :global(li) { padding-left: 6px; margin-bottom: 12px; }
+ .markdown-content :global(blockquote) { border-left: 1px solid #F5A824; margin: 24px 0; padding-left: 20px; }
+ .markdown-content :global(a) { color: #1F262E; font-weight: 600; text-decoration: underline; text-decoration-color: #F5A824; text-underline-offset: 4px; }
+ .markdown-content :global(img) { width: 100%; height: auto; border-radius: 4px; margin-block: 28px; }
+ .markdown-content :global(table) { display: block; width: 100%; overflow-x: auto; margin-block: 28px; border: 1px solid #DCE0E5; border-radius: 4px; font-size: 14px; line-height: 1.6; }
+ .markdown-content :global(th) { background: #1A1A2E; color: white; text-align: left; font-weight: 600; min-width: 130px; }
+ .markdown-content :global(th),.markdown-content :global(td) { padding: 14px; border-bottom: 1px solid #DCE0E5; vertical-align: top; }
+ .markdown-content :global(tr:nth-child(even)) { background: #F3F5F6; }
+ @media(max-width:639px) { .blog-article { padding-block: 36px; } }
 </style>

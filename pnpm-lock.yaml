@@ -119,6 +119,9 @@ importers:
       input-otp:
         specifier: ^1.5.0
         version: 1.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      js-yaml:
+        specifier: ^4.3.2
+        version: 4.3.2
       lucide-react:
         specifier: 0.475.0
         version: 0.475.0(react@18.2.0)

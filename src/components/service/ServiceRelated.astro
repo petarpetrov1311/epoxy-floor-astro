@@ -1,0 +1,5 @@
+---
+import { ArrowRight } from 'lucide-react';
+const { entries = [] } = Astro.props;
+---
+{entries.length > 0 && <section id="related" class="home-section"><div class="home-container"><h2>Свързани страници</h2><div class="heading-rule"></div><div class="related-grid">{entries.map(item => <a href={item.url}>{item.data.navLabel || item.data.title}<ArrowRight size={20} aria-hidden="true" /></a>)}</div></div></section>}

@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/landing/Navbar.astro';
+import Footer from '../components/landing/Footer.jsx';
+import QuoteForm from '../components/landing/QuoteForm.jsx';
+import { SITE_CFG } from '../lib/floor-seo.mjs';
+import '../styles/home.css';
+const company = SITE_CFG.organization;
+import { floorRegistry } from '../lib/floor-content.mjs';
+const applications = floorRegistry.filter(entry => entry.id.startsWith('applications/')).map(entry => ({ id: entry.id.split('/')[1], label: entry.data.navLabel })).sort((a,b) => a.label.localeCompare(b.label, 'bg'));
+const systems = floorRegistry.filter(entry => entry.id.startsWith('nastilki/')).sort((a,b) => a.data.navOrder - b.data.navOrder).map(entry => ({ id: entry.id.split('/')[1], label: entry.data.navLabel }));
+---
+<Layout title="Контакти и заявка за оферта | EPOXY FLOORS" description="Свържете се с EPOXY FLOORS за безплатен оглед и индивидуална оферта за подова настилка.">
+<Navbar /><main class="home-section"><div class="home-container faq-container"><h1 class="text-4xl font-bold">Контакти</h1><div class="heading-rule"></div><div class="contact-links"><a href={`tel:${company.telephone}`}>+359 898 512 776</a><a href={`mailto:${company.email}`}>{company.email}</a><p>{company.address.addressLocality}, {company.address.streetAddress}</p><p>{company.openingHoursText}</p></div><section id="forma"><h2>Заявка за оферта</h2><div class="heading-rule"></div><QuoteForm systems={systems} applications={applications} client:load /></section></div></main><Footer />
+</Layout>
+<style>.contact-links { display: grid; gap: 12px; margin-bottom: 48px; }.contact-links a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }</style>

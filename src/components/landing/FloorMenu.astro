@@ -1,0 +1,13 @@
+---
+import { systemLinks, applicationLinks } from '../../data/navigation';
+---
+<div class="floor-menu-groups">
+  {[{ title: 'По вид настилка', links: systemLinks }, { title: 'По приложение', links: applicationLinks }].map(group => <div><p class="group-title">{group.title}</p>{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div>)}
+</div>
+<style>
+  .floor-menu-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 20px; }
+  .group-title { padding: 0 12px 12px; color: #1F262E; font-weight: 700; font-size: 14px; }
+  a { display: flex; align-items: center; min-height: 44px; padding: 10px 12px; color: #1F262E; border-radius: 4px; font-size: 14px; line-height: 1.4; transition: background-color 180ms ease-in-out; }
+  a:hover { background: #F3F5F6; text-decoration: underline; text-underline-offset: 4px; }
+  @media(max-width: 767px) { .floor-menu-groups { grid-template-columns: 1fr; padding: 12px 0; gap: 20px; } }
+</style>

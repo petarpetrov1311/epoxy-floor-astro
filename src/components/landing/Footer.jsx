@@ -1,27 +1,18 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
 import { existsSync } from 'node:fs';
+import { serviceLinks } from '../../data/navigation';
 
-const serviceLinks = [
-  'Тераси и плоски покриви',
-  'Двор и открити части',
-  'Игрища и спортни съоръжения',
-  'Хранително-вкусова промишленост',
-  'Производства и складове',
-  'Паркинги и гаражи',
-  'Мортел',
-  'Мандри и кланици',
-  'Декоративни настилки',
-];
 
 const navLinks = [
   { label: 'Начало', href: '/#hero' },
-  { label: 'Настилки', href: '/#services' },
+  { label: 'Настилки', href: '/nastilki' },
   { label: 'За нас', href: '/za-nas' },
+  { label: 'Блог', href: '/blog' },
   { label: 'Цени', href: '/tsena-nastilki' },
   { label: 'Сравнения', href: '/sravneniya' },
   { label: 'Технология и материали', href: '/tehnologia-i-materiali' },
-  { label: 'Контакти', href: '/#contact' },
+  { label: 'Контакти', href: '/kontakti' },
 ];
 
 export default function Footer() {
@@ -57,9 +48,9 @@ export default function Footer() {
             <h3 className="font-bold text-sm tracking-wider uppercase mb-5 text-white">Настилки</h3>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
-                <li key={link}>
-                  <a href="/#services" className="text-sm text-white/60 hover:text-primary transition-colors">
-                    {link}
+                <li key={link.href}>
+                  <a href={link.href} className="text-sm text-white/60 hover:text-primary transition-colors">
+                    {link.label}
                   </a>
                 </li>
               ))}

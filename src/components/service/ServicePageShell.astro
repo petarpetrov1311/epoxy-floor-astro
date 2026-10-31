@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../landing/Navbar.astro';
+import Footer from '../landing/Footer.jsx';
+import FloorGallery from '../landing/FloorGallery.astro';
+import ServiceHero from './ServiceHero.astro';
+import ServiceContents from './ServiceContents.astro';
+import ServiceFaq from './ServiceFaq.astro';
+import ServiceRelated from './ServiceRelated.astro';
+import ServiceActions from './ServiceActions.astro';
+import { mediaFor } from '../../lib/floor-media.mjs';
+import { buildSeo, SITE_CFG } from '../../lib/floor-seo.mjs';
+import { PRICES_CONFIRMED, priceSentence, pricesFor, priceText, vatText } from '../../lib/floor-pricing.mjs';
+import { floorRelated } from '../../lib/floor-content.mjs';
+import '../../styles/home.css';
+import '../../styles/service-page.css';
+const { document, entry } = Astro.props;
+const { frontmatter: page, Content, getHeadings } = document;
+const isApplication = page.type === 'application';
+const media = mediaFor(entry.id);
+const faqs = (page.faqs || []).map(faq => {
+  const price = faq.price && PRICES_CONFIRMED ? priceSentence(entry.id) : null;
+  return { ...faq, a: price ? `${price} ${faq.a}` : faq.a };
+});
+const related = floorRelated(page.related);
+const prices = PRICES_CONFIRMED ? pricesFor(entry.id) : [];
+const headingList = getHeadings();
+const mainHeadings = headingList.filter(heading => heading.depth === 2);
+const headings = headingList.filter(heading => heading.depth === 2 || (heading.depth === 3 && mainHeadings.length < 2));
+const showContents = !isApplication || mainHeadings.length >= 3;
+const phone = 'tel:' + SITE_CFG.organization.telephone;
+const parameter = isApplication ? 'prilozhenie' : 'sistema';
+const quote = `/kontakti?${parameter}=${encodeURIComponent(entry.id.split('/')[1])}#forma`;
+const seo = buildSeo(isApplication ? 'application' : 'nastilka', page, entry.url, { pageId: entry.id });
+---
+<Layout title={page.seoTitle} description={page.description} seo={seo}>
+  <Navbar />
+  <main>
+    <ServiceHero page={page} hero={media.hero} phone={phone} quote={quote} />
+    <slot name="summary" />
+    <div class:list={['home-container', 'floor-layout', { 'no-sidebar': !showContents }]}>
+      {showContents && <ServiceContents headings={headings} gallery={media.gallery.length > 0} faqs={faqs.length > 0} related={related.length > 0} phone={phone} quote={quote} />}
+      <article id="technical-content" class="floor-prose"><Content /></article>
+    </div>
+    <slot name="applications" />
+    <FloorGallery photos={media.gallery} />
+    {prices.length > 0 && <section class="home-section"><div class="home-container faq-container"><h2>Ориентировъчни цени</h2><div class="heading-rule"></div><ul>{prices.map(price => <li>{price.name}: {priceText(price)}{price.note && ` (${price.note})`}</li>)}</ul>{vatText() && <p>{vatText()}</p>}</div></section>}
+    <ServiceFaq faqs={faqs} />
+    <ServiceRelated entries={related} />
+    <section class="floor-bottom"><div class="home-container"><h2>Безплатен оглед на обекта</h2><ServiceActions phone={phone} quote={quote} /></div></section>
+  </main>
+  <Footer />
+</Layout>

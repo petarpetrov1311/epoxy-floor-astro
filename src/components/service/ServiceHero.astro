@@ -1,0 +1,12 @@
+---
+import ServiceActions from './ServiceActions.astro';
+const { page, hero, phone, quote } = Astro.props;
+---
+<header class="floor-hero">
+  {hero && <img src={hero.src} alt={hero.alt} width={hero.w} height={hero.h} fetchpriority="high" />}
+  <div class="home-container floor-hero-content">
+    <nav aria-label="Път до страницата" class="breadcrumbs"><a href="/">Начало</a><span aria-hidden="true">/</span><a href="/nastilki">Настилки</a><span aria-hidden="true">/</span><span>{page.navLabel || page.title}</span></nav>
+    <h1>{page.title}</h1>{page.subtitle && <p class="floor-subtitle">{page.subtitle}</p>}
+    <ServiceActions phone={phone} quote={quote} />
+  </div>
+</header>

@@ -1,4 +1,6 @@
 ---
+import FloorPage from '../../components/landing/FloorPage.astro';
+import ApplicationPage from '../../components/landing/ApplicationPage.astro';
 import ServicePageLayout from '../../components/landing/ServicePageLayout.jsx';
 import MobileServiceGallery from '../../components/landing/MobileServiceGallery.jsx';
 import PhotoThumbnailSlider from '../../components/landing/PhotoThumbnailSlider.jsx';
@@ -9,29 +11,34 @@ import Layout from '../../layouts/Layout.astro';
 import { services } from '../../data/services.js';
 
 export function getStaticPaths() {
-  return [
-    'hranitelno-vkusova',
-    'proizvodstva-i-skladove',
-    'parking-i-garaji',
-    'terasi-i-hidroizolacii',
-    'terasi-i-ploski-pokrivi',
-    'dvor-i-otkriti-chasti',
-    'igrishta-i-sportni-saorazhenia',
-    'mortel',
-    'mandri-i-klanici',
-    'dekorativni',
+  const documents = import.meta.glob('../../../handoff/content/{nastilki,applications}/*.md', { eager: true });
+  const seen = new Map();
+  const modern = Object.entries(documents).flatMap(([path, document]) => {
+    const id = path.split('/').pop().replace('.md', '');
+    const slugs = document.frontmatter.type === 'application' ? [document.frontmatter.slug] : [...new Set([id, document.frontmatter.slug])];
+    return slugs.map(slug => {
+      if (seen.has(slug)) throw new Error(`Duplicate route /nastilki/${slug}: ${seen.get(slug)} and ${path}`);
+      seen.set(slug, path);
+      return { params: { slug }, props: { document } };
+    });
+  });
+  const occupied = new Set(modern.map(route => route.params.slug));
+  const legacy = [
     'mnogoslojni',
-  ].map((slug) => ({ params: { slug } }));
+  ].filter(slug => !occupied.has(slug)).map((slug) => ({ params: { slug }, props: {} }));
+  return [...modern, ...legacy];
 }
 
+const { document } = Astro.props;
 const service = services[Astro.params.slug];
 ---
 
-<Layout title={`${service.title} | Epoxy Floors`}>
+<!-- Both Markdown collections render complete HTML; only the unmatched original system retains its legacy layout. -->
+{document ? (document.frontmatter.type === 'application' ? <ApplicationPage document={document} /> : <FloorPage document={document} />) : <Layout title={`${service.title} | Epoxy Floors`}>
   <Navbar />
   <ServicePageLayout {...service}>
     <MobileServiceGallery slot="mobileGallery" title={service.title} image={service.image} gallery={service.gallery} client:visible />
     {service.gallery?.length > 0 && <PhotoThumbnailSlider images={service.gallery} altPrefix={service.title} client:visible />}
   </ServicePageLayout>
   <Footer />
-</Layout>
+</Layout>}

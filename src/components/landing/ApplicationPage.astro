@@ -1,0 +1,11 @@
+---
+import ServicePageShell from '../service/ServicePageShell.astro';
+import { serviceIdentity } from '../../lib/floor-content.mjs';
+import { Check } from 'lucide-react';
+const { document } = Astro.props;
+const page = document.frontmatter;
+const entry = serviceIdentity(page);
+---
+<ServicePageShell document={document} entry={entry}>
+  {page.keyBenefit && <div slot="summary" class="application-benefit"><div class="home-container"><Check size={24} aria-hidden="true" /><p>{page.keyBenefit}</p></div></div>}
+</ServicePageShell>

@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-const { title = 'Epoxy Floors | Подови настилки', description = 'Индустриални и декоративни епоксидни подови настилки.' } = Astro.props;
+const { title = 'Epoxy Floors | Подови настилки', description = 'Индустриални и декоративни епоксидни подови настилки.', seo } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,6 +14,23 @@ const { title = 'Epoxy Floors | Подови настилки', description = '�
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+        {seo && <>
+          <link rel="canonical" href={seo.canonical} />
+          <meta name="robots" content={seo.robots} />
+          <meta property="og:title" content={seo.og.title} />
+          <meta property="og:description" content={seo.og.description} />
+          <meta property="og:type" content={seo.og.type} />
+          <meta property="og:url" content={seo.canonical} />
+          <meta property="og:locale" content={seo.og.locale} />
+          <meta property="og:site_name" content={seo.og.site_name} />
+          {seo.og.image && <>
+            <meta property="og:image" content={new URL(seo.og.image, seo.canonical).href} />
+            <meta property="og:image:width" content={seo.og.imageWidth} />
+            <meta property="og:image:height" content={seo.og.imageHeight} />
+            <meta property="og:image:alt" content={seo.og.imageAlt} />
+          </>}
+          <script type="application/ld+json" set:html={JSON.stringify(seo.ld[0]).replaceAll('<', '\\u003c')} />
+        </>}
 	</head>
 	<body>
 		<slot />

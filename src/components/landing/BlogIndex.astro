@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../landing/Navbar.astro';
+import Footer from '../landing/Footer.jsx';
+import { ArrowRight, Clock } from 'lucide-react';
+import { publishedBlogEntries, dateISO, dateLabel } from '../../lib/blog-content.mjs';
+import { buildSeo, SITE } from '../../lib/floor-seo.mjs';
+import '../../styles/home.css';
+const seo = buildSeo('hub', { title: 'Блог', seoTitle: 'Блог — избор и поддръжка на настилки | EPOXY FLOORS', description: 'Практични ръководства и сравнения за избор, изпълнение и поддръжка на подови настилки.' }, '/blog');
+seo.ld[0]['@graph'].push({ '@type': 'ItemList', itemListElement: publishedBlogEntries.map((entry, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + entry.url, name: entry.data.title })) });
+---
+<Layout title={seo.title} description={seo.description} seo={seo}>
+<Navbar /><main><header class="blog-index-hero"><div class="home-container"><h1>Блог</h1><p>Практични теми за избор, изпълнение и поддръжка на подови настилки.</p></div></header><section class="home-section" aria-label="Блог статии"><div class="home-container"><div class="blog-posts">{publishedBlogEntries.map(entry => <article class="blog-card"><a href={entry.url} class="blog-card-link">{entry.image && <img src={entry.image.src} alt={entry.image.alt} width={entry.image.w} height={entry.image.h} loading="lazy" />}<div class="blog-card-copy"><div class="blog-card-meta"><span>{entry.category}</span><time datetime={dateISO(entry.data.pubDate)}>{dateLabel(entry.data.pubDate)}</time><span><Clock size={14} aria-hidden="true" />{entry.readTime}</span></div><h2>{entry.data.title}</h2><p>{entry.data.description}</p><span class="blog-read">Прочети повече <ArrowRight size={18} aria-hidden="true" /></span></div></a></article>)}</div>{publishedBlogEntries.length === 0 && <p>Все още няма публикувани статии.</p>}</div></section></main><Footer />
+</Layout>
+<style>
+ .blog-index-hero { background: #1A1A2E; color: white; padding-block: 64px; }
+ h1 { font-size: clamp(36px,4vw,56px); font-weight: 700; }
+ .blog-index-hero p { max-width: 65ch; margin-top: 20px; font-size: 16px; line-height: 1.75; }
+ .blog-posts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+ .blog-card { border: 1px solid #DCE0E5; border-radius: 6px; overflow: hidden; transition: box-shadow 180ms ease-in-out,border-color 180ms ease-in-out; }
+ .blog-card:hover { box-shadow: 0 10px 24px rgb(26 26 46 / .12); border-color: #F5A824; }
+ .blog-card-link { display: flex; flex-direction: column; height: 100%; }
+ .blog-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+ .blog-card-copy { display: flex; flex: 1; flex-direction: column; padding: 28px; }
+ .blog-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 13px; line-height: 1.5; }
+ .blog-card-meta > span { display: flex; gap: 6px; align-items: center; }
+ .blog-card-meta > span:first-child { font-weight: 600; }
+ h2 { margin-block: 16px; font-size: 24px; font-weight: 700; line-height: 1.3; }
+ .blog-card-copy p { font-size: 16px; line-height: 1.7; margin-bottom: 24px; }
+ .blog-read { display: flex; align-items: center; gap: 10px; margin-top: auto; font-size: 14px; font-weight: 600; }
+ svg { color: #F5A824; }
+ @media(max-width:767px) { .blog-posts { grid-template-columns: 1fr; } .blog-card-copy { padding: 24px; } }
+</style>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CheckCircle, Send } from 'lucide-react';
 
 const initialFormState = {
@@ -10,11 +10,19 @@ const initialFormState = {
   website: ''
 };
 
-export default function QuoteForm() {
+export default function QuoteForm({ systems = [], applications = [] }) {
   const [form, setForm] = useState(initialFormState);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [selectedSystem, setSelectedSystem] = useState('');
+  const [selectedApplication, setSelectedApplication] = useState('');
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('sistema');
+    if (systems.some(system => system.id === requested)) setSelectedSystem(requested);
+    const requestedApplication = new URLSearchParams(window.location.search).get('prilozhenie');
+    if (applications.some(application => application.id === requestedApplication)) setSelectedApplication(requestedApplication);
+  }, [systems, applications]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +35,7 @@ export default function QuoteForm() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify({ ...form, message: [systems.find(system => system.id === selectedSystem)?.label, applications.find(application => application.id === selectedApplication)?.label, form.message].filter(Boolean).join('\n\n') })
       });
 
       const result = await response.json().catch(() => ({}));
@@ -145,6 +153,8 @@ export default function QuoteForm() {
       </div>
 
       <div className="md:col-span-2">
+        {systems.length > 0 && <div className="mb-6"><label htmlFor="quote-system" className="mb-1.5 block text-sm font-medium text-foreground">Система</label><select id="quote-system" name="sistema" value={selectedSystem} onChange={event => setSelectedSystem(event.target.value)} className="w-full rounded border border-border bg-white px-4 py-3 text-sm text-foreground"><option value="">Изберете система</option>{systems.map(system => <option key={system.id} value={system.id}>{system.label}</option>)}</select></div>}
+        {applications.length > 0 && <div className="mb-6"><label htmlFor="quote-application" className="mb-1.5 block text-sm font-medium text-foreground">Вид обект</label><select id="quote-application" name="prilozhenie" value={selectedApplication} onChange={event => setSelectedApplication(event.target.value)} className="w-full rounded border border-border bg-white px-4 py-3 text-sm text-foreground"><option value="">Изберете вид обект</option>{applications.map(application => <option key={application.id} value={application.id}>{application.label}</option>)}</select></div>}
         <label htmlFor="quote-message" className="mb-1.5 block text-sm font-medium text-foreground">
           Опишете Вашия обект <span className="text-primary">*</span>
         </label>

@@ -2,5 +2,57 @@
   "framework": "astro",
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/nastilki/parking-i-garaji",
+      "destination": "/nastilki/parkingi-i-garazhi",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/parking-i-garaji/",
+      "destination": "/nastilki/parkingi-i-garazhi",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/mandri-i-klanici",
+      "destination": "/nastilki/mandri-i-klanitsi",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/mandri-i-klanici/",
+      "destination": "/nastilki/mandri-i-klanitsi",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/igrishta-i-sportni-saorazhenia",
+      "destination": "/nastilki/igrishta-i-sportni-saorazheniya",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/igrishta-i-sportni-saorazhenia/",
+      "destination": "/nastilki/igrishta-i-sportni-saorazheniya",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/terasi-i-hidroizolacii",
+      "destination": "/nastilki/terasi-i-ploski-pokrivi",
+      "statusCode": 301
+    },
+    {
+      "source": "/nastilki/terasi-i-hidroizolacii/",
+      "destination": "/nastilki/terasi-i-ploski-pokrivi",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogove",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blogove/",
+      "destination": "/blog",
+      "statusCode": 301
+    }
+  ]
 }
