@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/landing/Navbar.astro';
+import Footer from '../../components/landing/Footer.jsx';
+import { Content, frontmatter as page, getHeadings } from '../../../handoff/content/nastilki/epoksidni.md';
+import { ArrowRight, Check, Phone, ChevronDown } from 'lucide-react';
+import '../../styles/home.css';
+const headings = getHeadings().filter(heading => heading.depth === 2);
+---
+<Layout title={page.seoTitle} description={page.description}>
+  <Navbar />
+  <main>
+    <header class="floor-hero">
+      <img src="/images/projects/oborudvane1.jpg" alt="Безфугова индустриална настилка в производствено помещение" width="1600" height="1000" fetchpriority="high" />
+      <div class="home-container floor-hero-content">
+        <nav aria-label="Път до страницата" class="breadcrumbs"><a href="/">Начало</a><span aria-hidden="true">/</span><span>{page.navLabel}</span></nav>
+        <h1>{page.title}</h1><p class="floor-subtitle">{page.subtitle}</p>
+        <div class="hero-actions"><a class="home-button" href="/#contact">Заявете безплатен оглед <ArrowRight size={18} aria-hidden="true" /></a><a class="home-button secondary" href="#technical-content">Разгледайте системите</a></div>
+      </div>
+    </header>
+    <div class="floor-features"><ul class="home-container">{page.features.map(feature => <li><Check size={20} aria-hidden="true" /><span>{feature}</span></li>)}</ul></div>
+    <div class="home-container floor-layout">
+      <aside>
+        <nav aria-label="На тази страница" class="floor-contents"><h2>На тази страница</h2>{headings.map(heading => <a href={`#${heading.slug}`}>{heading.text}<ArrowRight size={16} aria-hidden="true" /></a>)}<a href="#faq">Често задавани въпроси <ArrowRight size={16} aria-hidden="true" /></a></nav>
+        <div class="floor-call"><h2>Заявете безплатен оглед</h2><a href="tel:+359898512776"><Phone size={18} aria-hidden="true" />+359 898 512 776</a><a class="home-button" href="/#contact">Заявка за оферта <ArrowRight size={18} aria-hidden="true" /></a></div>
+      </aside>
+      <article id="technical-content" class="floor-prose"><Content /></article>
+    </div>
+    <section class="floor-applications"><div class="home-container"><h2>Приложения</h2><div class="heading-rule"></div><ul>{page.applications.map(application => <li><Check size={20} aria-hidden="true" />{application}</li>)}</ul></div></section>
+    <section id="faq" class="home-section problem-section"><div class="home-container faq-container"><h2>Често задавани въпроси</h2><div class="heading-rule"></div>{page.faqs.map(faq => <details class="home-faq"><summary>{faq.q}<ChevronDown size={20} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div></section>
+  </main>
+  <Footer />
+</Layout>
+<style>
+  .floor-hero { position: relative; isolation: isolate; color: white; background: #1A1A2E; }
+  .floor-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .floor-hero::before { content: ''; position: absolute; inset: 0; background: rgb(26 26 46 / .8); z-index: -1; }
+  .floor-hero-content { padding-block: 32px 72px; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; margin-bottom: 56px; }
+  .breadcrumbs a { text-decoration: underline; text-underline-offset: 4px; }
+  h1 { max-width: 850px; font-size: clamp(34px,4.5vw,60px); font-weight: 700; line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
+  .floor-subtitle { max-width: 700px; margin-top: 20px; font-size: 20px; line-height: 1.5; }
+  .floor-features { background: #1A1A2E; color: white; border-top: 1px solid rgb(255 255 255 / .18); }
+  .floor-features ul { display: flex; flex-wrap: wrap; gap: 20px 32px; padding-block: 28px; }
+  .floor-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; }
+  .floor-features svg { color: #F5A824; flex-shrink: 0; }
+  .floor-layout { display: grid; grid-template-columns: 264px minmax(0,1fr); gap: 64px; padding-block: 64px 80px; align-items: start; }
+  aside { position: sticky; top: 110px; }
+  .floor-contents { border: 1px solid #DCE0E5; border-radius: 4px; padding: 24px; }
+  aside h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .floor-contents a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px; border-top: 1px solid #DCE0E5; font-size: 14px; line-height: 1.5; transition: background-color 180ms ease-in-out; }
+  .floor-contents a:hover { background: #F3F5F6; text-decoration: underline; text-underline-offset: 4px; }
+  .floor-contents svg { color: #F5A824; flex-shrink: 0; }
+  .floor-call { margin-top: 24px; padding: 24px; background: #F3F5F6; border-radius: 4px; }
+  .floor-call > a { display: flex; align-items: center; gap: 10px; min-height: 48px; font-size: 14px; font-weight: 600; }
+  .floor-call .home-button { margin-top: 16px; padding-inline: 12px; }
+  .floor-prose { min-width: 0; font-size: 16px; line-height: 1.8; }
+  .floor-prose :global(p) { margin-block: 16px; max-width: 75ch; }
+  .floor-prose :global(> p:first-child) { margin-top: 0; padding-bottom: 28px; border-bottom: 1px solid #DCE0E5; font-size: 18px; line-height: 1.75; }
+  .floor-prose :global(h2) { margin: 52px 0 24px; font-size: clamp(26px,2.6vw,34px); font-weight: 700; line-height: 1.25; text-wrap: balance; }
+  .floor-prose :global(h2::after) { content: ''; display: block; margin-top: 20px; width: 56px; height: 3px; background: #F5A824; }
+  .floor-prose :global(h3) { margin: 32px 0 16px; font-size: 22px; font-weight: 700; line-height: 1.4; }
+  .floor-prose :global(table) { display: block; width: 100%; overflow-x: auto; margin-block: 28px; border: 1px solid #DCE0E5; border-radius: 4px; font-size: 14px; line-height: 1.6; }
+  .floor-prose :global(th) { background: #1A1A2E; color: white; text-align: left; font-weight: 600; min-width: 140px; }
+  .floor-prose :global(th),.floor-prose :global(td) { padding: 16px; border-bottom: 1px solid #DCE0E5; vertical-align: top; }
+  .floor-prose :global(tr:nth-child(even)) { background: #F3F5F6; }
+  .floor-applications { background: #1A1A2E; color: white; padding-block: 48px; }
+  .floor-applications h2 { font-size: 30px; font-weight: 700; }
+  .floor-applications ul { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
+  .floor-applications li { display: flex; align-items: flex-start; gap: 12px; font-size: 16px; }
+  .floor-applications svg { color: #F5A824; flex-shrink: 0; }
+  @media(max-width: 1023px) { .floor-layout { grid-template-columns: 220px minmax(0,1fr); gap: 32px; } .floor-applications ul { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+  @media(max-width: 767px) { .floor-hero-content { padding-block: 24px 48px; } .breadcrumbs { margin-bottom: 32px; } .floor-layout { grid-template-columns: 1fr; gap: 40px; padding-block: 40px 52px; } aside { position: static; } .floor-call { display: none; } .floor-contents { padding: 20px; } .floor-prose :global(> p:first-child) { font-size: 16px; } .floor-subtitle { font-size: 18px; } .floor-applications ul { grid-template-columns: 1fr; } }
+</style>

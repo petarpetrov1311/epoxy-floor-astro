@@ -3,28 +3,25 @@ import { frontmatter as home } from '../../../handoff/content/pages/home.md';
 import { ArrowRight, Check, Factory, House, ShieldCheck, ChevronDown } from 'lucide-react';
 const images = ['/images/projects/oborudvane1.jpg', '/images/projects/about-us1.jpg'];
 const icons = [Factory, House];
-const destinations = ['#vid', '#prilozhenie', '/nastilki/dekorativni', '/nastilki/dekorativni#galeria'];
-const problemLinks = ['/nastilki/parking-i-garaji', '/nastilki/proizvodstva-i-skladove', '/nastilki/proizvodstva-i-skladove', '/nastilki/hranitelno-vkusova', '/nastilki/hranitelno-vkusova', '/nastilki/mortel'];
 ---
 <section id="services" class="home-section">
   <div class="home-container">
-    <h2>Индустриални и декоративни настилки</h2><div class="heading-rule"></div>
+    <h2>{home.dualEntry.title}</h2><div class="heading-rule"></div>
     <div class="entry-grid">
       {home.dualEntry.entries.map((entry, index) => { const Icon = icons[index]; return (
         <article class="entry-card">
           <img src={images[index]} alt={entry.title} width="800" height="480" loading="lazy" />
           <div class="entry-copy"><Icon className="entry-icon" size={28} aria-hidden="true" /><h3>{entry.title}</h3><p>{entry.text}</p>
-            <div class="entry-links">{entry.links.map((link, i) => <a href={destinations[index * 2 + i]}>{link.label}<ArrowRight size={18} aria-hidden="true" /></a>)}</div>
+            <div class="entry-links">{entry.links.map(link => <a href={link.href}>{link.label}<ArrowRight size={18} aria-hidden="true" /></a>)}</div>
           </div>
         </article>
       ); })}
     </div>
-    <div id="vid" class="system-links"><h3>Системи по вид настилка</h3><p>Епоксидни, полиуретанови и PU-циментни системи, мортел и декоративни настилки.</p><a href="/nastilki/proizvodstva-i-skladove">Индустриални системи <ArrowRight size={18} aria-hidden="true" /></a><a href="/nastilki/mortel">Мортел <ArrowRight size={18} aria-hidden="true" /></a><a href="/nastilki/dekorativni">Декоративни системи <ArrowRight size={18} aria-hidden="true" /></a></div>
   </div>
 </section>
 <section id="problems" class="home-section problem-section">
   <div class="home-container"><h2>Какъв проблем трябва да реши вашият под?</h2><div class="heading-rule"></div>
-    <div class="problem-grid">{home.problemEntry.items.map((item, i) => <a href={problemLinks[i]}><span>{item.label}</span><ArrowRight size={20} aria-hidden="true" /></a>)}</div>
+    <div class="problem-grid">{home.problemEntry.items.map(item => <a href={`/${item.page}${item.anchor ? `#${item.anchor}` : ''}`}><span>{item.label}</span><ArrowRight size={20} aria-hidden="true" /></a>)}</div>
   </div>
 </section>
 <section id="why-choose-us" class="home-section why-section">

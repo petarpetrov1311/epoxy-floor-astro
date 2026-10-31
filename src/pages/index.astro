@@ -2,13 +2,7 @@
 import { frontmatter as home } from '../../handoff/content/pages/home.md';
 import HomeContent from '../components/landing/HomeContent.astro';
 import '../styles/home.css';
-import Services from '../components/landing/Services.jsx';
-import EpoxyTextures from '../components/landing/EpoxyTextures.astro';
-import Portfolio from '../components/landing/Portfolio.jsx';
-import About from '../components/landing/About.jsx';
-import Contact from '../components/landing/Contact.jsx';
 import QuoteForm from '../components/landing/QuoteForm.jsx';
-import PhotoThumbnailSlider from '../components/landing/PhotoThumbnailSlider.jsx';
 import Footer from '../components/landing/Footer.jsx';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/landing/Hero.astro';
@@ -19,19 +13,9 @@ import Navbar from '../components/landing/Navbar.astro';
   <Navbar />
   <main>
     <Hero />
-    <section id="stats" class="home-stats"><div class="home-container"><div><strong>20+</strong><span>години опит</span></div><div><strong>280 000</strong><span>кв.м положени настилки</span></div><div><strong>1 500</strong><span>завършени обекта</span></div><div><strong>5 години</strong><span>гаранция по договор</span></div></div></section>
+    <section id="stats" class="home-stats" aria-label="EPOXY FLOORS в числа"><div class="home-container">{home.stats.map(stat => <div><strong>{stat}</strong></div>)}</div></section>
     <HomeContent />
-    <div id="prilozhenie"><Services /></div>
-    <EpoxyTextures />
-    <Portfolio client:visible />
-    <About>
-      <PhotoThumbnailSlider
-        images={['/images/projects/about-us1.jpg', '/images/projects/about-us2.jpg', '/images/projects/oborudvane1.jpg', '/images/projects/oborudvane2.jpg', '/images/projects/parking.jpg', '/images/projects/img-3147-1-scaled.jpeg']}
-        altPrefix="Наш проект"
-        client:visible
-      />
-    </About>
-    <Contact><QuoteForm client:visible /></Contact>
+    <section id="contact" class="home-section"><div class="home-container faq-container"><h2>Заявка за оферта</h2><div class="heading-rule"></div><QuoteForm client:visible /></div></section>
   </main>
   <Footer />
 </Layout>

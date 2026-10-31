@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/landing/Navbar.astro';
+import Footer from '../components/landing/Footer.jsx';
+import { ArrowRight, ChevronDown, Phone } from 'lucide-react';
+import '../styles/home.css';
+
+const documents = import.meta.glob('../../handoff/content/pages/*.md', { eager: true });
+export function getStaticPaths() {
+  const documents = import.meta.glob('../../handoff/content/pages/*.md', { eager: true });
+  return Object.values(documents).filter((document: any) => document.frontmatter.slug !== 'home').map((document: any) => ({ params: { slug: document.frontmatter.slug }, props: { document } }));
+}
+const { document } = Astro.props;
+const { frontmatter: page, Content, getHeadings } = document;
+const headings = getHeadings().filter((heading: any) => heading.depth === 2);
+const images: Record<string, string> = {
+  'za-nas': '/images/projects/about-us2.jpg',
+  'tsena-nastilki': '/images/projects/oborudvane1.jpg',
+  'tehnologia-i-materiali': '/images/projects/oborudvane2.jpg',
+  'sravneniya': '/images/projects/parking.jpg',
+};
+const related = (page.related || []).flatMap((reference: string) => {
+  const target: any = Object.values(documents).find((entry: any) => `pages/${entry.frontmatter.slug}` === reference);
+  if (target) return [{ title: target.frontmatter.title, href: `/${target.frontmatter.slug}` }];
+  if (reference === 'nastilki/epoksidni') return [{ title: 'Епоксидни подови настилки', href: '/nastilki/epoksidni' }];
+  return [];
+});
+---
+<Layout title={page.seoTitle} description={page.description}>
+  <Navbar />
+  <main>
+    <header class="document-hero">
+      <img src={images[page.slug]} alt="" width="1600" height="1000" fetchpriority="high" />
+      <div class="home-container document-hero-content">
+        <nav aria-label="Път до страницата" class="document-breadcrumbs"><a href="/">Начало</a><span aria-hidden="true">/</span><span>{page.slug === 'tsena-nastilki' ? 'Цени' : page.title}</span></nav>
+        <h1>{page.title}</h1>{page.subtitle && <p>{page.subtitle}</p>}
+        <div class="hero-actions"><a class="home-button" href="/#contact">Заявете безплатен оглед <ArrowRight size={18} aria-hidden="true" /></a><a class="home-button secondary" href="#page-content">Прочетете повече</a></div>
+      </div>
+    </header>
+    <div class="home-container document-layout">
+      <aside class="document-aside"><nav aria-label="На тази страница"><h2>На тази страница</h2>{headings.map((heading: any) => <a href={`#${heading.slug}`}>{heading.text}<ArrowRight size={16} aria-hidden="true" /></a>)}{page.faqs?.length > 0 && <a href="#faq">Често задавани въпроси<ArrowRight size={16} aria-hidden="true" /></a>}</nav><a class="document-phone" href="tel:+359898512776"><Phone size={18} aria-hidden="true" />+359 898 512 776</a></aside>
+      <article id="page-content" class="document-prose"><Content /></article>
+    </div>
+    {page.faqs?.length > 0 && <section id="faq" class="home-section problem-section"><div class="home-container faq-container"><h2>Често задавани въпроси</h2><div class="heading-rule"></div>{page.faqs.map((faq: any) => <details class="home-faq"><summary>{faq.q}<ChevronDown size={20} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div></section>}
+    {related.length > 0 && <section class="home-section"><div class="home-container"><h2>Свързани страници</h2><div class="heading-rule"></div><div class="document-related">{related.map((entry: any) => <a href={entry.href}>{entry.title}<ArrowRight size={20} aria-hidden="true" /></a>)}</div></div></section>}
+  </main>
+  <Footer />
+</Layout>
+<style>
+  .document-hero { position: relative; isolation: isolate; background: #1A1A2E; color: white; }
+  .document-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .document-hero::before { content: ''; position: absolute; inset: 0; background: rgb(26 26 46 / .82); z-index: -1; }
+  .document-hero-content { padding-block: 28px 64px; }
+  .document-breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; font-size: 14px; }
+  .document-breadcrumbs a { text-decoration: underline; text-underline-offset: 4px; }
+  h1 { max-width: 980px; font-size: clamp(34px,4.3vw,56px); font-weight: 700; line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
+  .document-hero-content > p { margin-top: 20px; font-size: 20px; line-height: 1.5; }
+  .document-layout { display: grid; grid-template-columns: 260px minmax(0,1fr); gap: 64px; padding-block: 64px 80px; align-items: start; }
+  .document-aside { position: sticky; top: 110px; }
+  .document-aside nav { padding: 24px; border: 1px solid #DCE0E5; border-radius: 4px; }
+  .document-aside h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+  .document-aside nav a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px; border-top: 1px solid #DCE0E5; font-size: 14px; line-height: 1.5; transition: background-color 180ms ease-in-out; }
+  .document-aside nav a:hover { background: #F3F5F6; text-decoration: underline; text-underline-offset: 4px; }
+  .document-aside svg,.document-related svg { color: #F5A824; flex-shrink: 0; }
+  .document-phone { display: flex; gap: 12px; align-items: center; padding: 20px; margin-top: 24px; background: #1A1A2E; color: white; font-size: 14px; font-weight: 600; border-radius: 4px; }
+  .document-prose { min-width: 0; font-size: 16px; line-height: 1.8; }
+  .document-prose :global(p) { max-width: 75ch; margin-block: 20px; }
+  .document-prose :global(> :first-child) { margin-top: 0; }
+  .document-prose :global(h2) { margin: 48px 0 24px; font-size: clamp(26px,2.5vw,34px); line-height: 1.25; font-weight: 700; text-wrap: balance; }
+  .document-prose :global(h2::after) { content: ''; display: block; width: 56px; height: 3px; margin-top: 20px; background: #F5A824; }
+  .document-prose :global(h3) { margin: 32px 0 16px; font-size: 22px; font-weight: 700; line-height: 1.4; }
+  .document-prose :global(ul),.document-prose :global(ol) { padding-left: 24px; margin-block: 24px; }
+  .document-prose :global(ul) { list-style: disc; }
+  .document-prose :global(ol) { list-style: decimal; }
+  .document-prose :global(li) { padding-left: 8px; margin-block: 20px; }
+  .document-prose :global(li::marker) { color: #1F262E; font-weight: 700; }
+  .document-prose :global(table) { display: block; width: 100%; overflow-x: auto; margin-block: 28px; border: 1px solid #DCE0E5; border-radius: 4px; font-size: 14px; line-height: 1.6; }
+  .document-prose :global(th) { background: #1A1A2E; color: white; text-align: left; font-weight: 600; min-width: 140px; }
+  .document-prose :global(th),.document-prose :global(td) { padding: 16px; border-bottom: 1px solid #DCE0E5; vertical-align: top; }
+  .document-prose :global(tr:nth-child(even)) { background: #F3F5F6; }
+  .document-related { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+  .document-related a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px; border: 1px solid #DCE0E5; border-radius: 4px; font-size: 16px; font-weight: 600; transition: border-color 180ms ease-in-out, box-shadow 180ms ease-in-out; }
+  .document-related a:hover { border-color: #F5A824; box-shadow: 0 6px 18px rgb(26 26 46 / .08); }
+  @media(max-width: 1023px) { .document-layout { grid-template-columns: 220px minmax(0,1fr); gap: 32px; } }
+  @media(max-width: 767px) { .document-hero-content { padding-block: 24px 48px; } .document-breadcrumbs { margin-bottom: 32px; } .document-layout { grid-template-columns: 1fr; gap: 36px; padding-block: 40px 52px; } .document-aside { position: static; } .document-phone { display: none; } .document-related { grid-template-columns: 1fr; } }
+</style>

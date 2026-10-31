@@ -1,4 +1,5 @@
 export const serviceLinks = [
+  { label: 'Епоксидни настилки', href: '/nastilki/epoksidni' },
   { label: 'Тераси и плоски покриви', href: '/nastilki/terasi-i-ploski-pokrivi' },
   { label: 'Двор и открити части', href: '/nastilki/dvor-i-otkriti-chasti' },
   { label: 'Игрища и спортни съоръжения', href: '/nastilki/igrishta-i-sportni-saorazhenia' },

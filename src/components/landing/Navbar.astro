@@ -5,10 +5,12 @@ import { existsSync } from 'node:fs';
 const hasLogo = existsSync('public/images/site/logo-navbar.png');
 const links = [
   { href: '/#hero', label: 'Начало' },
-  { href: '/#projects', label: 'Проекти' },
+  { href: '/tsena-nastilki', label: 'Цени' },
+  { href: '/sravneniya', label: 'Сравнения' },
+  { href: '/tehnologia-i-materiali', label: 'Технология и материали' },
   { href: '/galeria', label: 'Галерия' },
   { href: '/blogove', label: 'Блогове' },
-  { href: '/#about', label: 'За нас' },
+  { href: '/za-nas', label: 'За нас' },
   { href: '/#contact', label: 'Контакти' },
 ];
 ---
@@ -31,7 +33,7 @@ const links = [
           </div>
         )}
       </a>
-      <div class="hidden xl:flex items-center gap-6">
+      <div class="hidden xl:flex items-center gap-4 whitespace-nowrap">
         <a href={links[0].href} class="nav-link text-sm font-medium transition-colors duration-200">{links[0].label}</a>
         <details class="relative desktop-services">
           <summary class="nav-link flex items-center gap-1 text-sm font-medium cursor-pointer">Настилки <ChevronDown className="w-4 h-4" /></summary>
@@ -53,7 +55,7 @@ const links = [
                 {serviceLinks.map(link => <a href={link.href} class="block py-1.5 text-sm text-muted-foreground hover:text-primary">{link.label}</a>)}
               </div>
             </details>
-            {links.slice(1).map(link => <a href={link.href} class="block py-2 text-foreground hover:text-primary font-medium">{link.label}</a>)}
+            {links.slice(1).map(link => <a href={link.href} class="block py-3 text-foreground hover:text-primary font-medium">{link.label}</a>)}
             <a href="/#contact" class="block w-full text-center bg-primary text-foreground px-6 py-3 text-sm font-semibold rounded mt-2">Заяви Оферта</a>
             <div class="pt-3 border-t border-border space-y-2">
               <a href="tel:+359898512776" class="flex items-center gap-2 text-sm text-muted-foreground"><Phone className="w-4 h-4 text-primary" />+359 898 512 776</a>

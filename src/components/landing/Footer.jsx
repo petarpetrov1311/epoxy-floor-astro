@@ -17,8 +17,10 @@ const serviceLinks = [
 const navLinks = [
   { label: 'Начало', href: '/#hero' },
   { label: 'Настилки', href: '/#services' },
-  { label: 'Проекти', href: '/#projects' },
-  { label: 'За нас', href: '/#about' },
+  { label: 'За нас', href: '/za-nas' },
+  { label: 'Цени', href: '/tsena-nastilki' },
+  { label: 'Сравнения', href: '/sravneniya' },
+  { label: 'Технология и материали', href: '/tehnologia-i-materiali' },
   { label: 'Контакти', href: '/#contact' },
 ];
 

@@ -1,28 +1,37 @@
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { galleryProjects } from '../src/data/gallery.js';
 import { services } from '../src/data/services.js';
 import { faqs } from '../src/data/faqs.js';
 
 // Run after the production build. These checks inspect HTML before any JS runs.
 const read = path => readFileSync(join('dist', path), 'utf8');
 const home = read('index.html');
+for (const [slug, faqCount] of [['za-nas', 4], ['tsena-nastilki', 5], ['tehnologia-i-materiali', 4], ['sravneniya', 3]]) {
+  const html = read(`${slug}/index.html`);
+  assert(!html.includes('<astro-island'), `${slug} must render without React hydration`);
+  assert.equal((html.match(/<details class="home-faq"/g) || []).length, faqCount, `${slug} must prerender every FAQ`);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `${slug} must have one main heading`);
+  const article = html.match(/<article\b[\s\S]*?<\/article>/)?.[0];
+  assert(article?.includes('<h2'), `${slug} must include its Markdown body in initial HTML`);
+}
+const epoxy = read('nastilki/epoksidni/index.html');
+assert(!epoxy.includes('<astro-island'), 'Epoxy flooring content must render without React hydration');
+assert.equal((epoxy.match(/<details class="home-faq"/g) || []).length, 7, 'All seven epoxy FAQs must be prerendered');
+assert(epoxy.includes('<table>') && epoxy.includes('6–12 mm'), 'Technical comparison must be present in initial HTML');
 const islands = [...home.matchAll(/<astro-island\b[^>]*component-url="([^"]+)"/g)].map(match => match[1]);
-assert.equal(islands.length, 3, 'Only portfolio, photo slider and quote form should hydrate');
-for (const name of ['Portfolio', 'PhotoThumbnailSlider', 'QuoteForm']) {
+assert.equal(islands.length, 1, 'Only the quote form should hydrate');
+for (const name of ['QuoteForm']) {
   assert(islands.some(url => url.includes(name)), `${name} island is missing`);
 }
-for (const value of ['20', '80\u00a0000', '1200']) {
+for (const value of ['20+ години', '280 000 кв.м', '1 500 обекта', 'Немски и холандски материали', 'Гаранция 5 години по договор']) {
   const stats = home.match(/<section id="stats"[\s\S]*?<\/section>/)?.[0];
   assert(stats?.includes(value), `Final statistic ${value} must exist before hydration`);
 }
-for (const project of galleryProjects) assert(home.includes(project.title), `Missing project: ${project.title}`);
 assert(home.includes('name="message"'), 'Quote form must be prerendered');
-assert(home.includes('alt="Наш проект 1"'), 'Nested photo island must be prerendered');
 assert(!home.includes('style="opacity:0'), 'Initial content must not be hidden by animation');
 const sectionIds = [...home.matchAll(/<section id="([^"]+)"/g)].map(match => match[1]);
-assert.deepEqual(sectionIds, ['hero', 'stats', 'textures', 'services', 'projects', 'about', 'why-choose-us', 'contact']);
+assert.deepEqual(sectionIds, ['hero', 'stats', 'services', 'problems', 'why-choose-us', 'benefits', 'faq', 'contact']);
 for (const image of ['logo-navbar.png', 'logo-hero-footer.png']) {
   assert(home.includes(image), `Missing original logo: ${image}`);
   assert(readFileSync(join('dist/images/site', image)).length > 0);
@@ -57,4 +66,4 @@ for (const path of htmlFiles('dist')) {
   }
   pages++;
 }
-console.log(`Static HTML checks passed for ${pages} pages; homepage has three isolated React islands.`);
+console.log(`Static HTML checks passed for ${pages} pages; homepage hydrates only the quote form.`);

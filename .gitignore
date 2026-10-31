@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+
+.claude/
+.codex/
+.impeccable/
+.rollback-safety/
+.agents/
+handoff/
