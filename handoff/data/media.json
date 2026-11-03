@@ -1,0 +1,2505 @@
+{
+  "generated": "2026-10-26T14:06:33.613Z",
+  "note": "Само снимките, които се ползват на страниците. Пътищата (src, thumb) са от public/: media/ от пакета → public/media/. Снимките на казусите са в frontmatter (snimki), не тук.",
+  "photos": [
+    {
+      "file": "efl-dekorativna-nastilka-banketna-zala.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-banketna-zala",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-banketna-zala.webp",
+      "alt": "Гланцова декоративна епоксидна настилка в черно, сиво и бяло в банкетна зала с колони",
+      "title": "Декоративна епоксидна настилка – банкетна зала | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 177,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-banketna-zala.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-dekorativna-nastilka-cheren-mramor.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-cheren-mramor",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-cheren-mramor.webp",
+      "alt": "Детайл от текстурата на декоративна епоксидна настилка с черно-бял мраморен ефект",
+      "title": "Текстура на декоративна епоксидна настилка | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 180,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-cheren-mramor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-dekorativna-nastilka-foaye.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-foaye",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-foaye.webp",
+      "alt": "Бяла декоративна епоксидна настилка с мраморни жилки във входно фоайе със стъклена витрина",
+      "title": "Декоративна епоксидна настилка – фоайе | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 136,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-foaye.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-dekorativna-nastilka-hol.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-hol",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-hol.webp",
+      "alt": "Декоративна епоксидна настилка с ефект на бял мрамор в дневна на жилище",
+      "title": "Декоративна епоксидна настилка в жилище | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 145,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-hol.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-dekorativna-nastilka-magazin.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-magazin",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-magazin.webp",
+      "alt": "Декоративна епоксидна подова настилка с ефект на бял мрамор в търговско помещение",
+      "title": "Декоративна епоксидна настилка – търговско помещение | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 86,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-magazin.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-dekorativna-nastilka-zala-arki.webp",
+      "cat": "dekorativni-nastilki",
+      "slug": "dekorativna-nastilka-zala-arki",
+      "src": "/media/dekorativni-nastilki/efl-dekorativna-nastilka-zala-arki.webp",
+      "alt": "Декоративна епоксидна подова настилка с мраморен ефект в голяма зала с арки",
+      "title": "Декоративна епоксидна настилка – зала с арки | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 209,
+      "thumb": "/media/thumb/dekorativni-nastilki/efl-dekorativna-nastilka-zala-arki.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-administrativen-koridor.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-administrativen-koridor",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-administrativen-koridor.webp",
+      "alt": "Сива епоксидна настилка с чипсове в административна сграда",
+      "title": "Епоксидна настилка за административна сграда | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 143,
+      "taken": "2024-12",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-administrativen-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-betonni-blokove-holker.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-betonni-blokove-holker",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-betonni-blokove-holker.webp",
+      "alt": "Сива епоксидна настилка с холкер при стена от бетонни блокове",
+      "title": "Епоксидна настилка с холкер | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 141,
+      "taken": "2026-05",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-betonni-blokove-holker.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-bezhova-chipsove-blizak-plan.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-bezhova-chipsove-blizak-plan",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-bezhova-chipsove-blizak-plan.webp",
+      "alt": "Бежова епоксидна настилка с чипсове в близък план",
+      "title": "Епоксидна настилка – близък план | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 136,
+      "taken": "2026-03",
+      "cluster": "obekt-05",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-bezhova-chipsove-blizak-plan.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-bezhova-staya.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-bezhova-staya",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-bezhova-staya.webp",
+      "alt": "Бежова гланцова епоксидна настилка в стая",
+      "title": "Бежова епоксидна настилка за помещение | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 136,
+      "taken": "2026-03",
+      "cluster": "obekt-05",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-bezhova-staya.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-byalo-pomeshtenie.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-byalo-pomeshtenie",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-byalo-pomeshtenie.webp",
+      "alt": "Сива епоксидна настилка с чипсове в бяло помещение",
+      "title": "Епоксидна настилка за търговски обект | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 102,
+      "taken": "2025-11",
+      "cluster": "obekt-06",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-byalo-pomeshtenie.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-chipsove-detayl-siva.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-chipsove-detayl-siva",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-detayl-siva.webp",
+      "alt": "Детайл от сива епоксидна настилка с чипсове",
+      "title": "Сива епоксидна настилка – детайл | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 129,
+      "taken": "2026-09",
+      "cluster": "obekt-08",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-detayl-siva.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-chipsove-holker-stena.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-chipsove-holker-stena",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-holker-stena.webp",
+      "alt": "Сива епоксидна настилка с чипсове и холкер по бяла стена",
+      "title": "Епоксидна настилка с чипсове и холкер | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 45,
+      "taken": "2025-11",
+      "cluster": "obekt-06",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-holker-stena.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-chipsove-holker.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-chipsove-holker",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-holker.webp",
+      "alt": "Сива епоксидна настилка с чипсове до холкер",
+      "title": "Сива епоксидна настилка с холкер | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 80,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-chipsove-holker.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-bel.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-bel",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bel.webp",
+      "alt": "Светла епоксидна настилка в празен гараж",
+      "title": "Светла епоксидна настилка за гараж | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 116,
+      "taken": "2025-03",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bel.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-bezhov-ramka.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-bezhov-ramka",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bezhov-ramka.webp",
+      "alt": "Бежова епоксидна настилка с тъмна рамка в гараж",
+      "title": "Двуцветна епоксидна настилка за гараж | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 127,
+      "taken": "2025-04",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bezhov-ramka.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-bezhov.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-bezhov",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bezhov.webp",
+      "alt": "Светлобежова епоксидна настилка в гараж",
+      "title": "Бежова епоксидна настилка за гараж | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 145,
+      "taken": "2025-08",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-bezhov.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-chipsove-glants.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-chipsove-glants",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove-glants.webp",
+      "alt": "Гланцова епоксидна настилка с плътни чипсове в гараж",
+      "title": "Епоксидна настилка с плътни чипсове | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 135,
+      "taken": "2024-09",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove-glants.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-chipsove-holker.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-chipsove-holker",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove-holker.webp",
+      "alt": "Сива епоксидна настилка с чипсове и холкер в гараж",
+      "title": "Епоксидна настилка и холкер в гараж | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 136,
+      "taken": "2025-06",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove-holker.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-chipsove.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-chipsove",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove.webp",
+      "alt": "Сива епоксидна настилка с декоративни чипсове в гараж",
+      "title": "Епоксидна настилка с чипсове за гараж | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 131,
+      "taken": "2026-06",
+      "cluster": "obekt-10",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-chipsove.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/epoksidni",
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-led-osvetlenie.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-led-osvetlenie",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-led-osvetlenie.webp",
+      "alt": "Сива епоксидна настилка в гараж с LED осветление",
+      "title": "Епоксидна настилка за гараж с LED осветление | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 130,
+      "taken": "2026-09",
+      "cluster": "obekt-08",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-led-osvetlenie.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-garazh-sekttsionna-vrata.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-garazh-sekttsionna-vrata",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-sekttsionna-vrata.webp",
+      "alt": "Сива епоксидна настилка в гараж със секционна врата",
+      "title": "Епоксидна настилка за домашен гараж | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 123,
+      "taken": "2023-01",
+      "cluster": "obekt-21",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-garazh-sekttsionna-vrata.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-golyama-hala.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-golyama-hala",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-golyama-hala.webp",
+      "alt": "Новоположена епоксидна настилка в голяма хала",
+      "title": "Епоксидна настилка в хала | EPOXY FLOORS",
+      "w": 1600,
+      "h": 778,
+      "orient": "landscape",
+      "kb": 41,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-golyama-hala.webp",
+      "tw": 640,
+      "th": 311,
+      "pages": [
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-golyama-proizvodstvena-hala.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-golyama-proizvodstvena-hala",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-golyama-proizvodstvena-hala.webp",
+      "alt": "Гланцова епоксидна настилка в голяма производствена хала",
+      "title": "Епоксидна настилка за голяма хала | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 148,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-golyama-proizvodstvena-hala.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-hala-proizvodstvo.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-hala-proizvodstvo",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-hala-proizvodstvo.webp",
+      "alt": "Гланцова светлосива епоксидна настилка в производствена хала",
+      "title": "Епоксидна настилка за производствена хала | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 149,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-hala-proizvodstvo.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/epoksidni",
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-hala-razlivane.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-hala-razlivane",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-hala-razlivane.webp",
+      "alt": "Прясно положена епоксидна настилка в хала",
+      "title": "Новоположена епоксидна настилка | EPOXY FLOORS",
+      "w": 1179,
+      "h": 870,
+      "orient": "landscape",
+      "kb": 37,
+      "taken": "2025-01",
+      "cluster": "obekt-11",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-hala-razlivane.webp",
+      "tw": 640,
+      "th": 472,
+      "pages": [
+        "nastilki/epoksidni",
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-hladilno-pomeshtenie.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-hladilno-pomeshtenie",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-hladilno-pomeshtenie.webp",
+      "alt": "Сива епоксидна настилка в хладилно помещение",
+      "title": "Епоксидна настилка за хладилно помещение | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 133,
+      "taken": "2026-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-hladilno-pomeshtenie.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-hranitelen-tseh-chipsove.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-hranitelen-tseh-chipsove",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-hranitelen-tseh-chipsove.webp",
+      "alt": "Сива епоксидна настилка с чипсове в хранителен цех",
+      "title": "Епоксидна настилка за хранителен цех | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 129,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-hranitelen-tseh-chipsove.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-izba-holker.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-izba-holker",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-izba-holker.webp",
+      "alt": "Епоксиден холкер при каменна стена в изба",
+      "title": "Холкер в каменна изба | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 141,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-izba-holker.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-izba-kanal.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-izba-kanal",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-izba-kanal.webp",
+      "alt": "Светла епоксидна настилка с отводнителен канал в каменна изба",
+      "title": "Епоксидна настилка в изба | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 148,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-izba-kanal.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-kafyava-apartament.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-kafyava-apartament",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-kafyava-apartament.webp",
+      "alt": "Кафява гланцова епоксидна настилка в апартамент",
+      "title": "Кафява епоксидна настилка за жилище | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 139,
+      "taken": "2024-04",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-kafyava-apartament.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-koridor-chipsove.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-koridor-chipsove",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-koridor-chipsove.webp",
+      "alt": "Гланцова епоксидна настилка с декоративни чипсове в коридор",
+      "title": "Епоксидна настилка с чипсове | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 120,
+      "taken": "2023-04",
+      "cluster": "obekt-09",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-koridor-chipsove.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-logistichen-tsentar.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-logistichen-tsentar",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-logistichen-tsentar.webp",
+      "alt": "Бяла гланцова епоксидна настилка в логистичен център",
+      "title": "Епоксидна настилка за логистичен център | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 148,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-logistichen-tsentar.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-markirovka-detayl.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-markirovka-detayl",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-markirovka-detayl.webp",
+      "alt": "Детайл от жълта маркировъчна линия върху епоксидна настилка",
+      "title": "Маркировка на епоксидна настилка | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 147,
+      "taken": "2024-12",
+      "cluster": "obekt-13",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-markirovka-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/epoksidni",
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-metalna-hala.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-metalna-hala",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-metalna-hala.webp",
+      "alt": "Сива епоксидна настилка с чипсове в метална хала",
+      "title": "Епоксидна настилка за метална хала | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 145,
+      "taken": "2026-10",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-metalna-hala.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-ofis-pregradi.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-ofis-pregradi",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-ofis-pregradi.webp",
+      "alt": "Епоксидна настилка в офисно пространство с прегради",
+      "title": "Епоксидна настилка в офис | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 143,
+      "taken": "2023-05",
+      "cluster": "obekt-09",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-ofis-pregradi.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/dom-i-ofis"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-podzemen-garazh-boksove.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-podzemen-garazh-boksove",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-podzemen-garazh-boksove.webp",
+      "alt": "Епоксидна настилка пред гаражни боксове в подземен паркинг",
+      "title": "Епоксидна настилка за паркинг | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 148,
+      "taken": "2026-07",
+      "cluster": "obekt-19",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-podzemen-garazh-boksove.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/epoksidni",
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-podzemen-garazh-koridor.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-podzemen-garazh-koridor",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-podzemen-garazh-koridor.webp",
+      "alt": "Гланцова сива епоксидна настилка в коридор на подземен гараж",
+      "title": "Епоксидна настилка за гаражи | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 140,
+      "taken": "2026-07",
+      "cluster": "obekt-19",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-podzemen-garazh-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/parkingii-i-garazhi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-proizvodstvena-hala-siva.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-proizvodstvena-hala-siva",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-proizvodstvena-hala-siva.webp",
+      "alt": "Сива гланцова епоксидна настилка в производствена хала",
+      "title": "Епоксидна настилка за производство | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 142,
+      "taken": "2025-10",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-proizvodstvena-hala-siva.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-1.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-1",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-1.webp",
+      "alt": "Външна спортна площадка с епоксидно покритие в зелено",
+      "title": "Спортна площадка с епоксидно покритие | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 118,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-1.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-2.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-2",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-2.webp",
+      "alt": "Спортна площадка с бяла маркировка до училищна сграда",
+      "title": "Спортна площадка за училище | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 102,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-2.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-3.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-3",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-3.webp",
+      "alt": "Маркировка на игрище върху зелено епоксидно покритие",
+      "title": "Маркировка на спортна площадка | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 109,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-3.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-4.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-4",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-4.webp",
+      "alt": "Зелено покритие на училищно игрище с маркировка",
+      "title": "Покритие за училищно игрище | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 102,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-4.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-5.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-5",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-5.webp",
+      "alt": "Спортна площадка с централна линия пред училище",
+      "title": "Спортна площадка – централна линия | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 92,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-5.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-6.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-6",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-6.webp",
+      "alt": "Външно игрище със зелено покритие и бели линии",
+      "title": "Външно игрище с покритие | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 86,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-6.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-7.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-7",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-7.webp",
+      "alt": "Наказателно поле на игрище с епоксидно покритие",
+      "title": "Игрище за мини футбол | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 93,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-7.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-sportna-ploshtadka-8.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-sportna-ploshtadka-8",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-8.webp",
+      "alt": "Маркировка на наказателно поле на училищно игрище",
+      "title": "Маркировка на игрище | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 98,
+      "taken": "2024-10",
+      "cluster": "obekt-01",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-sportna-ploshtadka-8.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/igrishta"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-stalbi-chipsove.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-stalbi-chipsove",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-stalbi-chipsove.webp",
+      "alt": "Епоксидна настилка с чипсове на стъпала",
+      "title": "Епоксидна настилка за стъпала | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 128,
+      "taken": "2024-07",
+      "cluster": "obekt-12",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-stalbi-chipsove.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/epoksidni"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-terasa-kashta.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-terasa-kashta",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-terasa-kashta.webp",
+      "alt": "Сива епоксидна настилка с чипсове на покрита тераса",
+      "title": "Епоксидна настилка за тераса | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 147,
+      "taken": "2026-07",
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-terasa-kashta.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-epoksidna-nastilka-vinarna-rezervoari.webp",
+      "cat": "epoksidni-nastilki",
+      "slug": "epoksidna-nastilka-vinarna-rezervoari",
+      "src": "/media/epoksidni-nastilki/efl-epoksidna-nastilka-vinarna-rezervoari.webp",
+      "alt": "Светла епоксидна настилка във винарна с резервоари",
+      "title": "Епоксидна настилка за винарна | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 132,
+      "thumb": "/media/thumb/epoksidni-nastilki/efl-epoksidna-nastilka-vinarna-rezervoari.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/hranitelna-promishlenost"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-dalag-balkon.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-dalag-balkon",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-dalag-balkon.webp",
+      "alt": "Хидроизолация на дълъг балкон с панорамна гледка",
+      "title": "Хидроизолация на балкон | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 141,
+      "taken": "2023-01",
+      "cluster": "obekt-14",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-dalag-balkon.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-okolo-baseyn.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-okolo-baseyn",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-okolo-baseyn.webp",
+      "alt": "Хидроизолация на площадка около басейн",
+      "title": "Хидроизолация около басейн | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 127,
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-okolo-baseyn.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-pokrivna-terasa.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-pokrivna-terasa",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-pokrivna-terasa.webp",
+      "alt": "Сива хидроизолация на покривна тераса",
+      "title": "Хидроизолация на покривна тераса | EPOXY FLOORS",
+      "w": 1400,
+      "h": 1050,
+      "orient": "landscape",
+      "kb": 130,
+      "taken": "2023-01",
+      "cluster": "obekt-14",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-pokrivna-terasa.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-rozova-terasa.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-rozova-terasa",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-rozova-terasa.webp",
+      "alt": "Хидроизолация в розов цвят на тераса с метален парапет",
+      "title": "Цветна хидроизолация на тераса | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 131,
+      "taken": "2023-01",
+      "cluster": "obekt-14",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-rozova-terasa.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-tekstura-chipsove.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-tekstura-chipsove",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-tekstura-chipsove.webp",
+      "alt": "Текстура на синьо-сива хидроизолация с декоративни чипсове",
+      "title": "Текстура на хидроизолация | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 83,
+      "taken": "2025-06",
+      "cluster": "obekt-07",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-tekstura-chipsove.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-terasa-chipsove.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-terasa-chipsove",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-terasa-chipsove.webp",
+      "alt": "Сива хидроизолация на тераса с декоративни чипсове",
+      "title": "Хидроизолация с декоративни чипсове | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 144,
+      "taken": "2025-06",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-terasa-chipsove.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-terasa-detayl.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-terasa-detayl",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-terasa-detayl.webp",
+      "alt": "Детайл от хидроизолация на тераса с декоративни чипсове",
+      "title": "Хидроизолация на тераса – детайл | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 112,
+      "taken": "2025-06",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-terasa-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-terasa-gradska-gledka.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-terasa-gradska-gledka",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-terasa-gradska-gledka.webp",
+      "alt": "Хидроизолация на тераса с изглед към града",
+      "title": "Хидроизолация на тераса | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 120,
+      "taken": "2025-06",
+      "cluster": "obekt-07",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-terasa-gradska-gledka.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-hidroizolatsiya-terasa-otvodnitel.webp",
+      "cat": "hidroizolatsii",
+      "slug": "hidroizolatsiya-terasa-otvodnitel",
+      "src": "/media/hidroizolatsii/efl-hidroizolatsiya-terasa-otvodnitel.webp",
+      "alt": "Хидроизолация на тераса с подов отводнител",
+      "title": "Хидроизолация на тераса с отводнител | EPOXY FLOORS",
+      "w": 995,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 175,
+      "taken": "2025-06",
+      "cluster": "obekt-07",
+      "thumb": "/media/thumb/hidroizolatsii/efl-hidroizolatsiya-terasa-otvodnitel.webp",
+      "tw": 640,
+      "th": 772,
+      "pages": [
+        "nastilki/hidroizolatsii",
+        "applications/terasi-i-pokrivi"
+      ]
+    },
+    {
+      "file": "efl-holker-betonna-stena.webp",
+      "cat": "holkeri",
+      "slug": "holker-betonna-stena",
+      "src": "/media/holkeri/efl-holker-betonna-stena.webp",
+      "alt": "Холкер при бетонна стена в промишлено помещение",
+      "title": "Холкер при бетонна стена | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 175,
+      "taken": "2026-05",
+      "thumb": "/media/thumb/holkeri/efl-holker-betonna-stena.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-detayl.webp",
+      "cat": "holkeri",
+      "slug": "holker-detayl",
+      "src": "/media/holkeri/efl-holker-detayl.webp",
+      "alt": "Детайл от холкер между бетонен под и стенен панел",
+      "title": "Холкер – детайл | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 141,
+      "taken": "2025-05",
+      "thumb": "/media/thumb/holkeri/efl-holker-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-kafyav.webp",
+      "cat": "holkeri",
+      "slug": "holker-kafyav",
+      "src": "/media/holkeri/efl-holker-kafyav.webp",
+      "alt": "Кафяв епоксиден холкер при прехода от под към стена",
+      "title": "Кафяв епоксиден холкер | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 132,
+      "taken": "2024-04",
+      "thumb": "/media/thumb/holkeri/efl-holker-kafyav.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-kolazh.webp",
+      "cat": "holkeri",
+      "slug": "holker-kolazh",
+      "src": "/media/holkeri/efl-holker-kolazh.webp",
+      "alt": "Колаж с епоксидни холкери в различни цветове при прехода между под и стена",
+      "title": "Епоксидни холкери – проекти | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1600,
+      "orient": "square",
+      "kb": 139,
+      "thumb": "/media/thumb/holkeri/efl-holker-kolazh.webp",
+      "tw": 640,
+      "th": 640,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-kvartsov-pyasak.webp",
+      "cat": "holkeri",
+      "slug": "holker-kvartsov-pyasak",
+      "src": "/media/holkeri/efl-holker-kvartsov-pyasak.webp",
+      "alt": "Холкер от кварцов пясък и епоксидна смола при метална стена",
+      "title": "Холкер от кварцов пясък | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 139,
+      "taken": "2025-05",
+      "thumb": "/media/thumb/holkeri/efl-holker-kvartsov-pyasak.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-pod-i-stena.webp",
+      "cat": "holkeri",
+      "slug": "holker-pod-i-stena",
+      "src": "/media/holkeri/efl-holker-pod-i-stena.webp",
+      "alt": "Хигиенен холкер, свързващ пода и стената",
+      "title": "Хигиенен холкер | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 151,
+      "taken": "2026-05",
+      "thumb": "/media/thumb/holkeri/efl-holker-pod-i-stena.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-holker-sandvich-panel.webp",
+      "cat": "holkeri",
+      "slug": "holker-sandvich-panel",
+      "src": "/media/holkeri/efl-holker-sandvich-panel.webp",
+      "alt": "Холкер от кварцов мортел при сандвич панел",
+      "title": "Холкер при сандвич панел | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 145,
+      "taken": "2024-02",
+      "thumb": "/media/thumb/holkeri/efl-holker-sandvich-panel.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-alea-kam-kashta.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-alea-kam-kashta",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-alea-kam-kashta.webp",
+      "alt": "Каменен килим на алея към къща с метална порта",
+      "title": "Каменен килим за алея | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 187,
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-alea-kam-kashta.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/dvor",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-alea-kiparis.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-alea-kiparis",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-alea-kiparis.webp",
+      "alt": "Алея с каменен килим между огради към къща",
+      "title": "Каменен килим – алея към къща | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 199,
+      "taken": "2025-09",
+      "cluster": "obekt-02",
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-alea-kiparis.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-bezhov-mramor-detayl.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-bezhov-mramor-detayl",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-bezhov-mramor-detayl.webp",
+      "alt": "Бежов мраморен каменен килим в близък план",
+      "title": "Мраморен каменен килим | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 155,
+      "taken": "2026-08",
+      "cluster": "obekt-16",
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-bezhov-mramor-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-bezhov.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-bezhov",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-bezhov.webp",
+      "alt": "Бежов каменен килим от мраморни камъчета",
+      "title": "Бежов каменен килим | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 175,
+      "taken": "2026-08",
+      "cluster": "obekt-15",
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-bezhov.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/dekorativni",
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-cheren-i-siv.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-cheren-i-siv",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-cheren-i-siv.webp",
+      "alt": "Каменен килим от черни и сиви камъчета",
+      "title": "Черно-сив каменен килим | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 204,
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-cheren-i-siv.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-dvor-izgled.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-dvor-izgled",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-dvor-izgled.webp",
+      "alt": "Завършен каменен килим в двор, заснет от ниска перспектива",
+      "title": "Завършен каменен килим | EPOXY FLOORS",
+      "w": 1200,
+      "h": 900,
+      "orient": "landscape",
+      "kb": 157,
+      "taken": "2026-08",
+      "cluster": "obekt-16",
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-dvor-izgled.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-dvor-zavedenie.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-dvor-zavedenie",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-dvor-zavedenie.webp",
+      "alt": "Сив каменен килим в двор на заведение",
+      "title": "Каменен килим за двор | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 171,
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-dvor-zavedenie.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-dvutsveten.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-dvutsveten",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-dvutsveten.webp",
+      "alt": "Двуцветен каменен килим в сиво и теракота пред търговски обект",
+      "title": "Двуцветен каменен килим | EPOXY FLOORS",
+      "w": 583,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 146,
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-dvutsveten.webp",
+      "tw": 583,
+      "th": 1200,
+      "pages": [
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-kamenen-kilim-kolazh.webp",
+      "cat": "kamenen-kilim",
+      "slug": "kamenen-kilim-kolazh",
+      "src": "/media/kamenen-kilim/efl-kamenen-kilim-kolazh.webp",
+      "alt": "Колаж с каменен килим – текстура, полагане и завършена алея",
+      "title": "Каменен килим – проекти | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1200,
+      "orient": "square",
+      "kb": 198,
+      "thumb": "/media/thumb/kamenen-kilim/efl-kamenen-kilim-kolazh.webp",
+      "tw": 640,
+      "th": 640,
+      "pages": [
+        "applications/dvor"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-detayl.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-detayl",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-detayl.webp",
+      "alt": "Детайл от гланцова мортелна настилка с кварцов пясък",
+      "title": "Мортелна настилка – детайл | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 150,
+      "taken": "2025-06",
+      "cluster": "obekt-17",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/mortel",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-hala-koloni.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-hala-koloni",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-hala-koloni.webp",
+      "alt": "Сива мортелна настилка в хала с колони",
+      "title": "Мортелна настилка – хала | EPOXY FLOORS",
+      "w": 1179,
+      "h": 880,
+      "orient": "landscape",
+      "kb": 32,
+      "taken": "2025-01",
+      "cluster": "obekt-24",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-hala-koloni.webp",
+      "tw": 640,
+      "th": 478,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-kolazh.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-kolazh",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-kolazh.webp",
+      "alt": "Колаж с мортелна настилка в склад, детайли от повърхността и полагане",
+      "title": "Мортелни настилки – проекти | EPOXY FLOORS",
+      "w": 1400,
+      "h": 1400,
+      "orient": "square",
+      "kb": 145,
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-kolazh.webp",
+      "tw": 640,
+      "th": 640,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-logistichen-sklad.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-logistichen-sklad",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-logistichen-sklad.webp",
+      "alt": "Гланцова мортелна настилка в логистичен склад",
+      "title": "Мортелна настилка – логистичен склад | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 142,
+      "taken": "2025-04",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-logistichen-sklad.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-polagane.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-polagane",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-polagane.webp",
+      "alt": "Полагане на мортелна настилка с маламашка",
+      "title": "Полагане на мортелна настилка | EPOXY FLOORS",
+      "w": 1179,
+      "h": 657,
+      "orient": "landscape",
+      "kb": 56,
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-polagane.webp",
+      "tw": 640,
+      "th": 357,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-proizvodstven-tseh.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-proizvodstven-tseh",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-proizvodstven-tseh.webp",
+      "alt": "Жълта мортелна настилка с червена маркировка в производствен цех",
+      "title": "Мортелна настилка – производствен цех | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 148,
+      "taken": "2020-08",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-proizvodstven-tseh.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-sklad-koridor.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-sklad-koridor",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-sklad-koridor.webp",
+      "alt": "Мортелна настилка в коридор между складови стелажи",
+      "title": "Мортелна настилка – складов коридор | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 142,
+      "taken": "2025-04",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-sklad-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-sklad-stelazhi.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-sklad-stelazhi",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-sklad-stelazhi.webp",
+      "alt": "Мортелна епоксидна настилка в склад със стелажи",
+      "title": "Мортелна настилка – склад | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 143,
+      "taken": "2023-04",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-sklad-stelazhi.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-mortelna-nastilka-sklad.webp",
+      "cat": "mortelni-nastilki",
+      "slug": "mortelna-nastilka-sklad",
+      "src": "/media/mortelni-nastilki/efl-mortelna-nastilka-sklad.webp",
+      "alt": "Сива мортелна настилка в складово помещение с дневна светлина",
+      "title": "Мортелна настилка за склад | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 149,
+      "taken": "2023-04",
+      "thumb": "/media/thumb/mortelni-nastilki/efl-mortelna-nastilka-sklad.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/mortel"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-bezhova-hladilna-kamera.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-bezhova-hladilna-kamera",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-bezhova-hladilna-kamera.webp",
+      "alt": "Бежова полиуретанова настилка с чипсове и холкер в хладилна камера",
+      "title": "Бежова полиуретанова настилка | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 86,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-bezhova-hladilna-kamera.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-byala-hladilna-kamera.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-byala-hladilna-kamera",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-byala-hladilna-kamera.webp",
+      "alt": "Бяла полиуретанова настилка в хладилна камера",
+      "title": "Бяла полиуретанова настилка | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 88,
+      "taken": "2026-08",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-byala-hladilna-kamera.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-chervena-tseh-koridor",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
+      "alt": "Червена полиуретанова настилка в коридор на хранителен цех",
+      "title": "Полиуретанова настилка за хранителен цех | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 147,
+      "taken": "2026-08",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-chervena-tseh.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-chervena-tseh",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-chervena-tseh.webp",
+      "alt": "Червена полиуретанова настилка в месопреработвателен цех",
+      "title": "Червена полиуретанова настилка | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 179,
+      "taken": "2026-08",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-chervena-tseh.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-golyama-hala-glants.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-golyama-hala-glants",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-golyama-hala-glants.webp",
+      "alt": "Гланцова полиуретанова настилка в промишлена хала",
+      "title": "Гланцова полиуретанова настилка | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 139,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-golyama-hala-glants.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "pages/home"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-otvodnitelen-kanal",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
+      "alt": "Светла полиуретанова настилка с отводнителен канал в цех",
+      "title": "Полиуретанова настилка с канал | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 142,
+      "taken": "2026-03",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-proizvodstvena-zala-prozortsi.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-proizvodstvena-zala-prozortsi",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-proizvodstvena-zala-prozortsi.webp",
+      "alt": "Светлосива полиуретанова настилка в производствена зала с прозорци",
+      "title": "Полиуретанова настилка за производствена зала | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 144,
+      "taken": "2025-05",
+      "cluster": "obekt-25",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-proizvodstvena-zala-prozortsi.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "applications/proizvodstva-i-skladove"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-siva-koridor.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-siva-koridor",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-koridor.webp",
+      "alt": "Сива полиуретанова настилка в коридор",
+      "title": "Полиуретанова настилка за коридор | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 143,
+      "taken": "2025-08",
+      "cluster": "obekt-04",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-siva-tekstura-detayl",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+      "alt": "Детайл от матова сива полиуретанова настилка",
+      "title": "Полиуретанова настилка – детайл | EPOXY FLOORS",
+      "w": 750,
+      "h": 1000,
+      "orient": "portrait",
+      "kb": 201,
+      "taken": "2025-08",
+      "cluster": "obekt-04",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelen-holker-ugal",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+      "alt": "Зелен полиуретанов холкер в ъгъл на помещение",
+      "title": "Полиуретанов холкер в ъгъл | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 138,
+      "taken": "2024-09",
+      "cluster": "obekt-03",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/poliuretanovi",
+        "applications/hranitelna-promishlenost",
+        "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelena-hladilen-sklad.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelena-hladilen-sklad",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hladilen-sklad.webp",
+      "alt": "Зелена полиуретанова настилка в хладилен склад",
+      "title": "Полиуретанова настилка за хладилен склад | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 148,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hladilen-sklad.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/poliuretanovi"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelena-hranitelno-proizvodstvo",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
+      "alt": "Зелена полиуретанова настилка в хранително производство",
+      "title": "Полиуретанова настилка за хранително производство | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 144,
+      "taken": "2024-03",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelena-tekstura.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelena-tekstura",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tekstura.webp",
+      "alt": "Текстура на зелена противоплъзгаща полиуретанова настилка",
+      "title": "Противоплъзгаща полиуретанова настилка | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 242,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tekstura.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelena-tseh-kanal",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
+      "alt": "Зелена полиуретанова настилка с отводнителен канал в хранителен цех",
+      "title": "Полиуретанова настилка с отводнителен канал | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 149,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zelena-tseh-otvodnitel",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
+      "alt": "Зелена полиуретанова настилка в цех с подов отводнител",
+      "title": "Полиуретанова настилка за цех | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 147,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-zhalta-tekstura.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-zhalta-tekstura",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zhalta-tekstura.webp",
+      "alt": "Текстура на жълта полиуретанова настилка",
+      "title": "Жълта полиуретанова настилка – текстура | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 225,
+      "taken": "2024-02",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zhalta-tekstura.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "nastilki/pu-tsiment"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-ekip-promishlen-obekt.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-ekip-promishlen-obekt",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-ekip-promishlen-obekt.webp",
+      "alt": "Екип полага епоксидна настилка в промишлен обект",
+      "title": "Полагане в промишлен обект | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 147,
+      "taken": "2025-10",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-ekip-promishlen-obekt.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/za-nas"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-ekip-zhalt-epoksid.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-ekip-zhalt-epoksid",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-ekip-zhalt-epoksid.webp",
+      "alt": "Екип разстила жълта епоксидна настилка",
+      "title": "Екип при полагане на епоксид | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 134,
+      "taken": "2026-10",
+      "cluster": "obekt-18",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-ekip-zhalt-epoksid.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/za-nas"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-grundirane-fugi.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-grundirane-fugi",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-grundirane-fugi.webp",
+      "alt": "Грундиране на бетонна основа с обработени фуги",
+      "title": "Грундиране на основата | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 142,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-grundirane-fugi.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-kamenen-kilim-baseyn.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-kamenen-kilim-baseyn",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-kamenen-kilim-baseyn.webp",
+      "alt": "Полагане на каменен килим около басейн",
+      "title": "Полагане на каменен килим | EPOXY FLOORS",
+      "w": 1000,
+      "h": 750,
+      "orient": "landscape",
+      "kb": 183,
+      "taken": "2025-11",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-kamenen-kilim-baseyn.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/za-nas"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-kamenen-kilim-mistrii.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-kamenen-kilim-mistrii",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-kamenen-kilim-mistrii.webp",
+      "alt": "Разстилане на каменен килим с мистрии",
+      "title": "Разстилане на каменен килим | EPOXY FLOORS",
+      "w": 1200,
+      "h": 900,
+      "orient": "landscape",
+      "kb": 228,
+      "taken": "2025-11",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-kamenen-kilim-mistrii.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/za-nas"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-pochistvane-garazh.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-pochistvane-garazh",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-pochistvane-garazh.webp",
+      "alt": "Прахосмукиране на шлайфана бетонна основа в гараж",
+      "title": "Почистване на основа преди полагане | EPOXY FLOORS",
+      "w": 1600,
+      "h": 1200,
+      "orient": "landscape",
+      "kb": 133,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-pochistvane-garazh.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-premahvane-star-pod.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-premahvane-star-pod",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-premahvane-star-pod.webp",
+      "alt": "Премахване на старото подово покритие преди полагане",
+      "title": "Демонтаж на стара настилка | EPOXY FLOORS",
+      "w": 1200,
+      "h": 900,
+      "orient": "landscape",
+      "kb": 141,
+      "taken": "2025-06",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-premahvane-star-pod.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-remont-pukanini.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-remont-pukanini",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-remont-pukanini.webp",
+      "alt": "Шлайфане и запълване на пукнатини в основата на гараж",
+      "title": "Ремонт на пукнатини в основата | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 132,
+      "taken": "2026-09",
+      "cluster": "obekt-08",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-remont-pukanini.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-hala.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-hala",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-hala.webp",
+      "alt": "Двама работници шлайфат бетонен под в хала",
+      "title": "Шлайфане на бетон в хала | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 143,
+      "taken": "2025-10",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-hala.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali",
+        "pages/za-nas"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-kamenna-stena.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-kamenna-stena",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-kamenna-stena.webp",
+      "alt": "Шлайфане на пода покрай каменна стена",
+      "title": "Шлайфане до каменна облицовка | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 139,
+      "taken": "2026-08",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-kamenna-stena.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-koridor.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-koridor",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-koridor.webp",
+      "alt": "Шлайфане на мозаечен под в коридор преди полагане",
+      "title": "Шлайфане на стар мозаечен под | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 148,
+      "taken": "2026-08",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-koridor.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-krai.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-krai",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-krai.webp",
+      "alt": "Шлайфане на ръба на пода до стената с ръчен шлайф",
+      "title": "Шлайфане на основа покрай стени | EPOXY FLOORS",
+      "w": 1400,
+      "h": 1050,
+      "orient": "landscape",
+      "kb": 143,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-krai.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-mashina.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-mashina",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-mashina.webp",
+      "alt": "Машина за шлайфане на бетон с индустриална прахосмукачка",
+      "title": "Машинно шлайфане на бетон | EPOXY FLOORS",
+      "w": 1050,
+      "h": 1400,
+      "orient": "portrait",
+      "kb": 128,
+      "taken": "2026-07",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-mashina.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-obshtestvena-sgrada.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-obshtestvena-sgrada",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-obshtestvena-sgrada.webp",
+      "alt": "Шлайфане на под в коридор на обществена сграда",
+      "title": "Шлайфане на под в обществена сграда | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
+      "orient": "portrait",
+      "kb": 133,
+      "taken": "2026-10",
+      "cluster": "obekt-18",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-obshtestvena-sgrada.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-shlayfane-terasa.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-shlayfane-terasa",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-shlayfane-terasa.webp",
+      "alt": "Шлайфане на външна площадка с машина за бетон",
+      "title": "Шлайфане на външна площадка | EPOXY FLOORS",
+      "w": 900,
+      "h": 1200,
+      "orient": "portrait",
+      "kb": 134,
+      "taken": "2026-04",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-shlayfane-terasa.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-valyak-epoksid.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-valyak-epoksid",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-valyak-epoksid.webp",
+      "alt": "Нанасяне на сив епоксиден слой с валяк в помещение",
+      "title": "Нанасяне на епоксид с валяк | EPOXY FLOORS",
+      "w": 1400,
+      "h": 1050,
+      "orient": "landscape",
+      "kb": 145,
+      "taken": "2025-09",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-valyak-epoksid.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    },
+    {
+      "file": "efl-polagane-nastilka-zapalvane-fugi.webp",
+      "cat": "raboten-protses",
+      "slug": "polagane-nastilka-zapalvane-fugi",
+      "src": "/media/raboten-protses/efl-polagane-nastilka-zapalvane-fugi.webp",
+      "alt": "Запълнени фуги и нанесен грунд преди финишния слой",
+      "title": "Запълване на фуги преди полагане | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1600,
+      "orient": "portrait",
+      "kb": 125,
+      "taken": "2026-06",
+      "thumb": "/media/thumb/raboten-protses/efl-polagane-nastilka-zapalvane-fugi.webp",
+      "tw": 640,
+      "th": 853,
+      "pages": [
+        "pages/tehnologia-i-materiali"
+      ]
+    }
+  ],
+  "pages": {
+    "nastilki/epoksidni": {
+      "hero": "efl-epoksidna-nastilka-hala-proizvodstvo.webp",
+      "gallery": [
+        "efl-epoksidna-nastilka-bezhova-chipsove-blizak-plan.webp",
+        "efl-epoksidna-nastilka-byalo-pomeshtenie.webp",
+        "efl-epoksidna-nastilka-chipsove-detayl-siva.webp",
+        "efl-epoksidna-nastilka-garazh-chipsove.webp",
+        "efl-epoksidna-nastilka-hala-razlivane.webp",
+        "efl-epoksidna-nastilka-koridor-chipsove.webp",
+        "efl-epoksidna-nastilka-markirovka-detayl.webp",
+        "efl-epoksidna-nastilka-stalbi-chipsove.webp",
+        "efl-epoksidna-nastilka-garazh-sekttsionna-vrata.webp",
+        "efl-epoksidna-nastilka-podzemen-garazh-boksove.webp"
+      ]
+    },
+    "nastilki/poliuretanovi": {
+      "hero": "efl-poliuretanova-nastilka-zelena-hladilen-sklad.webp",
+      "gallery": [
+        "efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+        "efl-poliuretanova-nastilka-siva-koridor.webp",
+        "efl-poliuretanova-nastilka-proizvodstvena-zala-prozortsi.webp",
+        "efl-poliuretanova-nastilka-bezhova-hladilna-kamera.webp",
+        "efl-poliuretanova-nastilka-byala-hladilna-kamera.webp",
+        "efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
+        "efl-poliuretanova-nastilka-chervena-tseh.webp",
+        "efl-poliuretanova-nastilka-golyama-hala-glants.webp"
+      ]
+    },
+    "nastilki/mortel": {
+      "hero": "efl-mortelna-nastilka-proizvodstven-tseh.webp",
+      "gallery": [
+        "efl-mortelna-nastilka-detayl.webp",
+        "efl-mortelna-nastilka-hala-koloni.webp",
+        "efl-mortelna-nastilka-kolazh.webp",
+        "efl-mortelna-nastilka-logistichen-sklad.webp",
+        "efl-mortelna-nastilka-polagane.webp",
+        "efl-mortelna-nastilka-sklad-koridor.webp",
+        "efl-mortelna-nastilka-sklad-stelazhi.webp",
+        "efl-mortelna-nastilka-sklad.webp"
+      ]
+    },
+    "nastilki/dekorativni": {
+      "hero": "efl-dekorativna-nastilka-banketna-zala.webp",
+      "gallery": [
+        "efl-kamenen-kilim-alea-kiparis.webp",
+        "efl-kamenen-kilim-bezhov-mramor-detayl.webp",
+        "efl-kamenen-kilim-bezhov.webp",
+        "efl-dekorativna-nastilka-cheren-mramor.webp",
+        "efl-dekorativna-nastilka-foaye.webp",
+        "efl-dekorativna-nastilka-hol.webp",
+        "efl-dekorativna-nastilka-magazin.webp",
+        "efl-dekorativna-nastilka-zala-arki.webp"
+      ]
+    },
+    "nastilki/hidroizolatsii": {
+      "hero": "efl-hidroizolatsiya-pokrivna-terasa.webp",
+      "gallery": [
+        "efl-hidroizolatsiya-tekstura-chipsove.webp",
+        "efl-hidroizolatsiya-dalag-balkon.webp",
+        "efl-hidroizolatsiya-okolo-baseyn.webp",
+        "efl-hidroizolatsiya-terasa-chipsove.webp",
+        "efl-hidroizolatsiya-terasa-detayl.webp",
+        "efl-hidroizolatsiya-terasa-gradska-gledka.webp",
+        "efl-hidroizolatsiya-rozova-terasa.webp",
+        "efl-hidroizolatsiya-terasa-otvodnitel.webp"
+      ]
+    },
+    "nastilki/pu-tsiment": {
+      "hero": null,
+      "gallery": [
+        "efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+        "efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
+        "efl-poliuretanova-nastilka-chervena-tseh.webp",
+        "efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
+        "efl-poliuretanova-nastilka-zelena-tekstura.webp",
+        "efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
+        "efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
+        "efl-poliuretanova-nastilka-zhalta-tekstura.webp"
+      ]
+    },
+    "nastilki/esd": {
+      "hero": null,
+      "gallery": []
+    },
+    "applications/proizvodstva-i-skladove": {
+      "hero": "efl-epoksidna-nastilka-logistichen-tsentar.webp",
+      "gallery": [
+        "efl-epoksidna-nastilka-markirovka-detayl.webp",
+        "efl-epoksidna-nastilka-hala-razlivane.webp",
+        "efl-poliuretanova-nastilka-proizvodstvena-zala-prozortsi.webp",
+        "efl-epoksidna-nastilka-golyama-hala.webp",
+        "efl-epoksidna-nastilka-golyama-proizvodstvena-hala.webp",
+        "efl-epoksidna-nastilka-hala-proizvodstvo.webp",
+        "efl-epoksidna-nastilka-metalna-hala.webp",
+        "efl-epoksidna-nastilka-proizvodstvena-hala-siva.webp"
+      ]
+    },
+    "applications/hranitelna-promishlenost": {
+      "hero": "efl-epoksidna-nastilka-vinarna-rezervoari.webp",
+      "gallery": [
+        "efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+        "efl-epoksidna-nastilka-betonni-blokove-holker.webp",
+        "efl-epoksidna-nastilka-chipsove-holker-stena.webp",
+        "efl-epoksidna-nastilka-chipsove-holker.webp",
+        "efl-epoksidna-nastilka-hladilno-pomeshtenie.webp",
+        "efl-epoksidna-nastilka-hranitelen-tseh-chipsove.webp",
+        "efl-epoksidna-nastilka-izba-holker.webp",
+        "efl-epoksidna-nastilka-izba-kanal.webp"
+      ]
+    },
+    "applications/mandri": {
+      "hero": "efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
+      "gallery": [
+        "efl-poliuretanova-nastilka-zelen-holker-ugal.webp",
+        "efl-holker-betonna-stena.webp",
+        "efl-holker-detayl.webp",
+        "efl-holker-kafyav.webp",
+        "efl-holker-kolazh.webp",
+        "efl-holker-kvartsov-pyasak.webp",
+        "efl-holker-pod-i-stena.webp",
+        "efl-holker-sandvich-panel.webp"
+      ]
+    },
+    "applications/parkingii-i-garazhi": {
+      "hero": "efl-epoksidna-nastilka-podzemen-garazh-boksove.webp",
+      "gallery": [
+        "efl-epoksidna-nastilka-garazh-chipsove.webp",
+        "efl-epoksidna-nastilka-garazh-led-osvetlenie.webp",
+        "efl-epoksidna-nastilka-podzemen-garazh-koridor.webp",
+        "efl-epoksidna-nastilka-garazh-bel.webp",
+        "efl-epoksidna-nastilka-garazh-bezhov-ramka.webp",
+        "efl-epoksidna-nastilka-garazh-bezhov.webp",
+        "efl-epoksidna-nastilka-garazh-chipsove-glants.webp",
+        "efl-epoksidna-nastilka-garazh-chipsove-holker.webp"
+      ]
+    },
+    "applications/dom-i-ofis": {
+      "hero": "efl-epoksidna-nastilka-kafyava-apartament.webp",
+      "gallery": [
+        "efl-epoksidna-nastilka-ofis-pregradi.webp",
+        "efl-dekorativna-nastilka-banketna-zala.webp",
+        "efl-dekorativna-nastilka-cheren-mramor.webp",
+        "efl-dekorativna-nastilka-foaye.webp",
+        "efl-dekorativna-nastilka-hol.webp",
+        "efl-dekorativna-nastilka-magazin.webp",
+        "efl-dekorativna-nastilka-zala-arki.webp",
+        "efl-epoksidna-nastilka-bezhova-staya.webp"
+      ]
+    },
+    "applications/dvor": {
+      "hero": "efl-kamenen-kilim-dvor-izgled.webp",
+      "gallery": [
+        "efl-kamenen-kilim-alea-kiparis.webp",
+        "efl-kamenen-kilim-bezhov.webp",
+        "efl-kamenen-kilim-bezhov-mramor-detayl.webp",
+        "efl-kamenen-kilim-alea-kam-kashta.webp",
+        "efl-kamenen-kilim-cheren-i-siv.webp",
+        "efl-kamenen-kilim-dvor-zavedenie.webp",
+        "efl-kamenen-kilim-dvutsveten.webp",
+        "efl-kamenen-kilim-kolazh.webp"
+      ]
+    },
+    "applications/terasi-i-pokrivi": {
+      "hero": "efl-hidroizolatsiya-okolo-baseyn.webp",
+      "gallery": [
+        "efl-hidroizolatsiya-tekstura-chipsove.webp",
+        "efl-hidroizolatsiya-dalag-balkon.webp",
+        "efl-epoksidna-nastilka-terasa-kashta.webp",
+        "efl-hidroizolatsiya-terasa-chipsove.webp",
+        "efl-hidroizolatsiya-terasa-detayl.webp",
+        "efl-hidroizolatsiya-terasa-gradska-gledka.webp",
+        "efl-hidroizolatsiya-pokrivna-terasa.webp",
+        "efl-hidroizolatsiya-terasa-otvodnitel.webp"
+      ]
+    },
+    "applications/igrishta": {
+      "hero": null,
+      "gallery": [
+        "efl-epoksidna-nastilka-sportna-ploshtadka-1.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-2.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-3.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-4.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-5.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-6.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-7.webp",
+        "efl-epoksidna-nastilka-sportna-ploshtadka-8.webp"
+      ]
+    },
+    "pages/tehnologia-i-materiali": {
+      "hero": "efl-polagane-nastilka-valyak-epoksid.webp",
+      "gallery": [
+        "efl-polagane-nastilka-premahvane-star-pod.webp",
+        "efl-polagane-nastilka-shlayfane-hala.webp",
+        "efl-polagane-nastilka-shlayfane-kamenna-stena.webp",
+        "efl-polagane-nastilka-shlayfane-koridor.webp",
+        "efl-polagane-nastilka-shlayfane-krai.webp",
+        "efl-polagane-nastilka-shlayfane-mashina.webp",
+        "efl-polagane-nastilka-shlayfane-obshtestvena-sgrada.webp",
+        "efl-polagane-nastilka-shlayfane-terasa.webp",
+        "efl-polagane-nastilka-pochistvane-garazh.webp",
+        "efl-polagane-nastilka-remont-pukanini.webp",
+        "efl-polagane-nastilka-grundirane-fugi.webp",
+        "efl-polagane-nastilka-zapalvane-fugi.webp"
+      ]
+    },
+    "pages/za-nas": {
+      "hero": "efl-polagane-nastilka-ekip-promishlen-obekt.webp",
+      "gallery": [
+        "efl-polagane-nastilka-ekip-zhalt-epoksid.webp",
+        "efl-polagane-nastilka-kamenen-kilim-baseyn.webp",
+        "efl-polagane-nastilka-kamenen-kilim-mistrii.webp",
+        "efl-polagane-nastilka-shlayfane-hala.webp"
+      ]
+    },
+    "pages/home": {
+      "hero": "efl-poliuretanova-nastilka-golyama-hala-glants.webp",
+      "gallery": [
+        "efl-epoksidna-nastilka-administrativen-koridor.webp",
+        "efl-poliuretanova-nastilka-bezhova-hladilna-kamera.webp",
+        "efl-kamenen-kilim-alea-kam-kashta.webp",
+        "efl-mortelna-nastilka-detayl.webp",
+        "efl-hidroizolatsiya-dalag-balkon.webp",
+        "efl-dekorativna-nastilka-banketna-zala.webp"
+      ]
+    }
+  },
+  "clusters": []
+}

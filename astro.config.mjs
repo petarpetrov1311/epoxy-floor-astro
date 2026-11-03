@@ -1,7 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 import { fileURLToPath } from 'node:url';
 
 // https://astro.build/config
@@ -10,7 +11,6 @@ export default defineConfig({
   // corrupting Bulgarian text at React 18 stream chunk boundaries.
   integrations: [
     react({ experimentalDisableStreaming: true }),
-    tailwind(),
     {
       name: 'separate-vite-caches',
       hooks: {
@@ -24,6 +24,11 @@ export default defineConfig({
   ],
 
   vite: {
+    css: {
+      postcss: {
+        plugins: [tailwindcss(), autoprefixer()],
+      },
+    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),

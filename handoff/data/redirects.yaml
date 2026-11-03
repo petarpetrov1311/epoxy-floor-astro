@@ -1,0 +1,111 @@
+# 301 пренасочвания: стар сайт (www.epoxy-fl.com) → нов сайт. from — стар път (кирилицата буквално), to — нов.
+# Готови правила за Vercel: vercel-redirects.json; за други хостинги — samples/.
+redirects:
+  - from: /floors/
+    to: /nastilki
+  - from: /floors/manufacture/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /floors/food-industry/
+    to: /nastilki/hranitelno-vkusova
+  - from: /floors/food-industry/месопреработвателна-промишленост/
+    to: /nastilki/hranitelno-vkusova
+  - from: /floors/food-industry/млекопреработвателна-промишленост/
+    to: /nastilki/mandri-i-klanitsi
+  - from: /floors/food-industry/хлебарство-и-сладкарство/
+    to: /nastilki/hranitelno-vkusova
+  - from: /floors/food-industry/other-manufacture/
+    to: /nastilki/hranitelno-vkusova
+  - from: /floors/parking-lots/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /floors/тераси-и-хидроизолации/
+    to: /nastilki/terasi-i-ploski-pokrivi
+  - from: /floors/decorative/
+    to: /nastilki/dekorativni-nastilki
+  - from: /about-us-3/
+    to: /za-nas
+  - from: /contact-us/
+    to: /kontakti
+  - from: /equipment/
+    to: /tehnologia-i-materiali
+  - from: /privacy-policy/
+    to: /privacy-policy
+  - from: /blog/
+    to: /blog
+  - from: /category/news/
+    to: /blog
+  - from: /ново-оборъдване/
+    to: /blog
+  - from: /тук-са-новите-цветове/
+    to: /blog
+  - from: /епокси-флорс-изпълнява-проект-по-опик/
+    to: /blog
+  - from: /author/mentor/
+    to: /blog
+  - from: /portfolio/
+    to: /proekti
+  - from: /project-cat/decorative/
+    to: /nastilki/dekorativni-nastilki
+  - from: /project-cat/parging-lots/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /project-cat/manufacturing/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /project-cat/тераси-и-хидроизолации/
+    to: /nastilki/terasi-i-ploski-pokrivi
+  - from: /project-cat/food/
+    to: /nastilki/hranitelno-vkusova
+  - from: /portfolio/месо-и-месни-продукти/
+    to: /nastilki/hranitelno-vkusova
+  - from: /portfolio/месокомбинат/
+    to: /nastilki/mandri-i-klanitsi
+  - from: /portfolio/мандра-велика/
+    to: /nastilki/mandri-i-klanitsi
+  - from: /portfolio/фабрика-за-консерви-полиуретанова-на/
+    to: /nastilki/hranitelno-vkusova
+  - from: /portfolio/полиуретан-цимен-в-фабрика/
+    to: /nastilki/poliuretan-tsiment
+  - from: /portfolio/фабрика-за-етерични-масла/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/производствена-база-лекарствени-пре/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/производство/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/производствена-база-3/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/производствено-хале/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/други-производства-2/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/складови-помещения/
+    to: /nastilki/proizvodstva-i-skladove
+  - from: /portfolio/мортелен-под-в-складово-помещение/
+    to: /nastilki/mortel
+  - from: /portfolio/паркинг-дунав-2/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /portfolio/подземен-паркинг/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /portfolio/паркинг-сграда-кристал/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /portfolio/паркинги-и-гаражи-2023/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /portfolio/гараж-2/
+    to: /nastilki/parkingi-i-garazhi
+  - from: /portfolio/частен-дом-дюселдорф/
+    to: /nastilki/dekorativni-za-dom-i-ofis
+  - from: /portfolio/къща-за-гости/
+    to: /nastilki/dekorativni-za-dom-i-ofis
+  - from: /portfolio/козметичен-салон-1/
+    to: /nastilki/dekorativni-za-dom-i-ofis
+  - from: /portfolio/медицински-център/
+    to: /nastilki/epoksidni-nastilki
+  - from: /portfolio/училищна-база/
+    to: /nastilki/epoksidni-nastilki
+  - from: /portfolio/old-people-home/
+    to: /nastilki/epoksidni-nastilki
+  - from: /portfolio/избрани-проекти-от-2022-г/
+    to: /proekti
+  - from: /portfolio/venenatis-nam-phasellus/
+    to: /
+  - from: /cms_block_cat/epoxy/
+    to: /
+  - from: /woodmart_slider/epoxy/
+    to: /

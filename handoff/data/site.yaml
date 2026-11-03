@@ -1,0 +1,55 @@
+# Глобални данни: домейн, фирма (NAP, schema GeneralContractor), robots.
+# NAP (име · адрес · телефон) трябва да е идентичен на сайта, в schema и в Google Business Profile.
+site: https://www.epoxy-fl.com
+language: bg
+locale: bg_BG
+brand: EPOXY FLOORS
+ogImage: /media/raboten-protses/efl-polagane-nastilka-ekip-promishlen-obekt.webp
+organization:
+  type: GeneralContractor
+  name: EPOXY FLOORS
+  alternateName: Епокси Флорс
+  slogan: Да стъпваш стабилно.
+  description: EPOXY FLOORS проектира и полага индустриални и декоративни подови настилки в цяла България — от хранителни производства до частни домове.
+  telephone: '+359898512776'
+  email: epoxy_fl@abv.bg
+  address:
+    addressLocality: Шумен
+    addressCountry: BG
+    streetAddress: ул. Братя Андрей и Веселин Стоянови №12
+    postalCode: '9700'
+  geo:
+    '@type': GeoCoordinates
+    latitude: 43.268547
+    longitude: 26.922026
+  correspondenceAddress: гр. Шумен, бул. Велики Преслав №1
+  areaServed: България
+  foundingDate: '2003'
+  openingHours: Mo-Fr 09:00-17:00
+  openingHoursText: Понеделник – петък, 9:00 – 17:00
+  logo: /images/logo.png
+  image: /media/raboten-protses/efl-polagane-nastilka-ekip-promishlen-obekt.webp
+  sameAs:
+    - https://www.facebook.com/epoxyfl
+  knowsAbout:
+    - епоксидни подови настилки
+    - полиуретанови настилки
+    - полиуретан-цимент
+    - декоративни настилки
+    - антистатични (ESD) настилки
+    - хидроизолации
+    - мортелни подови системи
+robots:
+  allow:
+    - Googlebot
+    - Bingbot
+    - Google-Extended
+    - GPTBot
+    - OAI-SearchBot
+    - ChatGPT-User
+    - PerplexityBot
+    - ClaudeBot
+    - Claude-SearchBot
+    - anthropic-ai
+    - Applebot
+  disallowPaths: []

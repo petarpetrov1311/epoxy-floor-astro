@@ -1,0 +1,84 @@
+# Цени по системи (EUR). Един източник за ценовата таблица, ценовите блокове и FAQ с `price: true`.
+# status: pending — цените не се публикуват и не влизат в schema; confirmed — влизат (Offer, FAQPage).
+# vatIncluded: true/false/null · unit: m2 | lm | null · prefix: дума пред диапазона („от 12–15 €“).
+# pages: id-тата на страниците (колекция/файл), на които се показва цената.
+status: pending
+currency: EUR
+vatIncluded: null
+prefix: от
+items:
+  - id: epoksid-tankosloyno
+    name: Тънкослойно епоксидно покритие
+    min: 12
+    max: 15
+    unit: null
+    pages:
+      - nastilki/epoksidni
+      - pages/tsena-nastilki
+  - id: epoksid-mnogosloyno
+    name: Многослойна епоксидна система
+    min: 40
+    max: 55
+    unit: null
+    pages:
+      - nastilki/epoksidni
+      - pages/tsena-nastilki
+  - id: pu-tsiment
+    name: PU цимент
+    note: полиуретан цимент, ръсена система с кварцов пясък
+    min: 45
+    max: 60
+    unit: null
+    pages:
+      - nastilki/pu-tsiment
+      - pages/tsena-nastilki
+      - applications/hranitelna-promishlenost
+      - applications/mandri
+  - id: dekorativni
+    name: Декоративни многоцветни подови настилки
+    min: 60
+    max: 75
+    unit: null
+    pages:
+      - nastilki/dekorativni
+      - pages/tsena-nastilki
+      - applications/dom-i-ofis
+  - id: pu-membrana
+    name: PU мембрана за тераси
+    min: 35
+    max: 45
+    unit: null
+    pages:
+      - nastilki/hidroizolatsii
+      - pages/tsena-nastilki
+      - applications/terasi-i-pokrivi
+  - id: mortel
+    name: Мортел
+    min: 55
+    max: 70
+    unit: null
+    pages:
+      - nastilki/mortel
+      - pages/tsena-nastilki
+      - applications/proizvodstva-i-skladove
+  - id: holker
+    name: Холкер
+    min: 13
+    max: 16
+    unit: null
+    pages:
+      - pages/tsena-nastilki
+      - applications/hranitelna-promishlenost
+      - applications/mandri
+  - id: kamenen-kilim
+    name: Каменен килим
+    note: само труд
+    min: 35
+    max: 45
+    unit: null
+    pages:
+      - nastilki/dekorativni
+      - pages/tsena-nastilki
+      - applications/dom-i-ofis
+      - applications/dvor
+      - applications/terasi-i-pokrivi

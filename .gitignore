@@ -6,6 +6,7 @@ dist/
 
 # dependencies
 node_modules/
+.pnpm-store/
 
 # logs
 npm-debug.log*
@@ -14,8 +15,8 @@ yarn-error.log*
 pnpm-debug.log*
 
 # environment variables
-.env
-.env.production
+.env*
+!.env.example
 
 # macOS-specific files
 .DS_Store
@@ -29,4 +30,34 @@ pnpm-debug.log*
 .impeccable/
 .rollback-safety/
 .agents/
+.vercel/
+
+# Build-time content and data consumed by Astro (required in Vercel builds).
+# Keep the rest of handoff local: it contains reference docs, drafts, and source media.
 handoff/
+!handoff/
+handoff/*
+!handoff/content/
+!handoff/data/
+
+handoff/content/*
+!handoff/content/applications/
+!handoff/content/blog/
+!handoff/content/nastilki/
+!handoff/content/pages/
+
+handoff/content/applications/*
+!handoff/content/applications/*.md
+handoff/content/blog/*
+!handoff/content/blog/*.md
+handoff/content/blog/_*
+handoff/content/nastilki/*
+!handoff/content/nastilki/*.md
+handoff/content/pages/*
+!handoff/content/pages/*.md
+
+handoff/data/*
+!handoff/data/media.json
+!handoff/data/pricing.yaml
+!handoff/data/redirects.yaml
+!handoff/data/site.yaml
