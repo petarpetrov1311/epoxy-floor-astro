@@ -48,7 +48,7 @@
 .benefit-list li { display: flex; gap: 16px; padding-block: 18px; border-bottom: 1px solid #DCE0E5; font-size: 16px; line-height: 1.65; }
 .benefit-list li:first-child { padding-top: 0; }
 .benefit-list svg { color: #F5A824; flex-shrink: 0; margin-top: 3px; }
-.faq-container { max-width: 960px; }
+.faq-container { max-width: 1280px; }
 .home-faq { border-bottom: 1px solid #DCE0E5; }
 .home-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; list-style: none; cursor: pointer; font-weight: 600; transition: color 180ms ease-in-out; }
 .home-faq summary::-webkit-details-marker { display: none; }

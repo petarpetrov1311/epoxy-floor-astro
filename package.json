@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "test:seo": "node scripts/test-seo-metadata.mjs",
     "test:static": "node scripts/check-static-output.mjs && node scripts/check-floor-template.mjs && node scripts/check-applications.mjs && node scripts/check-blog.mjs",
     "preview": "astro preview",
     "astro": "astro"

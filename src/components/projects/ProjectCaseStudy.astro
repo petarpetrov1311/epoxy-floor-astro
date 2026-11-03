@@ -1,0 +1,104 @@
+---
+import Navbar from '../landing/Navbar.astro';
+import Footer from '../landing/Footer.jsx';
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/home.css';
+import { buildSeo } from '../../lib/floor-seo.mjs';
+
+const { project } = Astro.props;
+const { data } = project;
+const seo = buildSeo('project', data, project.url);
+const missing = (value) => value == null || value === '' ? 'Липсва' : value;
+const technical = [
+  ['Обект', data.obekt],
+  ['Система', project.systems.map(({ label }) => label).join(', ') || null],
+  ['Площ', data.plosht == null ? null : `${data.plosht} кв.м`],
+  ['Срок', data.srok == null ? null : `${data.srok} работни дни`],
+  ['Град', data.grad],
+  ['Година', data.godina],
+];
+---
+
+<Layout title={seo.title} description={seo.description} seo={seo}>
+  <div class="project-site">
+    <Navbar />
+    <main>
+      <header class="project-hero">
+        <img class="project-hero-image" src={project.hero.src} alt={project.hero.alt} width={project.hero.w} height={project.hero.h} fetchpriority="high" />
+        <div class="project-hero-shade" aria-hidden="true"></div>
+        <div class="project-hero-inner">
+          <nav class="project-breadcrumbs" aria-label="Навигационна пътека">
+            <a href="/">Начало</a><span aria-hidden="true">›</span><a href="/proekti">Проекти</a><span aria-hidden="true">›</span><span aria-current="page">{data.obekt}</span>
+          </nav>
+          <h1>{data.title}</h1>
+          {data.problem && <p class="project-intro">{data.problem}</p>}
+        </div>
+      </header>
+
+      <div class="project-content">
+        <aside class="project-facts" aria-label="Технически данни за обекта">
+          <h2>Данни за обекта</h2>
+          <dl>{technical.map(([label, value]) => <div><dt>{label}</dt><dd>{missing(value)}</dd></div>)}</dl>
+        </aside>
+        <article class="project-story">
+          {data.problem && <section><h2>Предизвикателство</h2><p>{data.problem}</p></section>}
+          {data.reshenie && <section><h2>Решение</h2><p>{data.reshenie}</p></section>}
+          {data.rezultat && <section><h2>Резултат</h2><p>{data.rezultat}</p></section>}
+          {data.otziv && <blockquote><p>„{data.otziv.text}“</p><cite>{data.otziv.avtor}</cite></blockquote>}
+          <nav class="project-related" aria-label="Свързани страници">
+            {project.systems.map((system) => <a href={system.href}>Система: {system.label}</a>)}
+            {project.application && <a href={project.application.href}>Приложение: {project.application.label}</a>}
+          </nav>
+        </article>
+      </div>
+
+      {data.snimki?.length > 0 && <section class="project-gallery" aria-labelledby="project-gallery-title">
+        <div class="project-gallery-heading"><h2 id="project-gallery-title">Снимки от обекта</h2><a href="/galeria">Разгледайте галерията</a></div>
+        <div class="project-gallery-grid">{data.snimki.map((photo) => <figure><img src={photo.src} alt={photo.alt} width={photo.w} height={photo.h} loading="lazy" /><figcaption>{photo.alt}</figcaption></figure>)}</div>
+      </section>}
+
+      <section class="project-cta"><div><h2>Обсъдете вашия обект с нас</h2><p>Изпратете запитване за оглед и подходяща подова система.</p></div><a href="/kontakti#forma">Свържете се с нас</a></section>
+    </main>
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .project-site { color: #1F262E; }
+  .project-hero { position: relative; isolation: isolate; min-height: 500px; display: flex; align-items: end; overflow: hidden; background: #1A1A2E; color: #fff; }
+  .project-hero-image { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+  .project-hero-shade { position: absolute; inset: 0; z-index: -1; background: rgb(26 26 46 / .68); }
+  .project-hero-inner { width: min(100% - 48px, 1240px); margin-inline: auto; padding-block: 30px 64px; }
+  .project-breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 34px; font-size: 14px; }
+  .project-breadcrumbs a { min-height: 44px; display: inline-flex; align-items: center; text-underline-offset: 4px; }
+  .project-breadcrumbs a:hover { text-decoration: underline; }
+  h1 { max-width: 900px; font-size: clamp(34px, 5vw, 60px); font-weight: 700; line-height: 1.08; letter-spacing: -.025em; text-wrap: balance; }
+  .project-intro { max-width: 68ch; margin-top: 20px; font-size: 18px; line-height: 1.65; }
+  .project-content { width: min(100% - 48px, 1240px); margin: 0 auto; padding-block: 64px; display: grid; grid-template-columns: minmax(250px, .72fr) minmax(0, 1.5fr); gap: clamp(36px, 7vw, 100px); align-items: start; }
+  .project-facts { background: #F3F5F6; padding: 26px; border-radius: 5px; }
+  .project-facts h2, .project-story h2, .project-gallery h2, .project-cta h2 { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.25; font-weight: 700; }
+  .project-facts dl { margin: 18px 0 0; }
+  .project-facts dl > div { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding-block: 14px; border-top: 1px solid #DCE0E5; font-size: 15px; }
+  .project-facts dt { color: #53606B; }
+  .project-facts dd { margin: 0; font-weight: 600; text-align: right; }
+  .project-story section + section { margin-top: 34px; }
+  .project-story p { max-width: 70ch; margin-top: 12px; font-size: 17px; line-height: 1.75; }
+  .project-related { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .project-related a, .project-gallery-heading a { display: inline-flex; min-height: 44px; align-items: center; padding: 10px 14px; border: 1px solid #DCE0E5; border-radius: 4px; font-weight: 600; text-underline-offset: 4px; transition: border-color 180ms ease, background-color 180ms ease; }
+  .project-related a:hover, .project-gallery-heading a:hover { border-color: #F5A824; background: #F3F5F6; text-decoration: underline; }
+  .project-story blockquote { margin: 34px 0 0; padding: 22px; background: #F3F5F6; border-radius: 4px; }
+  .project-story blockquote p { margin: 0 0 12px; }
+  .project-story cite { font-style: normal; font-weight: 600; }
+  .project-gallery { width: min(100% - 48px, 1240px); margin: 0 auto; padding-block: 12px 72px; }
+  .project-gallery-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; }
+  .project-gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .project-gallery figure { min-width: 0; margin: 0; }
+  .project-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; background: #F3F5F6; }
+  .project-gallery figcaption { margin-top: 8px; color: #53606B; font-size: 13px; line-height: 1.5; }
+  .project-cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 42px max(24px, calc((100vw - 1240px) / 2)); background: #1A1A2E; color: white; }
+  .project-cta p { margin-top: 10px; color: #DCE0E5; line-height: 1.6; }
+  .project-cta > a { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 20px; background: #F5A824; color: #1A1A2E; font-weight: 700; border-radius: 4px; transition: background-color 180ms ease; white-space: nowrap; }
+  .project-cta > a:hover { background: #ffc24d; }
+  @media (max-width: 760px) { .project-hero { min-height: 430px; } .project-hero-inner, .project-content, .project-gallery { width: min(100% - 36px, 1240px); } .project-content { grid-template-columns: 1fr; gap: 36px; padding-block: 40px; } .project-gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .project-gallery figcaption { font-size: 12px; } .project-cta { padding: 34px 18px; align-items: flex-start; flex-direction: column; } }
+  @media (max-width: 440px) { .project-gallery-grid { grid-template-columns: 1fr; } .project-gallery-heading { align-items: flex-start; flex-direction: column; } .project-hero { min-height: 400px; } }
+</style>

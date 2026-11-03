@@ -1,0 +1,1387 @@
+{
+  "title": "SEO Metadata Validation",
+  "status": "PASSED",
+  "generatedAt": "2026-11-03T20:20:35.541Z",
+  "startedAt": "2026-11-03T20:20:35.473Z",
+  "durationMs": 68.61,
+  "summary": {
+    "markdownFilesDiscovered": 38,
+    "pagesTested": 35,
+    "passedPages": 35,
+    "failedPages": 0,
+    "skippedPages": 3,
+    "totalMetadataChecks": 277,
+    "passedMetadataChecks": 277,
+    "failedMetadataChecks": 0
+  },
+  "pages": [
+    {
+      "url": "/",
+      "source": "handoff/content/pages/home.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/sravneniya",
+      "source": "handoff/content/pages/sravneniya.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/tehnologia-i-materiali",
+      "source": "handoff/content/pages/tehnologia-i-materiali.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/tsena-nastilki",
+      "source": "handoff/content/pages/tsena-nastilki.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/za-nas",
+      "source": "handoff/content/pages/za-nas.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/dekorativni-nastilki",
+      "source": "handoff/content/nastilki/dekorativni.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/epoksidni-nastilki",
+      "source": "handoff/content/nastilki/epoksidni.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/antistatichni-esd",
+      "source": "handoff/content/nastilki/esd.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/hidroizolatsii",
+      "source": "handoff/content/nastilki/hidroizolatsii.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/mortel",
+      "source": "handoff/content/nastilki/mortel.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/poliuretanovi-nastilki",
+      "source": "handoff/content/nastilki/poliuretanovi.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/poliuretan-tsiment",
+      "source": "handoff/content/nastilki/pu-tsiment.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/dekorativni-za-dom-i-ofis",
+      "source": "handoff/content/applications/dom-i-ofis.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/dvor-i-otkriti-chasti",
+      "source": "handoff/content/applications/dvor.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/hranitelno-vkusova",
+      "source": "handoff/content/applications/hranitelna-promishlenost.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/igrishta-i-sportni-saorazheniya",
+      "source": "handoff/content/applications/igrishta.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/mandri-i-klanitsi",
+      "source": "handoff/content/applications/mandri.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/parkingi-i-garazhi",
+      "source": "handoff/content/applications/parkingii-i-garazhi.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/proizvodstva-i-skladove",
+      "source": "handoff/content/applications/proizvodstva-i-skladove.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/nastilki/terasi-i-ploski-pokrivi",
+      "source": "handoff/content/applications/terasi-i-pokrivi.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/epoksid-vs-plochki",
+      "source": "handoff/content/blog/epoksid-vs-plochki.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/epoksidni-nastilki-haccp",
+      "source": "handoff/content/blog/epoksidni-nastilki-haccp.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/hranitelno-proizvodstvo",
+      "source": "handoff/content/blog/hranitelno-proizvodstvo.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blog/kolko-trae",
+      "source": "handoff/content/blog/kolko-trae.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/proekti/epoksid-dom-za-stari-hora-shumen",
+      "source": "handoff/content/proekti/epoksid-dom-za-stari-hora-shumen.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/proekti/epoksid-garazh-shumen",
+      "source": "handoff/content/proekti/epoksid-garazh-shumen.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/proekti/mortel-sklad-shumen",
+      "source": "handoff/content/proekti/mortel-sklad-shumen.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/proekti/pu-tsiment-fabrika-shumen",
+      "source": "handoff/content/proekti/pu-tsiment-fabrika-shumen.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "Canonical",
+          "status": "PASSED"
+        },
+        {
+          "property": "Robots",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Description",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Type",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG URL",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Site Name",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Locale",
+          "status": "PASSED"
+        },
+        {
+          "property": "OG Image",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/dekorativni-epoksidni-podove",
+      "source": "src/pages/blogove/dekorativni-epoksidni-podove.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/epoksidni-nastilki-za-parkingi",
+      "source": "src/pages/blogove/epoksidni-nastilki-za-parkingi.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/hidroizolacii-za-terasi",
+      "source": "src/pages/blogove/hidroizolacii-za-terasi.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/kak-da-izberem-epoksidna-nastilka",
+      "source": "src/pages/blogove/kak-da-izberem-epoksidna-nastilka.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/poddrzhka-na-industrialni-podove",
+      "source": "src/pages/blogove/poddrzhka-na-industrialni-podove.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/podgotovka-na-osnovata",
+      "source": "src/pages/blogove/podgotovka-na-osnovata.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    },
+    {
+      "url": "/blogove/primerna-md-statia",
+      "source": "src/pages/blogove/primerna-md-statia.md",
+      "status": "PASSED",
+      "checks": [
+        {
+          "property": "Title",
+          "status": "PASSED"
+        },
+        {
+          "property": "Description",
+          "status": "PASSED"
+        }
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "source": "handoff/content/blog/_shablon.md",
+      "reason": "Underscore-prefixed content templates are excluded by the site convention."
+    },
+    {
+      "source": "handoff/content/onboarding/quiz.md",
+      "reason": "Internal onboarding material is not published as a website page."
+    },
+    {
+      "source": "handoff/content/proekti/_shablon.md",
+      "reason": "Underscore-prefixed project templates are excluded from publishing."
+    }
+  ],
+  "failures": []
+}

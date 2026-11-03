@@ -53,6 +53,26 @@
       "source": "/blogove/",
       "destination": "/blog",
       "statusCode": 301
+    },
+    {
+      "source": "/portfolio/old-people-home/",
+      "destination": "/proekti/epoksid-dom-za-stari-hora-shumen",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/паркинги-и-гаражи-2023/",
+      "destination": "/proekti/epoksid-garazh-shumen",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/мортелен-под-в-складово-помещение/",
+      "destination": "/proekti/mortel-sklad-shumen",
+      "statusCode": 301
+    },
+    {
+      "source": "/portfolio/полиуретан-цимен-в-фабрика/",
+      "destination": "/proekti/pu-tsiment-fabrika-shumen",
+      "statusCode": 301
     }
   ]
 }

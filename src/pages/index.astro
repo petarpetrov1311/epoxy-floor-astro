@@ -7,13 +7,14 @@ import Footer from '../components/landing/Footer.jsx';
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/landing/Hero.astro';
 import Navbar from '../components/landing/Navbar.astro';
+import Stats from '../components/landing/Stats.astro';
 ---
 
 <Layout title={home.seoTitle} description={home.description}>
   <Navbar />
   <main>
     <Hero />
-    <section id="stats" class="home-stats" aria-label="EPOXY FLOORS в числа"><div class="home-container">{home.stats.map(stat => <div><strong>{stat}</strong></div>)}</div></section>
+    <Stats />
     <HomeContent />
     <section id="contact" class="home-section"><div class="home-container faq-container"><h2>Заявка за оферта</h2><div class="heading-rule"></div><QuoteForm client:visible /></div></section>
   </main>

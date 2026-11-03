@@ -1,0 +1,90 @@
+---
+import { frontmatter as home } from '../../../handoff/content/pages/home.md';
+
+const formatNumber = (value) => new Intl.NumberFormat('bg-BG').format(value).replaceAll('\u00a0', ' ');
+const numericStats = home.stats
+  .filter((item) => /^\d/.test(item) || item.startsWith('Гаранция '))
+  .map((raw) => {
+    const warranty = raw.match(/^Гаранция\s+(\d+)\s+(.+)$/u);
+    const number = raw.match(/^([\d\s]+)(\+?)(?:\s+(.+))?$/u);
+    const match = warranty || number;
+    if (!match) return null;
+    const value = Number((warranty ? match[1] : match[1]).replaceAll(' ', ''));
+    const suffix = warranty ? '' : number[2];
+    const unit = warranty ? match[2].replace(/\s+по договор$/u, '') : (number[3] || '');
+    const label = warranty ? 'гаранция по договор'
+      : /кв\.м/u.test(raw) ? 'положени настилки'
+        : /обекта/u.test(raw) ? 'изпълнени обекти'
+          : 'професионален опит';
+    return { raw, value, suffix, unit, label };
+  })
+  .filter(Boolean);
+const materials = home.stats.find((item) => /материали/u.test(item));
+---
+
+<section id="stats" class="home-stats" aria-labelledby="stats-heading">
+  <div class="home-container">
+    <h2 id="stats-heading">Опит и мащаб в числа</h2>
+    <dl class="stats-grid">
+      {numericStats.map((stat) => <div class="stats-item">
+        <dt>{stat.label}</dt>
+        <dd><span class="stats-value" data-count-up data-target={stat.value} data-suffix={stat.suffix} aria-label={stat.raw}>{formatNumber(stat.value)}{stat.suffix}</span><span class="stats-unit">{stat.unit}</span></dd>
+      </div>)}
+    </dl>
+    {materials && <p class="stats-materials">{materials}</p>}
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector<HTMLElement>('#stats');
+  const counters = [...(section?.querySelectorAll<HTMLElement>('[data-count-up]') || [])];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (section && counters.length && !reduceMotion && 'IntersectionObserver' in window) {
+    const numberFormat = new Intl.NumberFormat('bg-BG', { maximumFractionDigits: 0 });
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        const counter = entry.target as HTMLElement;
+        const target = Number(counter.dataset.target);
+        const suffix = counter.dataset.suffix || '';
+        const duration = 1400;
+        const started = performance.now();
+        const tick = (now: number) => {
+          const progress = Math.min((now - started) / duration, 1);
+          const eased = 1 - (1 - progress) ** 4;
+          const value = Math.round(target * eased);
+          counter.textContent = `${numberFormat.format(value).replaceAll('\u00a0', ' ')}${suffix}`;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.35 });
+    counters.forEach((counter) => observer.observe(counter));
+  }
+</script>
+
+<style>
+  .home-stats { background: #1A1A2E; color: #fff; border-top: 1px solid rgb(255 255 255 / .15); padding-block: 48px 36px; }
+  .home-stats .home-container { display: block; width: min(100%, 1280px); margin-inline: auto; padding-inline: 32px; }
+  .home-stats h2 { margin: 0 0 28px; color: #fff; font-size: clamp(22px, 2.7vw, 30px); line-height: 1.25; font-weight: 700; letter-spacing: -.02em; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 0; }
+  .stats-item { min-width: 0; padding: 0 24px; border-left: 1px solid rgb(255 255 255 / .2); }
+  .stats-item:first-child { padding-left: 0; border-left: 0; }
+  .stats-item dt { color: #DCE0E5; font-size: 14px; line-height: 1.45; }
+  .stats-item dd { display: flex; flex-direction: column; align-items: flex-start; margin: 8px 0 0; font-variant-numeric: tabular-nums; }
+  .stats-value { color: #F5A824; font-size: clamp(27px, 3.2vw, 42px); line-height: 1.12; font-weight: 700; white-space: nowrap; }
+  .stats-unit { margin-top: 3px; color: #DCE0E5; font-size: 14px; line-height: 1.4; font-weight: 600; }
+  .stats-materials { margin: 28px 0 0; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / .2); color: #fff; font-size: 14px; line-height: 1.5; }
+  @media(max-width: 767px) {
+    .home-stats { padding-block: 36px 28px; }
+    .home-stats .home-container { padding-inline: 24px; }
+    .home-stats h2 { margin-bottom: 22px; }
+    .stats-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 0; }
+    .stats-item { padding-inline: 16px; }
+    .stats-item:nth-child(odd) { padding-left: 0; border-left: 0; }
+    .stats-item dt { font-size: 13px; }
+    .stats-value { font-size: clamp(24px, 6vw, 32px); }
+    .stats-materials { margin-top: 24px; }
+  }
+</style>

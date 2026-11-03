@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { services } from '../src/data/services.js';
+import { publishedProjects } from '../src/lib/projects.mjs';
 
 // Run after the production build. These checks inspect HTML before any JS runs.
 const read = path => readFileSync(join('dist', path), 'utf8');
@@ -42,8 +43,33 @@ for (const value of ['20+ години', '280 000 кв.м', '1 500 обекта'
   const stats = home.match(/<section id="stats"[\s\S]*?<\/section>/)?.[0];
   assert(stats?.includes(value), `Final statistic ${value} must exist before hydration`);
 }
+const renderedCounters = [...home.matchAll(/<span class="stats-value"[^>]*data-target="(\d+)"[^>]*>(.*?)<\/span>/g)];
+assert.equal(renderedCounters.length, 4, 'All numeric statistics must be present in initial HTML');
+assert.deepEqual(renderedCounters.map(([, target]) => Number(target)), [20, 280000, 1500, 5], 'SSR must output the real final counter values');
 assert(home.includes('name="message"'), 'Quote form must be prerendered');
 assert(!home.includes('style="opacity:0'), 'Initial content must not be hidden by animation');
+const sitemap = read('sitemap.xml');
+assert(sitemap.includes('/proekti</loc>'), 'Project index must be included in the sitemap');
+for (const project of publishedProjects) {
+  const html = read(`proekti/${project.data.slug}/index.html`);
+  assert(!html.includes('<astro-island'), `${project.data.slug} must render without hydration`);
+  assert(!html.includes('data-astro-island'), `${project.data.slug} must not hydrate project content`);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `${project.data.slug} must have one H1`);
+  assert(html.includes(`<meta name="robots" content="${project.data.noindex ? 'noindex, follow' : 'index, follow'}"`), `${project.data.slug} has incorrect robots metadata`);
+  assert(html.includes('<link rel="canonical"'), `${project.data.slug} must have a canonical URL`);
+  assert(html.includes('application/ld+json'), `${project.data.slug} must include JSON-LD`);
+  assert(html.includes('Липсва'), `${project.data.slug} must show missing technical facts`);
+  assert(html.includes(project.data.problem) && html.includes(project.data.reshenie) && html.includes(project.data.rezultat), `${project.data.slug} must prerender its case study content`);
+  assert(!sitemap.includes(`${project.url}</loc>`), `${project.data.slug} is noindex and must not appear in sitemap`);
+  for (const photo of project.data.snimki) {
+    assert(html.includes(`src="${photo.src}"`), `${project.data.slug} is missing rendered image ${photo.src}`);
+    assert(readFileSync(join('public', photo.src.slice(1))).length > 0, `Missing public project image ${photo.src}`);
+  }
+}
+const redirects = read('_redirects');
+for (const project of publishedProjects.filter(({ data }) => data.oldUrl)) {
+  assert(redirects.includes(`${project.data.oldUrl} ${project.url} 301`), `${project.data.slug} must have a 301 redirect from ${project.data.oldUrl}`);
+}
 const sectionIds = [...home.matchAll(/<section id="([^"]+)"/g)].map(match => match[1]);
 assert.deepEqual(sectionIds, ['hero', 'stats', 'services', 'problems', 'why-choose-us', 'benefits', 'faq', 'contact']);
 for (const image of ['logo-navbar.png', 'logo-hero-footer.png']) {

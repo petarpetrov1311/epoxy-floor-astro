@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/landing/Navbar.astro';
+import Footer from '../../components/landing/Footer.jsx';
+import { buildSeo } from '../../lib/floor-seo.mjs';
+import { publishedProjects } from '../../lib/projects.mjs';
+import '../../styles/home.css';
+
+const seo = buildSeo('hub', { title: 'Изпълнени проекти', seoTitle: 'Изпълнени проекти | EPOXY FLOORS', description: 'Реални обекти с епоксидни, мортелни и полиуретан-циментови подови системи, изпълнени от EPOXY FLOORS.' }, '/proekti');
+---
+<Layout title={seo.title} description={seo.description} seo={seo}>
+  <div class="projects-site">
+    <Navbar />
+    <main>
+      <header class="projects-index-hero"><div><nav aria-label="Навигационна пътека"><a href="/">Начало</a><span aria-hidden="true">›</span><span aria-current="page">Проекти</span></nav><h1>Изпълнени проекти</h1><p>Реални обекти и приложени подови системи.</p></div></header>
+      <section class="projects-index" aria-label="Проектни казуси">
+        {publishedProjects.map((project) => <article class="projects-index-card">
+          <a class="projects-index-image" href={project.url}><img src={project.hero.src} alt={project.hero.alt} width={project.hero.w} height={project.hero.h} loading="lazy" /></a>
+          <div class="projects-index-copy"><p class="projects-index-meta">{[project.data.grad, project.data.godina].filter(Boolean).join(' · ')}</p><h2><a href={project.url}>{project.data.title}</a></h2><p>{project.data.rezultat || project.data.problem}</p><a class="projects-index-link" href={project.url}>Към проекта <span aria-hidden="true">→</span></a></div>
+        </article>)}
+      </section>
+      <p class="projects-gallery-link">Вижте и <a href="/galeria">цялата галерия със снимки</a>.</p>
+    </main>
+    <Footer />
+  </div>
+</Layout>
+<style>
+  .projects-index-hero { background: #1A1A2E; color: white; padding: 34px 24px 52px; }
+  .projects-index-hero > div { width: min(100%,1240px); margin-inline: auto; }
+  .projects-index-hero nav { display: flex; gap: 12px; align-items: center; min-height: 44px; font-size: 14px; }
+  .projects-index-hero nav a { text-underline-offset: 4px; }
+  .projects-index-hero nav a:hover { text-decoration: underline; }
+  h1 { margin-top: 22px; font-size: clamp(36px,5vw,58px); line-height: 1.1; font-weight: 700; letter-spacing: -.025em; }
+  .projects-index-hero p { margin-top: 14px; color: #DCE0E5; font-size: 18px; }
+  .projects-index { width: min(100% - 48px,1240px); margin: 0 auto; padding-block: 52px 22px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+  .projects-index-card { min-width: 0; display: grid; grid-template-columns: minmax(150px,.92fr) minmax(0,1.08fr); border: 1px solid #DCE0E5; border-radius: 5px; overflow: hidden; transition: border-color 180ms ease, box-shadow 180ms ease; }
+  .projects-index-card:hover { border-color: #F5A824; box-shadow: 0 8px 20px rgb(26 26 46 / .09); }
+  .projects-index-image { display: block; min-height: 100%; background: #F3F5F6; }
+  .projects-index-image img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; }
+  .projects-index-copy { padding: 24px; display: flex; align-items: flex-start; flex-direction: column; }
+  .projects-index-meta { color: #53606B; font-size: 13px; }
+  .projects-index-copy h2 { margin-top: 10px; font-size: 21px; line-height: 1.3; font-weight: 700; }
+  .projects-index-copy h2 a:hover { text-decoration: underline; text-decoration-color: #F5A824; text-underline-offset: 4px; }
+  .projects-index-copy > p:not(.projects-index-meta) { margin-top: 12px; font-size: 14px; line-height: 1.6; }
+  .projects-index-link { min-height: 44px; display: inline-flex; align-items: center; gap: 9px; margin-top: auto; padding-top: 12px; font-weight: 700; }
+  .projects-index-link span { color: #9A6200; font-size: 18px; }
+  .projects-gallery-link { width: min(100% - 48px,1240px); margin: 0 auto; padding-bottom: 56px; color: #53606B; }
+  .projects-gallery-link a { color: #1A1A2E; font-weight: 600; text-decoration: underline; text-decoration-color: #F5A824; text-underline-offset: 4px; }
+  @media(max-width: 1000px) { .projects-index { grid-template-columns: 1fr; max-width: 850px; } }
+  @media(max-width: 600px) { .projects-index { width: min(100% - 36px,850px); padding-top: 32px; gap: 18px; } .projects-index-card { grid-template-columns: 1fr; } .projects-index-image img { min-height: 0; aspect-ratio: 16 / 9; } .projects-index-copy { padding: 20px; min-height: 225px; } .projects-gallery-link { width: min(100% - 36px,850px); } }
+</style>

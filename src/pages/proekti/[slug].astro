@@ -1,0 +1,11 @@
+---
+import ProjectCaseStudy from '../../components/projects/ProjectCaseStudy.astro';
+import { publishedProjects } from '../../lib/projects.mjs';
+
+export function getStaticPaths() {
+  return publishedProjects.map((project) => ({ params: { slug: project.data.slug }, props: { project } }));
+}
+
+const { project } = Astro.props;
+---
+<ProjectCaseStudy project={project} />

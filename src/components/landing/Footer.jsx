@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Настилки', href: '/nastilki' },
   { label: 'За нас', href: '/za-nas' },
   { label: 'Блог', href: '/blog' },
+  { label: 'Проекти', href: '/proekti' },
   { label: 'Цени', href: '/tsena-nastilki' },
   { label: 'Сравнения', href: '/sravneniya' },
   { label: 'Технология и материали', href: '/tehnologia-i-materiali' },
