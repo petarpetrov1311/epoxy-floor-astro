@@ -45,6 +45,7 @@ handoff/content/*
 !handoff/content/blog/
 !handoff/content/nastilki/
 !handoff/content/pages/
+!handoff/content/proekti/
 
 handoff/content/applications/*
 !handoff/content/applications/*.md
@@ -55,6 +56,8 @@ handoff/content/nastilki/*
 !handoff/content/nastilki/*.md
 handoff/content/pages/*
 !handoff/content/pages/*.md
+handoff/content/proekti/*
+!handoff/content/proekti/[!_]*.md
 
 handoff/data/*
 !handoff/data/media.json
