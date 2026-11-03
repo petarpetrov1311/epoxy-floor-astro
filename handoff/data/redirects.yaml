@@ -62,7 +62,7 @@ redirects:
   - from: /portfolio/фабрика-за-консерви-полиуретанова-на/
     to: /nastilki/hranitelno-vkusova
   - from: /portfolio/полиуретан-цимен-в-фабрика/
-    to: /proekti/pu-tsiment-fabrika-shumen
+    to: /nastilki/poliuretan-tsiment
   - from: /portfolio/фабрика-за-етерични-масла/
     to: /nastilki/proizvodstva-i-skladove
   - from: /portfolio/производствена-база-лекарствени-пре/
@@ -78,7 +78,7 @@ redirects:
   - from: /portfolio/складови-помещения/
     to: /nastilki/proizvodstva-i-skladove
   - from: /portfolio/мортелен-под-в-складово-помещение/
-    to: /proekti/mortel-sklad-shumen
+    to: /nastilki/mortel
   - from: /portfolio/паркинг-дунав-2/
     to: /nastilki/parkingi-i-garazhi
   - from: /portfolio/подземен-паркинг/
@@ -86,7 +86,7 @@ redirects:
   - from: /portfolio/паркинг-сграда-кристал/
     to: /nastilki/parkingi-i-garazhi
   - from: /portfolio/паркинги-и-гаражи-2023/
-    to: /proekti/epoksid-garazh-shumen
+    to: /nastilki/parkingi-i-garazhi
   - from: /portfolio/гараж-2/
     to: /nastilki/parkingi-i-garazhi
   - from: /portfolio/частен-дом-дюселдорф/
@@ -100,7 +100,7 @@ redirects:
   - from: /portfolio/училищна-база/
     to: /nastilki/epoksidni-nastilki
   - from: /portfolio/old-people-home/
-    to: /proekti/epoksid-dom-za-stari-hora-shumen
+    to: /nastilki/epoksidni-nastilki
   - from: /portfolio/избрани-проекти-от-2022-г/
     to: /proekti
   - from: /portfolio/venenatis-nam-phasellus/
