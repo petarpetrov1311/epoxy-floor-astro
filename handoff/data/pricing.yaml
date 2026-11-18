@@ -2,16 +2,18 @@
 # status: pending — цените не се публикуват и не влизат в schema; confirmed — влизат (Offer, FAQPage).
 # vatIncluded: true/false/null · unit: m2 | lm | null · prefix: дума пред диапазона („от 12–15 €“).
 # pages: id-тата на страниците (колекция/файл), на които се показва цената.
+# terms: условията (ДДС, мерни единици, какво включват) — показват се под ценовата таблица.
 status: pending
 currency: EUR
-vatIncluded: null
+vatIncluded: false
 prefix: от
+terms: Цените са без ДДС, на квадратен метър (холкерът — на линеен метър) и включват подготовка на основа, труд и материали, освен където е отбелязано друго. Няма минимална площ.
 items:
   - id: epoksid-tankosloyno
     name: Тънкослойно епоксидно покритие
     min: 12
     max: 15
-    unit: null
+    unit: m2
     pages:
       - nastilki/epoksidni
       - pages/tsena-nastilki
@@ -19,7 +21,7 @@ items:
     name: Многослойна епоксидна система
     min: 40
     max: 55
-    unit: null
+    unit: m2
     pages:
       - nastilki/epoksidni
       - pages/tsena-nastilki
@@ -28,9 +30,9 @@ items:
     note: полиуретан цимент, ръсена система с кварцов пясък
     min: 45
     max: 60
-    unit: null
+    unit: m2
     pages:
-      - nastilki/pu-tsiment
+      - nastilki/poliuretanovi
       - pages/tsena-nastilki
       - applications/hranitelna-promishlenost
       - applications/mandri
@@ -38,7 +40,7 @@ items:
     name: Декоративни многоцветни подови настилки
     min: 60
     max: 75
-    unit: null
+    unit: m2
     pages:
       - nastilki/dekorativni
       - pages/tsena-nastilki
@@ -47,7 +49,7 @@ items:
     name: PU мембрана за тераси
     min: 35
     max: 45
-    unit: null
+    unit: m2
     pages:
       - nastilki/hidroizolatsii
       - pages/tsena-nastilki
@@ -56,7 +58,7 @@ items:
     name: Мортел
     min: 55
     max: 70
-    unit: null
+    unit: m2
     pages:
       - nastilki/mortel
       - pages/tsena-nastilki
@@ -65,7 +67,7 @@ items:
     name: Холкер
     min: 13
     max: 16
-    unit: null
+    unit: lm
     pages:
       - pages/tsena-nastilki
       - applications/hranitelna-promishlenost
@@ -75,7 +77,7 @@ items:
     note: само труд
     min: 35
     max: 45
-    unit: null
+    unit: m2
     pages:
       - nastilki/dekorativni
       - pages/tsena-nastilki

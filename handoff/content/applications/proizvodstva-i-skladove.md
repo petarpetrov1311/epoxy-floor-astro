@@ -15,7 +15,6 @@ related:
   - nastilki/epoksidni
   - nastilki/poliuretanovi
   - nastilki/mortel
-  - nastilki/esd
 serviceType: Industrial warehouse flooring
 keyBenefit: Без циментов прах, издръжливост на мотокари, химическа устойчивост
 heroImage: /images/applications/proizvodstva-hero.jpg

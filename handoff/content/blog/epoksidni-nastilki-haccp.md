@@ -4,7 +4,7 @@ seoTitle: Епоксидни настилки и HACCP — кога са дос�
 description: Практическо ръководство за избор между епоксидна и PU-циментна система в хранителни производства с HACCP изисквания. Критерии, сравнение и реални примери.
 keyword: епоксидни настилки HACCP
 related:
-  - nastilki/pu-tsiment
+  - nastilki/poliuretanovi
   - applications/hranitelna-promishlenost
 pubDate: '2024-10-01'
 updatedDate: '2024-10-01'

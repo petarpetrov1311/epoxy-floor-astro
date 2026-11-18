@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T14:06:33.613Z",
+  "generated": "2026-11-01T18:53:09.993Z",
   "note": "Само снимките, които се ползват на страниците. Пътищата (src, thumb) са от public/: media/ от пакета → public/media/. Снимките на казусите са в frontmatter (snimki), не тук.",
   "photos": [
     {
@@ -1689,8 +1689,7 @@
       "tw": 640,
       "th": 853,
       "pages": [
-        "nastilki/poliuretanovi",
-        "nastilki/pu-tsiment"
+        "nastilki/poliuretanovi"
       ]
     },
     {
@@ -1709,8 +1708,7 @@
       "tw": 640,
       "th": 853,
       "pages": [
-        "nastilki/poliuretanovi",
-        "nastilki/pu-tsiment"
+        "nastilki/poliuretanovi"
       ]
     },
     {
@@ -1733,6 +1731,24 @@
       ]
     },
     {
+      "file": "efl-poliuretanova-nastilka-golyama-hala.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-golyama-hala",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-golyama-hala.webp",
+      "alt": "Светлосива полиуретанова настилка в голяма промишлена хала",
+      "title": "Полиуретанова настилка за хала | EPOXY FLOORS",
+      "w": 1920,
+      "h": 1440,
+      "orient": "landscape",
+      "kb": 81,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-golyama-hala.webp",
+      "tw": 640,
+      "th": 480,
+      "pages": [
+        "nastilki/poliuretanovi"
+      ]
+    },
+    {
       "file": "efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
       "cat": "poliuretanovi-nastilki",
       "slug": "poliuretanova-nastilka-otvodnitelen-kanal",
@@ -1748,7 +1764,26 @@
       "tw": 640,
       "th": 480,
       "pages": [
+        "nastilki/poliuretanovi",
         "applications/mandri"
+      ]
+    },
+    {
+      "file": "efl-poliuretanova-nastilka-predi-i-sled.webp",
+      "cat": "poliuretanovi-nastilki",
+      "slug": "poliuretanova-nastilka-predi-i-sled",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-predi-i-sled.webp",
+      "alt": "Преди и след: ремонт на полиуретанова настилка около отводнител",
+      "title": "Ремонт на полиуретанова настилка – преди и след | EPOXY FLOORS",
+      "w": 1200,
+      "h": 1200,
+      "orient": "square",
+      "kb": 143,
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-predi-i-sled.webp",
+      "tw": 640,
+      "th": 640,
+      "pages": [
+        "nastilki/poliuretanovi"
       ]
     },
     {
@@ -1793,23 +1828,22 @@
       ]
     },
     {
-      "file": "efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+      "file": "efl-poliuretanova-nastilka-siva-sklad.webp",
       "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-siva-tekstura-detayl",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
-      "alt": "Детайл от матова сива полиуретанова настилка",
-      "title": "Полиуретанова настилка – детайл | EPOXY FLOORS",
-      "w": 750,
-      "h": 1000,
+      "slug": "poliuretanova-nastilka-siva-sklad",
+      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-sklad.webp",
+      "alt": "Гланцова сива полиуретанова настилка в склад с ролетни врати",
+      "title": "Полиуретанова настилка за склад | EPOXY FLOORS",
+      "w": 1440,
+      "h": 1920,
       "orient": "portrait",
-      "kb": 201,
-      "taken": "2025-08",
-      "cluster": "obekt-04",
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
+      "kb": 145,
+      "taken": "2025-10",
+      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-siva-sklad.webp",
       "tw": 640,
       "th": 853,
       "pages": [
-        "nastilki/pu-tsiment"
+        "nastilki/poliuretanovi"
       ]
     },
     {
@@ -1850,100 +1884,6 @@
       "th": 480,
       "pages": [
         "nastilki/poliuretanovi"
-      ]
-    },
-    {
-      "file": "efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
-      "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-zelena-hranitelno-proizvodstvo",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
-      "alt": "Зелена полиуретанова настилка в хранително производство",
-      "title": "Полиуретанова настилка за хранително производство | EPOXY FLOORS",
-      "w": 1200,
-      "h": 1600,
-      "orient": "portrait",
-      "kb": 144,
-      "taken": "2024-03",
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
-      "tw": 640,
-      "th": 853,
-      "pages": [
-        "nastilki/pu-tsiment"
-      ]
-    },
-    {
-      "file": "efl-poliuretanova-nastilka-zelena-tekstura.webp",
-      "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-zelena-tekstura",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tekstura.webp",
-      "alt": "Текстура на зелена противоплъзгаща полиуретанова настилка",
-      "title": "Противоплъзгаща полиуретанова настилка | EPOXY FLOORS",
-      "w": 900,
-      "h": 1200,
-      "orient": "portrait",
-      "kb": 242,
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tekstura.webp",
-      "tw": 640,
-      "th": 853,
-      "pages": [
-        "nastilki/pu-tsiment"
-      ]
-    },
-    {
-      "file": "efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
-      "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-zelena-tseh-kanal",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
-      "alt": "Зелена полиуретанова настилка с отводнителен канал в хранителен цех",
-      "title": "Полиуретанова настилка с отводнителен канал | EPOXY FLOORS",
-      "w": 1050,
-      "h": 1400,
-      "orient": "portrait",
-      "kb": 149,
-      "taken": "2026-06",
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
-      "tw": 640,
-      "th": 853,
-      "pages": [
-        "nastilki/pu-tsiment"
-      ]
-    },
-    {
-      "file": "efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
-      "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-zelena-tseh-otvodnitel",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
-      "alt": "Зелена полиуретанова настилка в цех с подов отводнител",
-      "title": "Полиуретанова настилка за цех | EPOXY FLOORS",
-      "w": 1050,
-      "h": 1400,
-      "orient": "portrait",
-      "kb": 147,
-      "taken": "2026-06",
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
-      "tw": 640,
-      "th": 853,
-      "pages": [
-        "nastilki/pu-tsiment"
-      ]
-    },
-    {
-      "file": "efl-poliuretanova-nastilka-zhalta-tekstura.webp",
-      "cat": "poliuretanovi-nastilki",
-      "slug": "poliuretanova-nastilka-zhalta-tekstura",
-      "src": "/media/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zhalta-tekstura.webp",
-      "alt": "Текстура на жълта полиуретанова настилка",
-      "title": "Жълта полиуретанова настилка – текстура | EPOXY FLOORS",
-      "w": 900,
-      "h": 1200,
-      "orient": "portrait",
-      "kb": 225,
-      "taken": "2024-02",
-      "thumb": "/media/thumb/poliuretanovi-nastilki/efl-poliuretanova-nastilka-zhalta-tekstura.webp",
-      "tw": 640,
-      "th": 853,
-      "pages": [
-        "nastilki/pu-tsiment"
       ]
     },
     {
@@ -2300,7 +2240,11 @@
         "efl-poliuretanova-nastilka-byala-hladilna-kamera.webp",
         "efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
         "efl-poliuretanova-nastilka-chervena-tseh.webp",
-        "efl-poliuretanova-nastilka-golyama-hala-glants.webp"
+        "efl-poliuretanova-nastilka-golyama-hala-glants.webp",
+        "efl-poliuretanova-nastilka-golyama-hala.webp",
+        "efl-poliuretanova-nastilka-otvodnitelen-kanal.webp",
+        "efl-poliuretanova-nastilka-predi-i-sled.webp",
+        "efl-poliuretanova-nastilka-siva-sklad.webp"
       ]
     },
     "nastilki/mortel": {
@@ -2341,23 +2285,6 @@
         "efl-hidroizolatsiya-rozova-terasa.webp",
         "efl-hidroizolatsiya-terasa-otvodnitel.webp"
       ]
-    },
-    "nastilki/pu-tsiment": {
-      "hero": null,
-      "gallery": [
-        "efl-poliuretanova-nastilka-siva-tekstura-detayl.webp",
-        "efl-poliuretanova-nastilka-chervena-tseh-koridor.webp",
-        "efl-poliuretanova-nastilka-chervena-tseh.webp",
-        "efl-poliuretanova-nastilka-zelena-hranitelno-proizvodstvo.webp",
-        "efl-poliuretanova-nastilka-zelena-tekstura.webp",
-        "efl-poliuretanova-nastilka-zelena-tseh-kanal.webp",
-        "efl-poliuretanova-nastilka-zelena-tseh-otvodnitel.webp",
-        "efl-poliuretanova-nastilka-zhalta-tekstura.webp"
-      ]
-    },
-    "nastilki/esd": {
-      "hero": null,
-      "gallery": []
     },
     "applications/proizvodstva-i-skladove": {
       "hero": "efl-epoksidna-nastilka-logistichen-tsentar.webp",

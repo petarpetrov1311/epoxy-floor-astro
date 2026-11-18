@@ -12,7 +12,7 @@ keywords:
   - настилка млекопреработка
   - холкери PU-цимент
 related:
-  - nastilki/pu-tsiment
+  - nastilki/poliuretanovi
   - applications/hranitelna-promishlenost
 serviceType: Dairy and slaughterhouse flooring
 keyBenefit: Устойчивост на кръв и млечна киселина, парна дезинфекция, HACCP

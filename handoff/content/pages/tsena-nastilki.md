@@ -11,7 +11,7 @@ keywords:
   - полагане епоксидна настилка цена
 related:
   - nastilki/epoksidni
-  - nastilki/pu-tsiment
+  - nastilki/poliuretanovi
   - pages/sravneniya
 schemaType: Service
 faqs:

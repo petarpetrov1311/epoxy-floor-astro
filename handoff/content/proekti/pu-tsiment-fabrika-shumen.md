@@ -2,7 +2,7 @@
 slug: pu-tsiment-fabrika-shumen
 obekt: фабрика за риба и сокове
 plosht: null
-sistemi: [nastilki/pu-tsiment]
+sistemi: [nastilki/poliuretanovi]
 srok: null
 prilozhenie: applications/hranitelna-promishlenost
 grad: Шумен

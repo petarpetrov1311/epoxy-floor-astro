@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/landing/Navbar.astro';
 import Footer from '../components/landing/Footer.jsx';
 import { ArrowRight, ChevronDown, Phone } from 'lucide-react';
+import { PRICING, PRICES_CONFIRMED, priceText, vatText } from '../lib/floor-pricing.mjs';
 import '../styles/home.css';
 
 const documents = import.meta.glob('../../handoff/content/pages/*.md', { eager: true });
@@ -12,6 +13,9 @@ export function getStaticPaths() {
 }
 const { document } = Astro.props;
 const { frontmatter: page, Content, getHeadings } = document;
+const pagePrices = page.slug === 'tsena-nastilki' && PRICES_CONFIRMED
+  ? PRICING.items.filter((price: any) => price.pages.includes('pages/tsena-nastilki'))
+  : [];
 const headings = getHeadings().filter((heading: any) => heading.depth === 2);
 const images: Record<string, string> = {
   'za-nas': '/images/projects/about-us2.jpg',
@@ -41,6 +45,7 @@ const related = (page.related || []).flatMap((reference: string) => {
       <aside class="document-aside"><nav aria-label="На тази страница"><h2>На тази страница</h2>{headings.map((heading: any) => <a href={`#${heading.slug}`}>{heading.text}<ArrowRight size={16} aria-hidden="true" /></a>)}{page.faqs?.length > 0 && <a href="#faq">Често задавани въпроси<ArrowRight size={16} aria-hidden="true" /></a>}</nav><a class="document-phone" href="tel:+359898512776"><Phone size={18} aria-hidden="true" />+359 898 512 776</a></aside>
       <article id="page-content" class="document-prose"><Content /></article>
     </div>
+    {pagePrices.length > 0 && <section class="home-section"><div class="home-container faq-container"><h2>Ориентировъчни цени</h2><div class="heading-rule"></div><div class="document-price-table-wrap"><table class="document-price-table"><thead><tr><th scope="col">Система</th><th scope="col">Ориентировъчна цена</th></tr></thead><tbody>{pagePrices.map((price: any) => <tr><td>{price.name}{price.note && <small>{price.note}</small>}</td><td>{priceText(price)}</td></tr>)}</tbody></table></div>{vatText() && <p>{vatText()}</p>}{PRICING.terms && <p>{PRICING.terms}</p>}</div></section>}
     {page.faqs?.length > 0 && <section id="faq" class="home-section problem-section"><div class="home-container faq-container"><h2>Често задавани въпроси</h2><div class="heading-rule"></div>{page.faqs.map((faq: any) => <details class="home-faq"><summary>{faq.q}<ChevronDown size={20} aria-hidden="true" /></summary><p>{faq.a}</p></details>)}</div></section>}
     {related.length > 0 && <section class="home-section"><div class="home-container"><h2>Свързани страници</h2><div class="heading-rule"></div><div class="document-related">{related.map((entry: any) => <a href={entry.href}>{entry.title}<ArrowRight size={20} aria-hidden="true" /></a>)}</div></div></section>}
   </main>
@@ -81,6 +86,11 @@ const related = (page.related || []).flatMap((reference: string) => {
   .document-related { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
   .document-related a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px; border: 1px solid #DCE0E5; border-radius: 4px; font-size: 16px; font-weight: 600; transition: border-color 180ms ease-in-out, box-shadow 180ms ease-in-out; }
   .document-related a:hover { border-color: #F5A824; box-shadow: 0 6px 18px rgb(26 26 46 / .08); }
+  .document-price-table-wrap { overflow-x: auto; }
+  .document-price-table { width: 100%; border-collapse: collapse; text-align: left; }
+  .document-price-table th,.document-price-table td { padding: 16px; border-bottom: 1px solid #DCE0E5; }
+  .document-price-table th { background: #1A1A2E; color: white; }
+  .document-price-table small { display: block; margin-top: 4px; color: #59616A; }
   @media(max-width: 1023px) { .document-layout { grid-template-columns: 220px minmax(0,1fr); gap: 32px; } }
   @media(max-width: 767px) { .document-hero-content { padding-block: 24px 48px; } .document-breadcrumbs { margin-bottom: 32px; } .document-layout { grid-template-columns: 1fr; gap: 36px; padding-block: 40px 52px; } .document-aside { position: static; } .document-phone { display: none; } .document-related { grid-template-columns: 1fr; } }
 </style>
